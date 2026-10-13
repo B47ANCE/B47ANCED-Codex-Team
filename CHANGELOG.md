@@ -1,5 +1,11 @@
 # Changelog
 
+## 13.0.1 - 2026-10-13
+- Preserve exact manifest bytes across Windows/Linux Git clones.
+- Install templates, docs and tools transactionally; require successful exact-main-commit CI, drift checks, unique backups and rollback.
+- Preserve stronger existing PZ rules and all local configuration.
+
+
 ## 13.0.0 — 2026-10-13
 - Complete public configuration repository with all 23 existing skills.
 - Added validated main-branch updater, trusted bootstrap, backups, hash-based drift detection, rollback and scheduled sign-in updates.

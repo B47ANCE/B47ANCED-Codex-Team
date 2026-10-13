@@ -1,0 +1,3 @@
+interface:
+  display_name: "PZ Multiplayer Audit"
+  short_description: "Check dedicated authority, persistence and sync"

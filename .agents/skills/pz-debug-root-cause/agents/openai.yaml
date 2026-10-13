@@ -1,0 +1,3 @@
+interface:
+  display_name: "PZ Root-Cause Debugging"
+  short_description: "Diagnose PZ mod defects with source and log evidence"

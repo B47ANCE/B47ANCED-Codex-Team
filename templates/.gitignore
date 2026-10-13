@@ -1,0 +1,9 @@
+local.settings.json
+.env
+*.pem
+*.ppk
+*.key
+logs/
+diagnostics/
+dist/
+*.zip

@@ -1,0 +1,14 @@
+{
+  "version": "REPLACE_ME",
+  "git_commit": "REPLACE_ME",
+  "steam_app_id": 108600,
+  "workshop_id": "REPLACE_ME",
+  "mod_ids": [],
+  "game_build": "REPLACE_ME",
+  "package_sha256": "REPLACE_ME",
+  "validation": {
+    "static": "NOT TESTED",
+    "sp": "NOT TESTED",
+    "dedicated_mp": "NOT TESTED"
+  }
+}

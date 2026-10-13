@@ -1,0 +1,17 @@
+# Never publish secrets, diagnostics, personal state, or generated artifacts
+local.settings.json
+*.secret.json
+*.env
+.env
+.env.*
+!.env.example
+*.pem
+*.ppk
+*.key
+*.pfx
+*.log
+backups/
+.cache/
+__pycache__/
+*.pyc
+*.zip

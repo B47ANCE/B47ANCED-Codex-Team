@@ -1,0 +1,7 @@
+{
+  "steamcmd_exe": "C:\\Users\\YOURNAME\\Tools\\SteamCMD\\steamcmd.exe",
+  "local_mods_dir": "C:\\Users\\YOURNAME\\Zomboid\\mods",
+  "winscp_session": "PZ-Diagnostics",
+  "remote_log_directory": "SET_AFTER_READ_ONLY_DISCOVERY",
+  "remote_log_allowlist": ["server-console.txt", "*console*.txt", "*error*.log", "*crash*.log"]
+}

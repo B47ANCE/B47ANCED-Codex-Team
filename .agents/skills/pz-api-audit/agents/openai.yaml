@@ -1,0 +1,3 @@
+interface:
+  display_name: "PZ API Audit"
+  short_description: "Verify installed Build 42 Lua APIs before coding"

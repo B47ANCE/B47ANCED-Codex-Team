@@ -1,0 +1,3 @@
+interface:
+  display_name: "PZ Workshop Publish"
+  short_description: "Publish a validated mod to its existing Workshop item"

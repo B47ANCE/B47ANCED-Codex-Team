@@ -1,0 +1,2 @@
+# Operational scripts
+This distribution intentionally does not invent a working SteamCMD publishing script or a remote SFTP log path. Use existing verified scripts in each repository. WinSCP diagnostics require a locally saved session and a host-key verification step. Do not paste credentials into command arguments or repository files. Read-only SFTP must be enforced at the server/account level where possible.

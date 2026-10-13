@@ -1,0 +1,3 @@
+interface:
+  display_name: "PZ Local Deploy"
+  short_description: "Deploy the selected Lua mod to local SP testing"

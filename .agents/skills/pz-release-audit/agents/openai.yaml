@@ -1,0 +1,3 @@
+interface:
+  display_name: "PZ Release Audit"
+  short_description: "Check versions, packaging, dependencies and gates"

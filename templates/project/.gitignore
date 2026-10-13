@@ -1,0 +1,10 @@
+local.settings.json
+.env
+.env.*
+!.env.example
+*.log
+server-console*.txt
+__pycache__/
+dist/
+*.zip
+*.jar

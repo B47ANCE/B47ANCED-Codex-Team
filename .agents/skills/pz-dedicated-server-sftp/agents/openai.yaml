@@ -1,0 +1,3 @@
+interface:
+  display_name: "PZ Server Diagnostics"
+  short_description: "Inspect dedicated server diagnostics through SFTP"

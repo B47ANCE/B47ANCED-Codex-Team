@@ -1,0 +1,30 @@
+name: Validate repository
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  repository-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 # Team must pin to reviewed full commit SHA before production
+      - name: Basic repository validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f AGENTS.md
+          test -f VERSION
+          test -f SOURCE_INVENTORY.json
+          python3 -m json.tool SOURCE_INVENTORY.json >/dev/null
+          python3 - <<'PY_CHECK'
+          import pathlib, sys
+          paths=[p for p in pathlib.Path('.').rglob('*') if p.is_file() and '.git' not in p.parts]
+          seen={}
+          for p in paths:
+              k=p.as_posix().casefold()
+              if k in seen: print('Case collision:',seen[k],p);sys.exit(1)
+              seen[k]=p
+          print('Basic structural checks passed. Lua/runtime/secret checks NOT TESTED.')
+          PY_CHECK

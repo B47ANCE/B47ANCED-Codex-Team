@@ -1,0 +1,5 @@
+# Team-safe baseline. Each developer configures authentication and machine paths locally.
+model_reasoning_effort = "high"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+# Do not place credentials in this file.

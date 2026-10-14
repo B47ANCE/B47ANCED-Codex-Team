@@ -1,5 +1,9 @@
 # Changelog
 
+## 13.2.0 - 2026-10-14
+- Add explicit validated manual rollback with drift/path guards, recovery backup and update lock.
+- Consolidate download, prerequisites, setup, sign-in update and rollback commands in onboarding.
+
 ## 13.1.1 - 2026-10-14
 - Explicit isolated home target propagated through setup, validators, updater and scheduled runner.
 - Check Git/GitHub CLI and repository-root prerequisites before managed writes.

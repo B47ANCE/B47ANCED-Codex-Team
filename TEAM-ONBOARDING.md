@@ -1,1 +1,1 @@
-See docs/TEAM-ONBOARDING.md for v13.0.0 onboarding.
+See [complete developer setup, updates and rollback](docs/TEAM-ONBOARDING.md).

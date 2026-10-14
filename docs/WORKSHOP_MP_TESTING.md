@@ -13,3 +13,5 @@ Before uploading:
 After upload, humans test the exact subscribed package: download/install, server startup, client join/rejoin, server validation, synchronization, duplication risks, persistence and restarts. Record exact version/commit/build and actual results. Server launch/restart/deployment requires separate authorization. G7 PASS is required before stable-release G8 approval; changed source needs appropriately scoped retesting.
 
 Upload success proves distribution, not MP correctness. Known failures must remain explicit and evaluated; never silently mark them PASS.
+
+After confirmed upload success, automatically gracefully exit and restart the verified Steam desktop client under the shared publishing policy. This does not launch a game/server or prove subscribed package synchronization. Report restart success or failure separately from upload success.

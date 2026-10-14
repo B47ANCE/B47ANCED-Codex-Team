@@ -110,7 +110,7 @@ Before EVERY public push, audit the staged diff and tracked files for passwords,
 Command `commit`: commit and push the current intended development iteration to its configured public GitHub repository, using the checks above. This does not deploy locally or publish to Steam Workshop. See `.agents/skills/pz-github-versioning/SKILL.md`.
 
 ## Team workflow
-- Developers use named feature/fix branches and reviewed PRs before merging shared main. Never force-push or rewrite history. Configure branch protection only when authorized and available. Prefer applicable CI for lint, package checks and secret scanning; report unavailable checks honestly.
+- Developers use named feature/fix branches and PRs before merging shared main. For B47ANCE-owned repositories, owner B47ANCE may self-merge their own PR after required CI passes without another developer approval or a temporary protection exception; other developers require reviewer approval. An explicit merge request authorizes that owner self-merge. Never bypass required CI. Never force-push or rewrite history. Configure branch protection only when authorized and available. Prefer applicable CI for lint, package checks and secret scanning; report unavailable checks honestly.
 - A `commit` request pushes the intended version iteration on the verified feature branch. Preserve unrelated changes and remote identity. Public pushes do not authorize deployment or Workshop publication.
 - On this machine, the verified paths above remain current. Teammates must discover their own paths and private authentication. `templates/local.settings.example.json` is documentation only; existing helpers do not automatically consume it. Never commit an actual machine settings file or credentials.
 - Shared policy/configuration remain in this workspace; do not replace unrelated global Codex settings from a bundle.
@@ -126,7 +126,7 @@ Command `commit`: commit and push the current intended development iteration to 
 - Localization checks compare player-facing strings against translation keys and expected language/fallback policy; folder counts alone do not prove coverage.
 - Treat prior test reports as historical evidence tied to exact version, environment, and commit; never silently upgrade them to current verification.
 - Artifact cleanup is a distinct destructive operation, never implicit in build, deploy, publish, or version bump. Dry-run, produce retention plan and deletion ledger, protect current/newest/stable/ambiguous packages and provenance, and require explicit authorization before deletion; existing authorization in the session remains valid.
-- Feature branches + PR review before shared-main merge; protect main through GitHub settings when available. Review does not imply runtime validation.
+- Feature branches + PRs before shared-main merge; owner B47ANCE may self-merge their own PR after required CI passes, while other developers require reviewer approval; protect main through GitHub settings when available. Review does not imply runtime validation.
 - Use .agents/skills/pz-repository-governance for repository setup, migrations, version policy, provenance, cleanup, and release-surface audits.
 - Gate definitions remain project-specific and unchanged: gameplay dedicated G7 PASS is required before G8. Alternative bundle gate numbering is not authoritative. Preserve historical labels and evidence; offline checks and SP tests never prove dedicated MP.
 
@@ -163,5 +163,5 @@ Command `commit`: commit and push the current intended development iteration to 
 
 
 ## Validated configuration updates
-The public B47ANCE/B47ANCED-Codex-Team repository supplies reviewed main-branch updates. The locally trusted bootstrap validates the full manifest, checks the exact commit CI success, protects local drift, backs up managed files and rolls back failures. Local config and credentials are not updated. Newly fetched executable code is installed inert and never executed during that update. Bootstrap changes require manual review/reinstallation.
+The public B47ANCE/B47ANCED-Codex-Team repository supplies CI-validated main-branch updates approved either by owner self-merge or developer PR review. The locally trusted bootstrap validates the full manifest, checks the exact commit CI success, protects local drift, backs up managed files and rolls back failures. Local config and credentials are not updated. Newly fetched executable code is installed inert and never executed during that update. Bootstrap changes require manual review/reinstallation.
 <!-- END B47ANCED TEAM -->

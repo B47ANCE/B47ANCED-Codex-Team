@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.2.0.
+Links follow main and may advance beyond this document's configuration version, 13.2.1.
 
 ## Prerequisites
 
@@ -113,3 +113,7 @@ Enable-ScheduledTask -TaskName B47ANCED-Codex-Update
 Re-enabling permits the next sign-in to install newer validated main again. Restore-CodexTeam.ps1 accepts -HomeDirectory only for deliberate isolated testing; normal users omit it. Do not change USERPROFILE.
 
 No setup/update/rollback command publishes mods, launches PZ or modifies a dedicated server. Offline setup tests do not prove PZ runtime correctness.
+
+## Owner merges
+
+B47ANCE may self-merge their own PR after required CI passes without another developer approval. Other developers require reviewer approval. Keep feature branches and PRs; never bypass CI or force-push. The review bypass uses repository administrator role and applies through PRs only. Current settings cover all five existing B47ANCE-owned repositories; new repositories need equivalent setup.

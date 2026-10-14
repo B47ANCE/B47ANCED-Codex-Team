@@ -1,5 +1,9 @@
 # Changelog
 
+## 13.2.1 - 2026-10-14
+- Permit owner self-merges after required CI, while retaining reviewer approval for other developers.
+- Document review-only administrator PR bypass separate from CI/history safeguards.
+
 ## 13.2.0 - 2026-10-14
 - Add explicit validated manual rollback with drift/path guards, recovery backup and update lock.
 - Consolidate download, prerequisites, setup, sign-in update and rollback commands in onboarding.

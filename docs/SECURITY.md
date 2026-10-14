@@ -2,7 +2,7 @@
 
 This is a public repository. Never commit SFTP/Steam passwords, WinSCP exported sessions, GitHub tokens, private keys, or raw server logs. Rotate exposed credentials.
 
-**Auto-update trust:** Each workstation trusts maintainers allowed to merge to `main`. A passing CI check does not make malicious changes impossible. Require PR review, restricted write access, and branch protection/rulesets on GitHub. No updater should run scripts from the newly fetched checkout.
+**Auto-update trust:** Each workstation trusts maintainers allowed to merge to `main`. A passing CI check does not make malicious changes impossible. Require restricted write access and branch protection/rulesets on GitHub. Owner B47ANCE may self-merge their own PR after required CI passes; other developers require reviewer approval. Review-only rulesets allow administrator bypass through PRs; CI and history safeguards remain separate. Promoting another developer to administrator also grants this review bypass, so review admin grants carefully. No updater should run scripts from the newly fetched checkout.
 
 **Validation:** `tools/team_config.py validate` rejects symlinks, unexpected file types, secret-like filenames, malformed skills, missing required files, and integrity mismatches. It does not replace a full secrets scanner. CI additionally runs Gitleaks using a pinned release in a reviewed workflow, or equivalent.
 

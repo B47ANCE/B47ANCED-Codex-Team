@@ -24,3 +24,7 @@ Windows may mark ZIP-extracted scripts as downloaded. Review before running; pre
 5. Inspect `.codex/b47anced-team-state.json` and `.codex/b47anced-team-tools/last-update.log` under your user profile. The sign-in task uses least privilege, exact-main-commit CI, manifest/drift checks and backups. Bootstrap updates require manual reviewed setup; newly downloaded scripts are not run during updates.
 
 Local SteamCMD/game/mod paths, SSH profiles and developer settings remain private. Existing config is not overwritten. No mod publication, game launch or dedicated-server modification occurs. Offline checks do not prove app activation or PZ runtime. Main requires reviewer approval and CI before changes ship.
+
+## Isolated validation
+
+Setup and validators accept -HomeDirectory for a disposable installation target; omit it for your normal Windows profile. Scheduled tasks pass the chosen target explicitly. Do not change USERPROFILE or reuse another developer's credentials to test. Desktop-only Codex activation is a separate manual gate, not a required CLI check.

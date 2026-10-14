@@ -1,4 +1,4 @@
-# B47ANCE Workshop Codex Team 13.1.0
+# B47ANCE Workshop Codex Team 13.1.1
 
 23 Lua-only Project Zomboid skills, shared rules, templates and validated Windows sign-in updates. Canonical source: https://github.com/B47ANCE/B47ANCED-Codex-Team.git, branch main.
 

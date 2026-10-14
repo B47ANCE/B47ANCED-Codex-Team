@@ -1,6 +1,8 @@
 param(
+    [string]$HomeDirectory=$env:USERPROFILE,
     [string]$PackageRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path,
-    [switch]$Installed
+    [switch]$Installed,
+    [switch]$RequireCodexCli
 )
 $ErrorActionPreference = 'Stop'
 $expected = 23
@@ -24,7 +26,7 @@ foreach ($skill in $skills) {
 $config = Get-Content -LiteralPath (Join-Path $root '.codex\config.toml') -Raw
 Check ($config -notmatch '(?im)^\s*(password|token|secret|api_key)\s*=') 'No obvious credential assignments in config.toml'
 if ($Installed) {
-    $homeDir = [Environment]::GetFolderPath('UserProfile')
+    $homeDir = $HomeDirectory
     $global = Join-Path $homeDir '.codex\AGENTS.md'
     $userConfig = Join-Path $homeDir '.codex\config.toml'
     $userSkills = Join-Path $homeDir '.agents\skills'
@@ -34,7 +36,9 @@ if ($Installed) {
         Check (Test-Path -LiteralPath (Join-Path $userSkills ($skill.Name + '\SKILL.md'))) "Installed skill $($skill.Name) exists"
     }
     $codex = Get-Command codex -ErrorAction SilentlyContinue
-    Check ($null -ne $codex) 'Codex CLI is available on PATH (desktop/extension users may need manual verification)'
+    if($codex){Check $true 'Codex CLI is available on PATH'}
+    elseif($RequireCodexCli){Check $false 'Required Codex CLI is missing from PATH'}
+    else{Write-Host 'NOT TESTED: Codex CLI is absent; verify desktop/extension activation manually.'}
 }
 if ($failed -gt 0) { Write-Host "$failed verification check(s) failed." -ForegroundColor Red; exit 1 }
 Write-Host 'Structural verification passed. Runtime integrations and Codex activation remain NOT TESTED.' -ForegroundColor Green

@@ -1,9 +1,9 @@
-param([Parameter(Mandatory)][string]$RepositoryRoot)
+param([string]$HomeDirectory=$env:USERPROFILE, [Parameter(Mandatory)][string]$RepositoryRoot)
 $ErrorActionPreference='Stop'
-$state=Get-Content -LiteralPath (Join-Path $env:USERPROFILE '.codex/b47anced-team-state.json') -Raw | ConvertFrom-Json
+$state=Get-Content -LiteralPath (Join-Path $HomeDirectory '.codex/b47anced-team-state.json') -Raw | ConvertFrom-Json
 $skillNames=@($state.managed.PSObject.Properties.Name | Where-Object {$_ -match '^global/.agents/skills/([^/]+)/SKILL.md$'} | ForEach-Object {($_ -split '/')[3]})
 if($skillNames.Count -ne 23){throw 'Expected 23 managed global skills'}
-foreach($name in $skillNames){if(-not(Test-Path -LiteralPath (Join-Path $env:USERPROFILE ".agents/skills/$name/SKILL.md"))){throw "Missing global skill $name"}}
+foreach($name in $skillNames){if(-not(Test-Path -LiteralPath (Join-Path $HomeDirectory ".agents/skills/$name/SKILL.md"))){throw "Missing global skill $name"}}
 $projects=@(Get-ChildItem -LiteralPath $RepositoryRoot -Directory)
 foreach($project in $projects){
  $guide=Join-Path $project.FullName 'AGENTS.md'

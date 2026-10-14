@@ -1,4 +1,4 @@
-param([string]$RepositoryUrl = '', [string]$Branch = 'main', [switch]$CheckOnly)
+param([string]$HomeDirectory=$env:USERPROFILE, [string]$RepositoryUrl = '', [string]$Branch = 'main', [switch]$CheckOnly)
 $ErrorActionPreference = 'Stop'
 $cfgPath=Join-Path $PSScriptRoot 'source.json'
 $cfg=Get-Content -LiteralPath $cfgPath -Raw | ConvertFrom-Json
@@ -20,25 +20,25 @@ try {
  $head=(& $cfg.git_exe -C $tmp rev-parse HEAD).Trim()
  $exe=$cfg.python_exe; $prefix=@()
  # Run ONLY the previously installed trusted validator; never execute fetched scripts.
- $trusted=Join-Path $env:USERPROFILE '.codex/b47anced-team-tools/team_config.py'
+ $trusted=Join-Path $HomeDirectory '.codex/b47anced-team-tools/team_config.py'
  if (!(Test-Path $trusted)) { throw 'Trusted bootstrap not installed. Run tools/Install-CodexTeam.ps1 -Initial from reviewed checkout.' }
  if((Get-FileHash -LiteralPath $trusted).Hash.ToLower() -ne $cfg.validator_sha256){throw 'Trusted validator drift; manual review required'}
  & $exe @prefix $trusted validate --source $tmp
  if($LASTEXITCODE -ne 0){throw 'Downloaded configuration failed validation'}
- & $exe $trusted drift --home $env:USERPROFILE
+ & $exe $trusted drift --home $HomeDirectory
  if($LASTEXITCODE -ne 0){throw 'Managed files drifted; update blocked'}
  $runs=& $cfg.gh_exe api ('repos/B47ANCE/B47ANCED-Codex-Team/actions/runs?head_sha='+$head+'&branch=main&event=push')
  if($LASTEXITCODE -ne 0){throw 'Unable to verify CI'}
  $passed=@(($runs | ConvertFrom-Json).workflow_runs | Where-Object {$_.head_sha -eq $head -and $_.name -eq 'Validate Codex team configuration' -and $_.status -eq 'completed' -and $_.conclusion -eq 'success'})
  if($passed.Count -eq 0){throw 'Exact main commit lacks successful CI'}
- $state=Join-Path $env:USERPROFILE '.codex/b47anced-team-state.json'
+ $state=Join-Path $HomeDirectory '.codex/b47anced-team-state.json'
  $old=Get-Content $state -Raw | ConvertFrom-Json
  $version=(Get-Content (Join-Path $tmp 'VERSION') -Raw).Trim()
  if([version]($version -split '-')[0] -lt [version]($old.version -split '-')[0]){throw 'Automatic version downgrade blocked'}
  if($old.commit -eq $head){Write-Host "CURRENT $version ($head)";return}
  if($old.version -eq $version){throw 'Changed commit reuses installed version'}
  if($CheckOnly){Write-Host "Validated update available: $head";exit 0}
- $installArgs=@($trusted,'install','--source',$tmp,'--home',$env:USERPROFILE,'--commit',$head)
+ $installArgs=@($trusted,'install','--source',$tmp,'--home',$HomeDirectory,'--commit',$head)
  if($old.workspace){$installArgs+=@('--workspace',$old.workspace)}
  & $exe @installArgs
  if($LASTEXITCODE -ne 0){throw 'Installation failed'}

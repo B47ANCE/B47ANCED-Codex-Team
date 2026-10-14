@@ -1,5 +1,8 @@
 # Changelog
 
+## 13.2.2 - 2026-10-14
+- Permit explicitly authorized labelled Workshop MP test uploads before dedicated testing; retain stable G7/G8 and all other preflight requirements.
+
 ## 13.2.1 - 2026-10-14
 - Permit owner self-merges after required CI, while retaining reviewer approval for other developers.
 - Document review-only administrator PR bypass separate from CI/history safeguards.

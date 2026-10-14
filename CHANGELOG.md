@@ -1,5 +1,12 @@
 # Changelog
 
+## 13.1.1 - 2026-10-14
+- Explicit isolated home target propagated through setup, validators, updater and scheduled runner.
+- Check Git/GitHub CLI and repository-root prerequisites before managed writes.
+- ZIPs inside another Git checkout no longer inherit unrelated commit identity.
+- Desktop-only Codex installations no longer fail solely for absent CLI.
+
+
 ## 13.1.0 - 2026-10-14
 - Portable setup entry point, canonical URL, Python discovery and sign-in logging.
 - One global skill store; archive verified workspace duplicates with rollback.

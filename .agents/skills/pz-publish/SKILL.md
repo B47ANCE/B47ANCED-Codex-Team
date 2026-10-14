@@ -36,3 +36,9 @@ State canonical inputs, generated outputs, GitHub URL, release commit, Workshop 
 
 ## Workshop test distribution exception
 Apply the Workshop MP testing policy in global AGENTS.md and installed hub docs/WORKSHOP_MP_TESTING.md. Missing dedicated MP evidence alone does not block an explicitly authorized labelled Workshop test upload. G7 remains NOT TESTED / BLOCKED and stable-release G8 remains BLOCKED; offline/authority/security/version/package failures still block upload. This skill does not itself authorize publication.
+
+## Steam restart after successful Workshop publication
+- After verifying SteamCMD's successful upload of the authorized Workshop item, automatically gracefully exit and restart the Steam desktop client. This standing user preference authorizes the client restart as part of future successful publish commands; do not ask again.
+- Distinguish Steam desktop from SteamCMD. Discover the installed Steam executable from the running client or developer-local installation evidence; never guess paths or launch a different installation. Request graceful shutdown through the verified client executable, wait for it to exit with a bounded timeout, then start that same executable with a hidden launch window. Do not kill Steam or game processes forcibly, reboot Windows, launch a game/server or change server files.
+- If Steam is already closed, start the verified client once. If graceful shutdown times out or the executable cannot be verified, report the blocked restart; do not force termination or retry endlessly. Never restart Steam after a failed or unverified upload.
+- Verify the client process starts and report upload and restart outcomes separately. A client restart is not evidence that Workshop content downloaded or that MP works.

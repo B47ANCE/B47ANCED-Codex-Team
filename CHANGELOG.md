@@ -1,5 +1,8 @@
 # Changelog
 
+## 13.2.3 - 2026-10-14
+- Automatically gracefully restart the verified Steam desktop client after confirmed successful Workshop publication; report restart independently and never force termination.
+
 ## 13.2.2 - 2026-10-14
 - Permit explicitly authorized labelled Workshop MP test uploads before dedicated testing; retain stable G7/G8 and all other preflight requirements.
 

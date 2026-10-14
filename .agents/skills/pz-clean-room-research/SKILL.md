@@ -5,7 +5,7 @@ description: Research mods authored outside the B47ANCE'd Workshop team for inte
 
 # Third-party mod clean-room research
 
-Read the shared guide at `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/AGENTS.md` and project instructions. Preserve Lua-only runtime, authority and existing evidence/gate definitions. Read-only research does not authorize copying, edits to external mods or publication.
+Read the shared guide at `%USERPROFILE%/.codex/AGENTS.md` and project instructions. Preserve Lua-only runtime, authority and existing evidence/gate definitions. Read-only research does not authorize copying, edits to external mods or publication.
 
 Use this skill whenever examining, comparing, integrating with, or implementing behavior inspired by a mod authored outside the development team. Applies equally to Steam Workshop, GitHub, ZIPs, decompiled material, and locally installed third-party mods. Do not assume public availability means open-source permission.
 

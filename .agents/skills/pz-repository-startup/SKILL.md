@@ -4,7 +4,7 @@ description: Mandatory read-only GitHub freshness and working-tree preflight bef
 ---
 # Repository startup and latest-version gate
 
-Before modifying any repository, run `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/tools/Test-PZRepositoryFreshness.ps1 -Repository <path>` or equivalent checks. A fresh check is required for each new work session and again immediately before commit, deploy, or publish. Do not rely on stale cached results.
+Before modifying any repository, run `%USERPROFILE%/.codex/b47anced-team/tools/Test-PZRepositoryFreshness.ps1 -Repository <path>` or equivalent checks. A fresh check is required for each new work session and again immediately before commit, deploy, or publish. Do not rely on stale cached results.
 
 - Identify Git root, current branch, remotes, upstream and HEAD. Fail closed on detached HEAD, missing remote/upstream, unresolved merge/rebase, or ambiguous target unless user resolves it.
 - Fetch remote references without changing the worktree. Compare HEAD with its tracking branch using `git rev-list --left-right --count HEAD...@{upstream}`. Compare the remote default branch as well; a feature branch can be up to date with its upstream while missing changes from main.

@@ -5,7 +5,7 @@ description: Version, commit, push, and verify public GitHub iteration history f
 
 # Public GitHub versioning
 
-Read the canonical shared guide at `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/AGENTS.md` and the selected project instructions. Runtime mods remain Lua-only; server authority, sandbox configuration and dedicated runtime gates still apply.
+Read the canonical shared guide at `%USERPROFILE%/.codex/AGENTS.md` and the selected project instructions. Runtime mods remain Lua-only; server authority, sandbox configuration and dedicated runtime gates still apply.
 
 Trigger on `commit`, a requested version iteration, or explicit GitHub backup.
 

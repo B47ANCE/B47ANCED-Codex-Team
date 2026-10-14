@@ -14,7 +14,7 @@ class TeamConfigTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as td:
    home=pathlib.Path(td)/"home";f=home/".codex/AGENTS.md";f.parent.mkdir(parents=True);f.write_text("old instructions")
    m.install(root,home,pathlib.Path(td)/"backups",True,True)
-   self.assertEqual(f.read_text(encoding='utf-8'),(root/"AGENTS.md").read_text(encoding="utf-8"))
+   self.assertTrue(f.read_text(encoding='utf-8').startswith("old instructions"));self.assertIn((root/"AGENTS.md").read_text(encoding="utf-8").strip(),f.read_text(encoding="utf-8"))
  def test_config_preserved_on_update(self):
   with tempfile.TemporaryDirectory() as td:
    home=pathlib.Path(td)/'home';m.install(root,home,pathlib.Path(td)/'backups',True)

@@ -5,7 +5,7 @@ description: Mod interoperability and conflict diagnosis for Project Zomboid Bui
 
 # Mod interoperability and conflict diagnosis
 
-Use when the task concerns this domain. Follow the shared guide at `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/AGENTS.md` and the active project AGENTS.md. Gameplay requires dedicated G7 PASS before release G8; skill instructions do not authorize game/server launch, deployment or publication.
+Use when the task concerns this domain. Follow the shared guide at `%USERPROFILE%/.codex/AGENTS.md` and the active project AGENTS.md. Gameplay requires dedicated G7 PASS before release G8; skill instructions do not authorize game/server launch, deployment or publication.
 
 ## Procedure
 

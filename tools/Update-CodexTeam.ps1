@@ -1,6 +1,6 @@
 param([string]$RepositoryUrl = '', [string]$Branch = 'main', [switch]$CheckOnly)
 $ErrorActionPreference = 'Stop'
-$cfgPath=Join-Path $env:LOCALAPPDATA 'B47ANCED-Codex-Team/source.json'
+$cfgPath=Join-Path $PSScriptRoot 'source.json'
 $cfg=Get-Content -LiteralPath $cfgPath -Raw | ConvertFrom-Json
 if (-not $RepositoryUrl) {
  if (!(Test-Path $cfgPath)) { throw 'Missing local source.json. Run installer with -RepositoryUrl first.' }
@@ -10,14 +10,14 @@ if (-not $RepositoryUrl) {
 if ($RepositoryUrl -notmatch '^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(\.git)?$') { throw 'Only approved HTTPS GitHub repository URLs are supported' }
 if($RepositoryUrl -ne 'https://github.com/B47ANCE/B47ANCED-Codex-Team.git'){throw 'Unapproved source URL'}
 if ($Branch -ne 'main') { throw 'Auto-updater only supports main' }
-$lockDir=Join-Path $env:LOCALAPPDATA 'B47ANCED-Codex-Team/update.lock'
+$lockDir=Join-Path $PSScriptRoot 'update.lock'
 if (!(Test-Path (Split-Path $lockDir))) { New-Item -ItemType Directory -Force (Split-Path $lockDir) | Out-Null }
 try { New-Item -ItemType Directory -Path $lockDir -ErrorAction Stop | Out-Null } catch { throw 'Update already in progress; refusing concurrent install' }
 $tmp=Join-Path $env:TEMP ('b47-team-'+[guid]::NewGuid().ToString('N'))
 try {
- git clone --quiet --depth 1 --single-branch --branch main -- $RepositoryUrl $tmp
+ & $cfg.git_exe clone --quiet --depth 1 --single-branch --branch main -- $RepositoryUrl $tmp
  if ($LASTEXITCODE -ne 0) { throw 'Git clone failed' }
- $head=(git -C $tmp rev-parse HEAD).Trim()
+ $head=(& $cfg.git_exe -C $tmp rev-parse HEAD).Trim()
  $exe=$cfg.python_exe; $prefix=@()
  # Run ONLY the previously installed trusted validator; never execute fetched scripts.
  $trusted=Join-Path $env:USERPROFILE '.codex/b47anced-team-tools/team_config.py'
@@ -34,6 +34,7 @@ try {
  $state=Join-Path $env:USERPROFILE '.codex/b47anced-team-state.json'
  $old=Get-Content $state -Raw | ConvertFrom-Json
  $version=(Get-Content (Join-Path $tmp 'VERSION') -Raw).Trim()
+ if([version]($version -split '-')[0] -lt [version]($old.version -split '-')[0]){throw 'Automatic version downgrade blocked'}
  if($old.commit -eq $head){Write-Host "CURRENT $version ($head)";return}
  if($old.version -eq $version){throw 'Changed commit reuses installed version'}
  if($CheckOnly){Write-Host "Validated update available: $head";exit 0}

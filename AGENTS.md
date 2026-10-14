@@ -1,3 +1,4 @@
+<!-- BEGIN B47ANCED TEAM -->
 ## User rule: Lua-only mods
 Effective 2026-10-12: All mods must use Lua only. Never implement, build, ship or require custom Java code, Java bridges/agents, injected classes, or Java/JAR mod dependencies. Lua may call vanilla engine APIs already exposed to Lua. If a required capability cannot be supplied safely through these APIs, document the limitation and propose a Lua-only alternative; never substitute Java. This supersedes all earlier Java-permitted policies and approvals. Preserve historical research as historical evidence, not current authorization.
 
@@ -13,7 +14,7 @@ Effective 2026-10-12: All mods must use Lua only. Never implement, build, ship o
 - Report exact validation commands and blocked runtime gates.
 - Prefer targeted fixes and small diffs. Never package or release unless requested.
 
-Scope: these framework rules apply to PZ modding tasks. Preserve unrelated workflows and all stricter repository requirements. Framework: C:/Users/willi/Desktop/Repositories/PZ-AI-Development-Framework/WORKFLOW.md.
+Scope: these framework rules apply to PZ modding tasks. Preserve unrelated workflows and all stricter repository requirements. Framework: the locally configured PZ-AI-Development-Framework path/WORKFLOW.md.
 One writer, many readers: Codex owns production implementation; OpenCode scout/auditor/reviewer inspect only. ChatGPT designs and triages; humans supply actual PZ runtime evidence. No automatic project deployment.
 Evidence labels: [VERIFIED], [TESTED] with offline/runtime environment, [INFERRED], [UNKNOWN], [RUNTIME GATE]. Offline != PZ runtime; SP != dedicated MP. Do not launch PZ/server, deploy live mods, or publish without explicit authorization.
 
@@ -35,7 +36,7 @@ Every Project Zomboid project must use Semantic Versioning with one canonical pr
 
 Discover existing version state; classify PATCH/MINOR/MAJOR by compatibility and record the target development version before implementation. Keep PZ, dependency, framework provenance and compatibility/schema versions separate. Preserve historical evidence and immutable released artifacts as explicitly classified records; never relabel old validation as current proof. Inventory exact current mirrors and run `scripts/check_versions.py` before/after edits, and `--release` against current artifacts before G8. Do not invent missing project versions or rewrite active projects without authorization.
 
-Authoritative policy: project `docs/VERSION_POLICY.md`; framework source at `C:/Users/willi/Desktop/Repositories/PZ-AI-Development-Framework/project-template/docs/VERSION_POLICY.md`. Global guidance is a summary, not a second policy source.
+Authoritative policy: project `docs/VERSION_POLICY.md`; framework source at `the locally configured PZ-AI-Development-Framework path/project-template/docs/VERSION_POLICY.md`. Global guidance is a summary, not a second policy source.
 
 <!-- END PZ AI FRAMEWORK -->
 
@@ -44,8 +45,8 @@ Authoritative policy: project `docs/VERSION_POLICY.md`; framework source at `C:/
 
 ## Current policy and workspace
 - Effective 2026-10-12, runtime mods are Lua-only. Earlier Java-permitted policies, approvals, bridges, agents and JAR dependencies are historical evidence, not current authorization. Lua may call vanilla engine APIs already exposed to Lua. Document unsupported capabilities and propose Lua-only alternatives.
-- Shared guidance/skills/tools: `C:\Users\willi\Desktop\Work\Project Zomboid\Codex`.
-- Mod repositories: `C:\Users\willi\Desktop\Work\Project Zomboid\Mod Repositories`.
+- Shared guidance/skills/tools: `%USERPROFILE%\.codex\b47anced-team`.
+- Mod repositories: `the developer-selected mod repository root`.
 - Read this guide at the start of a project task. Project-specific requirements apply within the current Lua-only and authority boundaries.
 - Before edits, state intended files and behavioral invariants. Discover canonical project `VERSION` and current mirrors; classify compatibility impact before changing a version, and run existing `scripts/check_versions.py` before/after implementation. Never invent missing versions. Keep game/dependency/schema versions and historical evidence separate. Version inconsistency blocks release.
 - Meaningful shared gameplay configuration belongs in server-authoritative sandbox settings with stable identifiers, localization, sensible defaults/bounds and existing-save behavior. Internal technical safety limits and UI coordinates remain internal.
@@ -75,13 +76,13 @@ These are reusable development rules for any Project Zomboid Build 42 mod. Never
 6. Report changed files, test results, unresolved limitations, and next required in-game tests.
 
 ## Command: deploy
-When the user says `deploy`, treat that as authorization to build/copy the current intended development build to the local SP test installation at `C:\Users\willi\Zomboid\mods`. Locate and reuse existing project deployment scripts first. Otherwise discover the authoritative source and correct installed mod folder layout before copying. Replace only the selected mod's owned files; never delete unrelated mods or edit vanilla game files. Include intended uncommitted working-tree changes. Verify copied file presence/content and report destination and outcome. Do not publish. If the target mod is ambiguous, ask which one.
+When the user says `deploy`, treat that as authorization to build/copy the current intended development build to the local SP test installation at `the verified developer-local SP mods directory`. Locate and reuse existing project deployment scripts first. Otherwise discover the authoritative source and correct installed mod folder layout before copying. Replace only the selected mod's owned files; never delete unrelated mods or edit vanilla game files. Include intended uncommitted working-tree changes. Verify copied file presence/content and report destination and outcome. Do not publish. If the target mod is ambiguous, ask which one.
 
 ## Command: publish
-When the user says `publish`, treat that as authorization to publish the selected mod to its existing Steam Workshop item using `C:\Users\willi\Tools\SteamCMD\steamcmd.exe` and the user's existing cached SteamCMD authentication. Discover/reuse the project's established Workshop staging, VDF, metadata, and uploader scripts first. Confirm App ID 108600, existing Workshop ID, exact content folder, mod.info, version, and release notes. Run existing release gates and refuse to upload when essential checks fail or the target is ambiguous. Do not create a new Workshop item unless explicitly requested. Do not embed passwords, tokens, or Steam Guard codes in files/logs. SteamCMD may require reauthentication; do not bypass it. Verify SteamCMD's actual success result and report item ID and outcome. Publishing does not imply local deployment.
+When the user says `publish`, treat that as authorization to publish the selected mod to its existing Steam Workshop item using `the verified developer-local SteamCMD executable` and the user's existing cached SteamCMD authentication. Discover/reuse the project's established Workshop staging, VDF, metadata, and uploader scripts first. Confirm App ID 108600, existing Workshop ID, exact content folder, mod.info, version, and release notes. Run existing release gates and refuse to upload when essential checks fail or the target is ambiguous. Do not create a new Workshop item unless explicitly requested. Do not embed passwords, tokens, or Steam Guard codes in files/logs. SteamCMD may require reauthentication; do not bypass it. Verify SteamCMD's actual success result and report item ID and outcome. Publishing does not imply local deployment.
 
 ## Debugging and root-cause analysis
-When asked to `debug`, `investigate`, or `fix` a failure, follow `.agents/skills/pz-debug-root-cause/SKILL.md`. Resolve shared tools and setup references from the canonical Codex directory above, not from an assumed project-local `tools` folder. Inspect relevant current logs (including `C:\Users\willi\Zomboid\console.txt` when available), correlate stack traces with authoritative source and installed Build 42 APIs, identify a testable cause, make a root-cause fix, and add regression coverage. Never suppress errors to disguise a defect or claim runtime verification from static checks. Debugging alone does not authorize `deploy` or `publish`.
+When asked to `debug`, `investigate`, or `fix` a failure, follow `.agents/skills/pz-debug-root-cause/SKILL.md`. Resolve shared tools and setup references from the canonical Codex directory above, not from an assumed project-local `tools` folder. Inspect relevant current logs (including `the verified developer-local console.txt` when available), correlate stack traces with authoritative source and installed Build 42 APIs, identify a testable cause, make a root-cause fix, and add regression coverage. Never suppress errors to disguise a defect or claim runtime verification from static checks. Debugging alone does not authorize `deploy` or `publish`.
 
 ## Release hygiene
 Preserve actual paragraph breaks in Steam Workshop descriptions and change notes (do not serialize them as literal backslash-n). Use project-provided BBCode and run any existing VDF/newline validation tests. Preserve current visibility, Workshop ID, and non-generated metadata. Prefer reproducible packaging and hash comparisons where scripts exist. Never label untested gameplay as verified.
@@ -97,7 +98,7 @@ When asked to inspect dedicated-server logs or investigate a multiplayer failure
 
 ## Dedicated server SFTP connection
 
-For `server-debug`, use the saved WinSCP site `PZ-Diagnostics` for `us-la-02-012.myserverfiles.com:2022`. Read `SFTP-SETUP.md` for setup and limitations. Credentials must never appear in this file, command arguments, scripts, or reports. SFTP diagnostics are strictly read-only and independent of local `deploy` and SteamCMD `publish`. Never assume a remote log path before verifying it.
+For `server-debug`, discover the developer-specific verified saved SFTP site and diagnostic directory. No shared host or credentials are assumed. Read the local SFTP setup documentation. Credentials must never appear in this file, command arguments, scripts, or reports. SFTP diagnostics are strictly read-only and independent of local `deploy` and SteamCMD `publish`. Never assume a remote log path before verifying it.
 
 ## GitHub versioning (mandatory)
 Every mod project uses its own PUBLIC GitHub repository from creation onward unless the user explicitly changes the repository grouping. Do not make repositories private. Each intentional version iteration must be committed and pushed, including development iterations. Check Git status, active branch, remote URL, upstream, and existing uncommitted user work before acting. Never discard, overwrite, or indiscriminately stage unrelated changes; use targeted staging. If a repository/remote is absent, configure it with the user's approval and correct owner/name; never guess a destination.
@@ -111,7 +112,7 @@ Command `commit`: commit and push the current intended development iteration to 
 ## Team workflow
 - Developers use named feature/fix branches and reviewed PRs before merging shared main. Never force-push or rewrite history. Configure branch protection only when authorized and available. Prefer applicable CI for lint, package checks and secret scanning; report unavailable checks honestly.
 - A `commit` request pushes the intended version iteration on the verified feature branch. Preserve unrelated changes and remote identity. Public pushes do not authorize deployment or Workshop publication.
-- On this machine, the verified paths above remain current. Teammates must discover their own paths and private authentication. `templates/current/local.settings.example.json` is documentation only; existing helpers do not automatically consume it. Never commit an actual machine settings file or credentials.
+- On this machine, the verified paths above remain current. Teammates must discover their own paths and private authentication. `templates/local.settings.example.json` is documentation only; existing helpers do not automatically consume it. Never commit an actual machine settings file or credentials.
 - Shared policy/configuration remain in this workspace; do not replace unrelated global Codex settings from a bundle.
 
 ## Repository governance and provenance (mandatory)
@@ -156,10 +157,11 @@ Command `commit`: commit and push the current intended development iteration to 
 - Keep current Lua-only, authority, sandbox, canonical version and G7 dedicated MP / G8 release policies. Historical bundle instructions do not replace current shared policy or unrelated global settings.
 
 ## Canonical setup artifacts
-- This file is the shared policy source. Project AGENTS.md adds project requirements and a managed link; preserve text outside its managed block. Shared `.agents/skills` and `.codex` links expose current skills/configuration.
-- `templates/current/` is the only active new-project/template set. Prior bundle generations and setup changes are historical under `audits/`; do not install or execute historical examples as current guidance.
-- Use `tools/Install-PZWorkspace.ps1` and `tools/Test-PZWorkspace.ps1` to refresh and verify setup. Local setup consistency is separate from Git freshness, Codex activation and PZ/runtime evidence.
+- Global AGENTS.md is the shared policy source. Workspace guides are lightweight references. The user-profile .agents/skills directory is the only installed team skill store; project-specific skills remain independent. Preserve all custom project text.
+- The installed hub templates directory is the only active new-project/template set. Prior bundle generations and setup changes are historical under `audits/`; do not install or execute historical examples as current guidance.
+- Use `tools/Setup-CodexTeam.ps1`, `tools/Connect-ModRepositories.ps1` and `tools/Test-ModRepositories.ps1` to refresh and verify setup. Local setup consistency is separate from Git freshness, Codex activation and PZ/runtime evidence.
 
 
 ## Validated configuration updates
 The public B47ANCE/B47ANCED-Codex-Team repository supplies reviewed main-branch updates. The locally trusted bootstrap validates the full manifest, checks the exact commit CI success, protects local drift, backs up managed files and rolls back failures. Local config and credentials are not updated. Newly fetched executable code is installed inert and never executed during that update. Bootstrap changes require manual review/reinstallation.
+<!-- END B47ANCED TEAM -->

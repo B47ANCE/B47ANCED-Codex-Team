@@ -9,7 +9,7 @@ Use this skill when the user reports a crash, stack trace, missing UI action, de
 
 ## Evidence intake
 1. Identify the exact target mod, Build 42 game version, mod version, SP/client/dedicated-server context, reproduction steps, and expected versus actual behavior. Read project `AGENTS.md`, `README.md`, current `mod.info`, tests and relevant source before editing.
-2. Check the most recent relevant `C:\Users\willi\Zomboid\console.txt` when available, but do not assume it covers the failure. For MP, use `pz-dedicated-server-sftp` to retrieve remote server logs when configured, and inspect affected client logs as appropriate. Never silently treat old logs as current evidence.
+2. Check the most recent relevant `the verified developer-local console.txt` when available, but do not assume it covers the failure. For MP, use `pz-dedicated-server-sftp` to retrieve remote server logs when configured, and inspect affected client logs as appropriate. Never silently treat old logs as current evidence.
 3. Capture timestamp, exception, full stack trace, affected file and line, call chain, and any preceding warnings. Separate primary failure from secondary cascading errors. Redact credentials, identifiers, and personal information in shared diagnostics.
 4. Correlate logs with authoritative source, installed runtime APIs, initialization/load order, mod conflicts, nil handling, event registration, state transitions and multiplayer authority. Check Linux case sensitivity when relevant.
 

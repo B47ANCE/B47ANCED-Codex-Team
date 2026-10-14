@@ -1,5 +1,12 @@
 # Changelog
 
+## 13.1.0 - 2026-10-14
+- Portable setup entry point, canonical URL, Python discovery and sign-in logging.
+- One global skill store; archive verified workspace duplicates with rollback.
+- Lightweight workspace rule reference; preserve custom global/project instructions and settings.
+- Bootstrap files under user profile instead of AppData; block downgrades.
+
+
 ## 13.0.1 - 2026-10-13
 - Preserve exact manifest bytes across Windows/Linux Git clones.
 - Install templates, docs and tools transactionally; require successful exact-main-commit CI, drift checks, unique backups and rollback.

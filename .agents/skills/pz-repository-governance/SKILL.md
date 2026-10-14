@@ -4,7 +4,7 @@ description: Audit and govern PZ Build 42 Lua-only repositories, canonical versi
 ---
 # PZ repository governance
 
-Read the canonical shared guide at `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/AGENTS.md` and the active project instructions. Preserve their gate nomenclature: dedicated gameplay G7 must PASS before G8. Never renumber historical validation.
+Read the canonical shared guide at `%USERPROFILE%/.codex/AGENTS.md` and the active project instructions. Preserve their gate nomenclature: dedicated gameplay G7 must PASS before G8. Never renumber historical validation.
 
 1. Inventory repository, branches, remote visibility, tracked/untracked files, mod.info files, version files, src/Contents trees, build scripts, staging, ZIPs and docs. Do not assume a standard layout for existing projects.
 2. Establish authoritative sources using scripts and recorded provenance. Identify mirrors and differences. Never overwrite ambiguous trees.

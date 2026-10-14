@@ -1,5 +1,5 @@
 # Project-specific Codex instructions
-Read `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/AGENTS.md` first on the owner machine; teammates resolve their installed canonical shared guide. Preserve G7 dedicated MP and G8 release definitions.
+Read `%USERPROFILE%/.codex/AGENTS.md` first on the owner machine; teammates resolve their installed canonical shared guide. Preserve G7 dedicated MP and G8 release definitions.
 
 ## Project identity (fill from verified repository facts)
 - Display name: TODO

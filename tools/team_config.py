@@ -46,8 +46,7 @@ def mappings(src,home,initial,workspace=None):
  if initial and not (home/'.codex/config.toml').exists():result.append((src/'.codex/config.toml',home/'.codex/config.toml','initial-config'))
  if workspace:
   for source,dst,key in list(result):
-   if key=='global/AGENTS.md':result.append((source,workspace/'AGENTS.md','workspace/AGENTS.md'))
-   elif key.startswith('global/.agents/skills/'):result.append((source,workspace/key[len('global/'):],'workspace/'+key[len('global/'):]))
+   if key=='global/AGENTS.md':result.append((src/'templates/WORKSPACE_AGENTS.md',workspace/'AGENTS.md','workspace/AGENTS.md'))
    elif key.startswith('hub/tools/'):result.append((source,workspace/key[len('hub/'):],'workspace/'+key[len('hub/'):]))
    elif key.startswith('hub/templates/'):result.append((source,workspace/'templates/current'/key[len('hub/templates/'):],'workspace/templates/'+key[len('hub/templates/'):]))
  return result
@@ -70,14 +69,37 @@ def install(src,home,backup_base,initial=False,migrate=False,workspace=None,comm
    if parent==home or (workspace and parent==pathlib.Path(workspace)):break
    if parent.is_symlink() or getattr(parent,'is_junction',lambda:False)():raise ValueError('linked destination rejected')
  backup=pathlib.Path(backup_base)/uuid.uuid4().hex;backup.mkdir(parents=True)
- journal=[];oldstate=st.read_bytes() if st.exists() else None
+ journal=[];moved=[];oldstate=st.read_bytes() if st.exists() else None
  try:
+  # Remove only verified team duplicates; retain unrelated project-local skills.
+  if workspace:
+   for name in NAMES:
+    folder=pathlib.Path(workspace)/'.agents/skills'/name
+    canonical=home/'.agents/skills'/name
+    if folder.exists():
+     if folder.is_symlink() or getattr(folder,'is_junction',lambda:False)():raise ValueError('linked skill needs manual review')
+     expected={p.relative_to(folder).as_posix():digest(p) for p in folder.rglob('*') if p.is_file()}
+     installed={p.relative_to(canonical).as_posix():digest(p) for p in canonical.rglob('*') if p.is_file()} if canonical.exists() else {}
+     if expected!=installed:raise ValueError('workspace skill is customized: '+name)
+     archived=backup/'consolidated-skills'/name;archived.parent.mkdir(parents=True,exist_ok=True)
+     shutil.move(str(folder),str(archived));moved.append((folder,archived))
   for source,dst,key in entries:
    existed=dst.exists();b=backup/key
    if existed:b.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(dst,b)
    journal.append((dst,key,existed));dst.parent.mkdir(parents=True,exist_ok=True)
    fd,tmp=tempfile.mkstemp(prefix='.b47-',dir=dst.parent);os.close(fd)
-   try:shutil.copy2(source,tmp);os.replace(tmp,dst)
+   try:
+    shutil.copy2(source,tmp)
+    if key=='global/AGENTS.md' and existed:
+     existing=dst.read_text(encoding='utf-8-sig');incoming=source.read_text(encoding='utf-8')
+     pattern=r'(?s)<!-- BEGIN B47ANCED TEAM -->.*?<!-- END B47ANCED TEAM -->'
+     if re.search(pattern,existing):
+      pathlib.Path(tmp).write_text(re.sub(pattern,lambda match:incoming.strip(),existing),encoding='utf-8')
+     elif key not in old['managed']:
+      pathlib.Path(tmp).write_text(existing.rstrip()+'\n\n'+incoming,encoding='utf-8')
+    if key=='workspace/AGENTS.md' and existed and key not in old['managed']:
+     pathlib.Path(tmp).write_text(dst.read_text(encoding='utf-8-sig').rstrip()+'\n\n'+source.read_text(encoding='utf-8'),encoding='utf-8')
+    os.replace(tmp,dst)
    finally:
     if pathlib.Path(tmp).exists():pathlib.Path(tmp).unlink()
   newstate={'version':info['version'],'commit':commit,'workspace':str(workspace) if workspace else None,'backup':str(backup),'managed':{k:{'path':str(dst),'sha256':digest(dst)} for _,dst,k in entries if k!='initial-config'}}
@@ -90,6 +112,8 @@ def install(src,home,backup_base,initial=False,migrate=False,workspace=None,comm
    elif dst.exists():dst.unlink()
   if oldstate:st.write_bytes(oldstate)
   elif st.exists():st.unlink()
+  for folder,archived in reversed(moved):
+   if archived.exists():shutil.move(str(archived),str(folder))
   raise
  return newstate
 

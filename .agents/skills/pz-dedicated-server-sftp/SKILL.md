@@ -18,7 +18,7 @@ description: Inspect Project Zomboid dedicated-server diagnostics through verifi
 2. Create a WinSCP saved site with SFTP host/port/user and supported secure authentication. Verify host fingerprint through a trusted channel.
 3. Name the saved site (e.g. `PZ-Diagnostics`) and provide its name via environment variable `PZ_SFTP_SITE` or the script's `-SiteName` parameter. Use WinSCP secure credential storage or key authentication; don't export plaintext secrets.
 4. Find the remote diagnostic directory using an interactive **read-only** listing. Set `PZ_SFTP_LOG_DIR` or `-RemoteLogDir` to its absolute path. Do not guess it.
-5. Read `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/SFTP-SETUP.md`. The shared helper is `C:/Users/willi/Desktop/Work/Project Zomboid/Codex/tools/Get-PZServerLogs.ps1`; its current implementation lists the configured directory only. It does not implement downloads or an AllowedFiles parameter. Do not claim retrieved logs from a successful listing.
+5. Read `%USERPROFILE%/.codex/b47anced-team/SFTP-SETUP.md`. The shared helper is `%USERPROFILE%/.codex/b47anced-team/tools/Get-PZServerLogs.ps1`; its current implementation lists the configured directory only. It does not implement downloads or an AllowedFiles parameter. Do not claim retrieved logs from a successful listing.
 
 ## Routine use
 - When asked `server-debug`, `check server logs`, or when multiplayer diagnostics require server evidence, inspect the verified saved profile/path and current helper capability. Run its read-only listing when configured. Actual retrieval requires a verified bounded download route; if unavailable, report the missing capability rather than claiming a snapshot exists.
@@ -32,7 +32,7 @@ description: Inspect Project Zomboid dedicated-server diagnostics through verifi
 ```powershell
 $env:PZ_SFTP_SITE = 'PZ-Diagnostics'
 $env:PZ_SFTP_LOG_DIR = '/absolute/remote/log/directory'
-& 'C:/Users/willi/Desktop/Work/Project Zomboid/Codex/tools/Get-PZServerLogs.ps1'
+& '%USERPROFILE%/.codex/b47anced-team/tools/Get-PZServerLogs.ps1'
 ```
 
 The current script only lists and never performs remote mutation. For true server-side read-only guarantees, the hosting provider must enforce appropriate permissions. No connection or remote-path verification is implied by local setup validation.

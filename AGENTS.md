@@ -28,7 +28,7 @@ Verify state ownership, execution side, trust boundaries, vanilla/custom synchro
 
 Options need stable identifiers, localized names/tooltips, sensible defaults, supported bounds/steps, grouping, server-side validation/interpretation and existing-save behavior. Assess configuration candidates explicitly; no meaningless micro-settings.
 
-For gameplay-affecting features, dedicated multiplayer validation is mandatory: G7 must PASS before G8. G6 PASS != G7 PASS; offline and SP results do not prove MP correctness. Without dedicated evidence record G7 BLOCKED / NOT TESTED and G8 BLOCKED; do not claim release-ready. G7 N/A is allowed only for proven local-presentation-only changes with a documented reason and no stricter project gate. Preserve [VERIFIED], [TESTED] with environment, [INFERRED], [UNKNOWN], [RUNTIME GATE]; inference never becomes PASS without evidence.
+For gameplay-affecting features, dedicated multiplayer validation is mandatory: G7 must PASS before stable-release G8. G6 PASS != G7 PASS; offline and SP results do not prove MP correctness. Without dedicated evidence record G7 BLOCKED / NOT TESTED and G8 BLOCKED; do not claim release-ready. G7 N/A is allowed only for proven local-presentation-only changes with a documented reason and no stricter project gate. Preserve [VERIFIED], [TESTED] with environment, [INFERRED], [UNKNOWN], [RUNTIME GATE]; inference never becomes PASS without evidence.
 
 
 ## PZ GLOBAL INVARIANT #3 — VERSIONING
@@ -51,7 +51,7 @@ Authoritative policy: project `docs/VERSION_POLICY.md`; framework source at `the
 - Before edits, state intended files and behavioral invariants. Discover canonical project `VERSION` and current mirrors; classify compatibility impact before changing a version, and run existing `scripts/check_versions.py` before/after implementation. Never invent missing versions. Keep game/dependency/schema versions and historical evidence separate. Version inconsistency blocks release.
 - Meaningful shared gameplay configuration belongs in server-authoritative sandbox settings with stable identifiers, localization, sensible defaults/bounds and existing-save behavior. Internal technical safety limits and UI coordinates remain internal.
 - Clients submit intent. The server validates, changes and persists shared state, then synchronizes results. Verify ownership, trust boundaries, persistence, join/reconnect and duplication risks. Stop affected implementation if safe authority cannot be established.
-- Gameplay release requires dedicated MP G7 PASS before G8. Offline/SP evidence does not prove dedicated behavior; missing evidence means G7 BLOCKED / NOT TESTED and G8 BLOCKED.
+- Gameplay release requires dedicated MP G7 PASS before stable-release G8. Offline/SP evidence does not prove dedicated behavior; missing evidence means G7 BLOCKED / NOT TESTED and G8 BLOCKED.
 - Use [VERIFIED] source, [TESTED] with environment, [INFERRED], [UNKNOWN] and [RUNTIME GATE] accurately. No automatic deployment, game/server launch or publication.
 
 ## Scope
@@ -128,7 +128,7 @@ Command `commit`: commit and push the current intended development iteration to 
 - Artifact cleanup is a distinct destructive operation, never implicit in build, deploy, publish, or version bump. Dry-run, produce retention plan and deletion ledger, protect current/newest/stable/ambiguous packages and provenance, and require explicit authorization before deletion; existing authorization in the session remains valid.
 - Feature branches + PRs before shared-main merge; owner B47ANCE may self-merge their own PR after required CI passes, while other developers require reviewer approval; protect main through GitHub settings when available. Review does not imply runtime validation.
 - Use .agents/skills/pz-repository-governance for repository setup, migrations, version policy, provenance, cleanup, and release-surface audits.
-- Gate definitions remain project-specific and unchanged: gameplay dedicated G7 PASS is required before G8. Alternative bundle gate numbering is not authoritative. Preserve historical labels and evidence; offline checks and SP tests never prove dedicated MP.
+- Gate definitions remain project-specific and unchanged: gameplay dedicated G7 PASS is required before stable-release G8. Alternative bundle gate numbering is not authoritative. Preserve historical labels and evidence; offline checks and SP tests never prove dedicated MP.
 
 ## Third-party clean-room review gate
 - Consult `pz-clean-room-research` before external-mod analysis, compatibility research or a borrowed-feature proposal. Record provenance, license/permissions, observed facts and independent design in the relevant project.
@@ -164,4 +164,11 @@ Command `commit`: commit and push the current intended development iteration to 
 
 ## Validated configuration updates
 The public B47ANCE/B47ANCED-Codex-Team repository supplies CI-validated main-branch updates approved either by owner self-merge or developer PR review. The locally trusted bootstrap validates the full manifest, checks the exact commit CI success, protects local drift, backs up managed files and rolls back failures. Local config and credentials are not updated. Newly fetched executable code is installed inert and never executed during that update. Bootstrap changes require manual review/reinstallation.
+
+## Workshop MP testing policy
+- Effective 2026-10-14: Workshop distribution may be needed before dedicated MP testing. An explicit publish request authorizes the selected existing item's Workshop MP test upload when dedicated evidence is missing. This overrides older rules that missing MP evidence alone blocks Workshop publication, including older project guidance.
+- G7 stays BLOCKED / NOT TESTED and stable-release G8 stays BLOCKED until required dedicated evidence exists. Upload success is distribution evidence, never MP PASS or stable-release approval.
+- All applicable offline, freshness, authority/security, Lua-only, version, packaging, integrity and provenance checks must pass. Failed checks or unsafe/unresolved authority block upload. No new item or visibility change without explicit authorization. Preserve existing item identity and uploader workflow.
+- Description and changenote must say "MP testing build - dedicated multiplayer NOT TESTED" and identify known limitations. Preserve prior package/provenance for recovery and record exact version, commit, hashes and Workshop ID. Test subscription/download, server startup, client join/rejoin, synchronization, persistence and restarts after upload. Server launch/modification requires separate authorization.
+- Details: installed hub docs/WORKSHOP_MP_TESTING.md. This policy change does not authorize an upload.
 <!-- END B47ANCED TEAM -->

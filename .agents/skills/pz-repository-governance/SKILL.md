@@ -15,3 +15,6 @@ Read the canonical shared guide at `%USERPROFILE%/.codex/AGENTS.md` and the acti
 7. Before any cleanup: dry-run, generate plan and protected-file ledger, preserve current/newest/stable/ambiguous builds and provenance, confirm explicit deletion authorization in the current session (do not ask again when already authorized); after cleanup verify hashes and produce a deletion ledger.
 8. For an authorized version iteration, commit and push on a feature branch, open PR for review; never rewrite history or force-push. If not possible, state blocker.
 9. Output concise findings, exact commands run, changed files, hashes/commit, verified GitHub visibility, and all untested gates.
+
+## Workshop test distribution exception
+Apply the Workshop MP testing policy in global AGENTS.md and installed hub docs/WORKSHOP_MP_TESTING.md. Missing dedicated MP evidence alone does not block an explicitly authorized labelled Workshop test upload. G7 remains NOT TESTED / BLOCKED and stable-release G8 remains BLOCKED; offline/authority/security/version/package failures still block upload. This skill does not itself authorize publication.

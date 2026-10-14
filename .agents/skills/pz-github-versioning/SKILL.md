@@ -22,3 +22,6 @@ Safety: Never force-push, delete branches, reset user changes, make repos privat
 
 ## Team branches and review
 Use a named feature/fix branch for team work and open a PR before merging shared main. In B47ANCE-owned repositories, owner B47ANCE may self-merge their own PR after required CI passes without approval from another developer or a temporary protection exception; other developers require reviewer approval. An explicit merge request authorizes this owner self-merge; never bypass required CI. Preserve the intended remote/upstream and unrelated user changes. A commit request authorizes the intended iteration commit/push; it does not authorize merging shared main, changing repository visibility or settings, or creating an unverified stable release. Prefer available CI and report missing gates.
+
+## Workshop test distribution exception
+Apply the Workshop MP testing policy in global AGENTS.md and installed hub docs/WORKSHOP_MP_TESTING.md. Missing dedicated MP evidence alone does not block an explicitly authorized labelled Workshop test upload. G7 remains NOT TESTED / BLOCKED and stable-release G8 remains BLOCKED; offline/authority/security/version/package failures still block upload. This skill does not itself authorize publication.

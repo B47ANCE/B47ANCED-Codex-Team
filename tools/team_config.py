@@ -97,8 +97,13 @@ def install(src,home,backup_base,initial=False,migrate=False,workspace=None,comm
       pathlib.Path(tmp).write_text(re.sub(pattern,lambda match:incoming.strip(),existing),encoding='utf-8')
      elif key not in old['managed']:
       pathlib.Path(tmp).write_text(existing.rstrip()+'\n\n'+incoming,encoding='utf-8')
-    if key=='workspace/AGENTS.md' and existed and key not in old['managed']:
-     pathlib.Path(tmp).write_text(dst.read_text(encoding='utf-8-sig').rstrip()+'\n\n'+source.read_text(encoding='utf-8'),encoding='utf-8')
+    if key=='workspace/AGENTS.md' and existed:
+     existing=dst.read_text(encoding='utf-8-sig');incoming=source.read_text(encoding='utf-8')
+     pattern=r'(?s)<!-- BEGIN B47ANCED WORKSPACE -->.*?<!-- END B47ANCED WORKSPACE -->'
+     if re.search(pattern,existing):
+      pathlib.Path(tmp).write_text(re.sub(pattern,lambda match:incoming.strip(),existing),encoding='utf-8')
+     elif key not in old['managed']:
+      pathlib.Path(tmp).write_text(existing.rstrip()+'\n\n'+incoming,encoding='utf-8')
     os.replace(tmp,dst)
    finally:
     if pathlib.Path(tmp).exists():pathlib.Path(tmp).unlink()

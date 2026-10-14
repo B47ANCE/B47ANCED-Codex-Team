@@ -15,6 +15,8 @@ class Consolidation(unittest.TestCase):
    self.assertTrue(guide.read_text(encoding='utf-8').startswith('Custom workspace instructions'));self.assertEqual(custom.read_text(),'custom')
    self.assertEqual(len(list((pathlib.Path(state['backup'])/'consolidated-skills').iterdir())),23)
    self.assertEqual(len(list((ws/'.agents/skills').iterdir())),1);m.check_drift(h)
+   first=guide.read_text(encoding='utf-8');m.install(root,h,b,False,False,ws)
+   self.assertEqual(first,guide.read_text(encoding='utf-8'))
  def test_custom_duplicate_blocks_without_loss(self):
   with tempfile.TemporaryDirectory() as td:
    h=pathlib.Path(td)/'home';b=pathlib.Path(td)/'backups';ws=pathlib.Path(td)/'Workspace';m.install(root,h,b,True);shutil.copytree(h/'.agents/skills',ws/'.agents/skills')

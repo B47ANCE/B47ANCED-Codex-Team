@@ -34,7 +34,7 @@ if(-not $commit){
  # A downloaded ZIP is accepted only when its validated manifest matches canonical main.
  $commit=(& gh.exe api repos/B47ANCE/B47ANCED-Codex-Team/commits/main --jq .sha).Trim()
  if($LASTEXITCODE -ne 0){throw 'Cannot establish canonical main commit'}
- $encoded=& gh.exe api 'repos/B47ANCE/B47ANCED-Codex-Team/contents/MANIFEST.sha256.json?ref=main' --jq .content
+ $encoded=& gh.exe api ('repos/B47ANCE/B47ANCED-Codex-Team/contents/MANIFEST.sha256.json?ref='+$commit) --jq .content
  if($LASTEXITCODE -ne 0){throw 'Cannot verify downloaded ZIP manifest'}
  $remoteBytes=[Convert]::FromBase64String(($encoded -join '').Replace("`n",'').Replace("`r",''))
  $sha=[Security.Cryptography.SHA256]::Create()

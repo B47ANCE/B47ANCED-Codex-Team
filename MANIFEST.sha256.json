@@ -65,7 +65,7 @@
   "tests/test_team_config.py": "d3f3fe48d9e3e539c3c858be592ddc3ea594b342a103f148eb5e8e989e1ee17e",
   "tools/Build-WorkshopDescription.py": "d8d0eafa1ccdf37b0244644831e2e847647f36ed6cb26022d9572e6ea4b41694",
   "tools/Connect-ModRepositories.ps1": "ef06a3425be6569c709f25b311e25f11e99bd73234a6f841f33865f615871ac3",
-  "tools/Install-CodexTeam.ps1": "d131fbf6c7b3f7748f257b15c76f22cf079ddcddffdc218a0d49eab253c149e3",
+  "tools/Install-CodexTeam.ps1": "9091b7843e686001405cbeedc74ffbf4f4b7a8b74bf02fb89f70b1453ba07e6c",
   "tools/README.md": "cfd4f99b0a91193a93a0a80598915880c91cd3daa8a1c8bbbbd3fbfdbb2fc010",
   "tools/Register-CodexTeamUpdater.ps1": "6c6e9cc8fb0b11c731aea173aef36e168413d8c082cb0de76bcbb4680d7bdf7e",
   "tools/Run-Update.ps1": "411849048eabb0243612aba6b7eec2cb0c01d5795d90b28175cde89320835472",

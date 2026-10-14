@@ -1,30 +1,115 @@
-# Set up the second and third developer
+# Developer setup, updates and rollback
 
-1. Install Codex, Git, Python 3.10+ and GitHub CLI. Authenticate locally with your own identity; never share credentials.
-2. Clone the canonical repository:
+Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
+[Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
+Links follow main and may advance beyond this document's configuration version, 13.2.0.
+
+## Prerequisites
+
+Install Codex, [Git for Windows](https://git-scm.com/downloads/win), [Python 3.10+](https://www.python.org/downloads/windows/) and [GitHub CLI](https://cli.github.com/). Enable Python's PATH option. Open a new PowerShell window:
 
 ```powershell
+git --version
+py -3 --version
+gh --version
+gh auth login --hostname github.com --git-protocol https --web
+gh auth status
+```
+
+Use your own Codex/GitHub identities, credentials and private machine settings.
+
+## Download: choose clone or ZIP
+
+Clone is preferred:
+
+```powershell
+New-Item -ItemType Directory -Force "$env:USERPROFILE\Desktop\PZ" | Out-Null
+Set-Location "$env:USERPROFILE\Desktop\PZ"
 git clone --branch main https://github.com/B47ANCE/B47ANCED-Codex-Team.git
-cd B47ANCED-Codex-Team
+Set-Location .\B47ANCED-Codex-Team
+git rev-parse HEAD
+Get-Content .\VERSION
 ```
 
-3. Review README, AGENTS and docs/SECURITY.md, then run:
+Alternatively, use a fresh extraction directory:
 
 ```powershell
-& ./tools/Setup-CodexTeam.ps1 -Workspace "$env:USERPROFILE/Desktop/PZ/Codex" -RepositoryRoot "$env:USERPROFILE/Desktop/PZ/Mods" -EnableUpdates
+New-Item -ItemType Directory -Force "$env:USERPROFILE\Desktop\PZ" | Out-Null
+Invoke-WebRequest -Uri "https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip" -OutFile "$env:USERPROFILE\Desktop\PZ\B47ANCED-Codex-Team-main.zip"
+Expand-Archive -LiteralPath "$env:USERPROFILE\Desktop\PZ\B47ANCED-Codex-Team-main.zip" -DestinationPath "$env:USERPROFILE\Desktop\PZ"
+Set-Location "$env:USERPROFILE\Desktop\PZ\B47ANCED-Codex-Team-main"
+Get-Content .\VERSION
 ```
 
-Choose your own paths. RepositoryRoot must exist and contain only intended mod folders; omit it for global-only setup. Python is discovered automatically; use `-PythonExe` for a nonstandard runtime. Existing untracked global/team files require explicit reviewed `-MigrateExisting`; custom global guide text and unrelated skills/config are preserved. Managed-file drift blocks updates.
+Review README.md, AGENTS.md and docs/SECURITY.md. Windows may block downloaded ZIP scripts. If necessary, after reviewing the package, unblock only its scripts:
 
-Alternatively download the main-branch ZIP from GitHub, extract it and run the same setup command inside the extracted folder. The installer validates every file and requires the ZIP manifest to match canonical main before assigning its commit SHA. A feature-branch or stale ZIP is rejected; cloning remains the preferred workflow.
+```powershell
+Get-ChildItem .\tools -File -Filter *.ps1 | Unblock-File
+```
 
-Windows may mark ZIP-extracted scripts as downloaded. Review before running; prefer the clone workflow. If unblocking is necessary, unblock only the reviewed package scripts, never relax the machine policy globally.
+Never relax machine-wide execution policy. ZIP setup verifies its manifest against canonical main; stale or feature-branch ZIPs are rejected. Download again if main moved.
 
-4. Open a new Codex chat and confirm 23 global skills are visible. Workspace guides reference global policy; team skills are not copied into every project. Custom project rules and unrelated project-local skills remain.
-5. Inspect `.codex/b47anced-team-state.json` and `.codex/b47anced-team-tools/last-update.log` under your user profile. The sign-in task uses least privilege, exact-main-commit CI, manifest/drift checks and backups. Bootstrap updates require manual reviewed setup; newly downloaded scripts are not run during updates.
+## Install and enable automatic sign-in updates
 
-Local SteamCMD/game/mod paths, SSH profiles and developer settings remain private. Existing config is not overwritten. No mod publication, game launch or dedicated-server modification occurs. Offline checks do not prove app activation or PZ runtime. Main requires reviewer approval and CI before changes ship.
+Choose your own actual paths. The mod root must exist and contain only intended project folders. Omit RepositoryRoot for global-only setup.
 
-## Isolated validation
+```powershell
+$teamWorkspace = "$env:USERPROFILE\Desktop\PZ\Codex"
+$modRepositories = "$env:USERPROFILE\Desktop\PZ\Mods"
+New-Item -ItemType Directory -Force $modRepositories | Out-Null
+& .\tools\Setup-CodexTeam.ps1 -Workspace $teamWorkspace -RepositoryRoot $modRepositories -EnableUpdates
+```
 
-Setup and validators accept -HomeDirectory for a disposable installation target; omit it for your normal Windows profile. Scheduled tasks pass the chosen target explicitly. Do not change USERPROFILE or reuse another developer's credentials to test. Desktop-only Codex activation is a separate manual gate, not a required CLI check.
+Python is discovered automatically; supply `-PythonExe` for a nonstandard runtime. Existing unmanaged team files require reviewed `-MigrateExisting`; rerun setup with that switch only after inspection. Customized managed files block updates. Custom guide text, project instructions, unrelated skills and local config remain independent. Never edit managed team files to store machine-specific settings.
+
+## Verify
+
+```powershell
+& .\tools\Test-CodexTeamInstall.ps1 -PackageRoot . -Installed
+& .\tools\Test-ModRepositories.ps1 -RepositoryRoot $modRepositories
+Get-ScheduledTask -TaskName B47ANCED-Codex-Update
+Get-Content "$env:USERPROFILE\.codex\b47anced-team-state.json"
+```
+
+Open a new Codex chat and confirm 23 global team skills. Desktop activation is a separate manual check; absence of the Codex CLI is not a failure.
+
+## Updates
+
+The least-privilege sign-in task applies validated main updates. Updates check the full manifest, exact-commit CI, local drift and version progression; create a backup and roll back failed transactions. Downloaded executable code is installed inert. Bootstrap changes need manual review/setup.
+
+```powershell
+# Check only:
+& "$env:USERPROFILE\.codex\b47anced-team-tools\Update-CodexTeam.ps1" -CheckOnly
+# Apply:
+& "$env:USERPROFILE\.codex\b47anced-team-tools\Update-CodexTeam.ps1"
+# Inspect scheduled results:
+Get-ScheduledTaskInfo -TaskName B47ANCED-Codex-Update
+Get-Content "$env:USERPROFILE\.codex\b47anced-team-tools\last-update.log"
+```
+
+## Manual rollback of a completed update
+
+Run the new rollback command from a **manually reviewed checkout/extracted package** containing tools/Restore-CodexTeam.ps1. Do not run automatically downloaded hub tools without review. This command can restore an earlier 13.1.x update backup; a first installation with no previous-state.json cannot be rolled back this way.
+
+From that reviewed repository directory:
+
+```powershell
+# Preview checks without restoring:
+& .\tools\Restore-CodexTeam.ps1 -CheckOnly
+# Pause sign-in updates so they do not immediately reapply main:
+Disable-ScheduledTask -TaskName B47ANCED-Codex-Update
+# Validate again, create a recovery backup and restore:
+& .\tools\Restore-CodexTeam.ps1
+```
+
+Rollback shares the update lock and refuses current managed drift, corrupt/missing backup files, linked paths, unsafe ownership or workspace changes. It restores the previous state and owned files only. New managed files are archived in a recovery backup before removal; directories are never recursively deleted. Local config, credentials, unrelated skills, project rules and trusted bootstrap remain untouched. It does not restore historical duplicate workspace skills. Backups missing prior ownership evidence need manual review. Keep every backup: integrity checks verify saved files against prior recorded hashes, not an independent signature against deliberate local tampering.
+
+If restoration fails, it attempts to restore the current transaction from the recovery backup and returns an error. Keep error output and backups; do not retry blindly. After resolving the cause and deciding to resume main updates:
+
+```powershell
+Enable-ScheduledTask -TaskName B47ANCED-Codex-Update
+```
+
+Re-enabling permits the next sign-in to install newer validated main again. Restore-CodexTeam.ps1 accepts -HomeDirectory only for deliberate isolated testing; normal users omit it. Do not change USERPROFILE.
+
+No setup/update/rollback command publishes mods, launches PZ or modifies a dedicated server. Offline setup tests do not prove PZ runtime correctness.

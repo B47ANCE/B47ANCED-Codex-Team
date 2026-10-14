@@ -15,8 +15,22 @@ if(-not $PythonExe){
 $exe=$PythonExe; $prefix=@()
 & $exe @prefix (Join-Path $root 'tools/team_config.py') validate --source $root
 if ($LASTEXITCODE -ne 0) { throw 'Package validation failed' }
-$commit=(& git.exe -C $root rev-parse HEAD).Trim()
-if($LASTEXITCODE -ne 0){throw 'Source commit required'}
+$commit=''
+try {
+ $commit=(& git.exe -C $root rev-parse HEAD 2>$null).Trim()
+ if($LASTEXITCODE -ne 0){$commit=''}
+} catch {$commit=''}
+if(-not $commit){
+ # A downloaded ZIP is accepted only when its validated manifest matches canonical main.
+ $commit=(& gh.exe api repos/B47ANCE/B47ANCED-Codex-Team/commits/main --jq .sha).Trim()
+ if($LASTEXITCODE -ne 0){throw 'Cannot establish canonical main commit'}
+ $encoded=& gh.exe api 'repos/B47ANCE/B47ANCED-Codex-Team/contents/MANIFEST.sha256.json?ref=main' --jq .content
+ if($LASTEXITCODE -ne 0){throw 'Cannot verify downloaded ZIP manifest'}
+ $remoteBytes=[Convert]::FromBase64String(($encoded -join '').Replace("`n",'').Replace("`r",''))
+ $sha=[Security.Cryptography.SHA256]::Create()
+ try {$remoteHash=[BitConverter]::ToString($sha.ComputeHash($remoteBytes)).Replace('-','').ToLower()} finally {$sha.Dispose()}
+ if((Get-FileHash -LiteralPath (Join-Path $root 'MANIFEST.sha256.json')).Hash.ToLower() -ne $remoteHash){throw 'ZIP does not match canonical main; use the reviewed clone instead'}
+}
 $args=@((Join-Path $root 'tools/team_config.py'),'install','--source',$root,'--home',$env:USERPROFILE,'--commit',$commit)
 if($Initial){$args+='--initial'}
 if($MigrateExisting){$args+='--migrate'}

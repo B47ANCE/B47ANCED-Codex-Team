@@ -16,6 +16,8 @@ cd B47ANCED-Codex-Team
 
 Choose your own paths. RepositoryRoot must exist and contain only intended mod folders; omit it for global-only setup. Python is discovered automatically; use `-PythonExe` for a nonstandard runtime. Existing untracked global/team files require explicit reviewed `-MigrateExisting`; custom global guide text and unrelated skills/config are preserved. Managed-file drift blocks updates.
 
+Alternatively download the main-branch ZIP from GitHub, extract it and run the same setup command inside the extracted folder. The installer validates every file and requires the ZIP manifest to match canonical main before assigning its commit SHA. A feature-branch or stale ZIP is rejected; cloning remains the preferred workflow.
+
 4. Open a new Codex chat and confirm 23 global skills are visible. Workspace guides reference global policy; team skills are not copied into every project. Custom project rules and unrelated project-local skills remain.
 5. Inspect `.codex/b47anced-team-state.json` and `.codex/b47anced-team-tools/last-update.log` under your user profile. The sign-in task uses least privilege, exact-main-commit CI, manifest/drift checks and backups. Bootstrap updates require manual reviewed setup; newly downloaded scripts are not run during updates.
 

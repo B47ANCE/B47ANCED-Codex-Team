@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.4.3 - 2026-10-14
+- Trace all 21 remaining candidates through packaged Lua binding construction: 19 registered class methods and two annotated globals. Verification is source exposure only; invocation and runtime remain NOT_TESTED.
+- Keep FluidContainer.getFluidAmount UNKNOWN after checking the hierarchy, interfaces and annotation aliases; no packaged binding was found.
+- Preserve prior behavior limits and add exposure-route regression checks. Shared catalog: 92 source observations/routes VERIFIED and one UNKNOWN; no runtime promotion.
+
 ## 13.4.2 - 2026-10-14
 - Deep-review all 70 unresolved API records: 48 now have bounded source-verified receiver/call observations, 21 remain inferred and one fluid API conflict remains unknown. All 93 shared records remain runtime NOT_TESTED.
 - Replace unrelated receiver/name matches, record packaged descriptors and available loose-class metadata, and document negative/conflicting evidence without claiming Lua access from native signatures alone.

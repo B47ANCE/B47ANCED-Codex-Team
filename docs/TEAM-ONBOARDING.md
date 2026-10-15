@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.4.2.
+Links follow main and may advance beyond this document's configuration version, 13.4.3.
 
 ## Prerequisites
 

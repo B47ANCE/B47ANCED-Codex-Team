@@ -1,0 +1,635 @@
+{
+  "steam_build": "25485521",
+  "game_version": "UNKNOWN",
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "evidence_type": "Reviewed offline static exposure trace; no JVM/game classes loaded or executed",
+  "initializer": {
+    "owner": "zombie/Lua/LuaManager",
+    "sha256": "dcaad0082ca27a15550c7d0a6e14b3aeb71f634a14f32123dec620df180c646d",
+    "method": "init",
+    "exposeAll_offset": 323
+  },
+  "exposer": {
+    "owner": "zombie/Lua/LuaManager$Exposer",
+    "sha256": "9727656efbc06d7772661775f7a6885c7976b9e09472d7b128a3d5638ea68efa",
+    "recursive_export_offset": 7008,
+    "global_export_offset": 7022
+  },
+  "kahlua": {
+    "owner": "se/krka/kahlua/integration/expose/LuaJavaClassExposer",
+    "sha256": "4c8dc24c94de2cb814741f135d7d9baf8bc09062dd821d3c56cc4b09f322c0bd",
+    "filters": {
+      "exposeMethods": {
+        "public_filter_offsets": [
+          44
+        ],
+        "static_filter_offsets": [
+          52
+        ],
+        "hidden_filter_offsets": [
+          36
+        ],
+        "registration_offsets": [
+          65
+        ]
+      },
+      "exposeStatics": {
+        "public_filter_offsets": [
+          111,
+          189,
+          310
+        ],
+        "static_filter_offsets": [
+          119,
+          197
+        ],
+        "hidden_filter_offsets": [
+          103,
+          181,
+          302
+        ],
+        "registration_offsets": [
+          133
+        ]
+      }
+    },
+    "notes": "Public instance/static methods exported under reflected names; HiddenFromLua methods excluded. Global exporter consumes name/global annotations. Ignored Object monitor methods do not match these targets. Existing environments and classloader transformations remain runtime questions."
+  },
+  "findings": [
+    {
+      "symbol": "getTotalPowerUsing",
+      "owner": "zombie/iso/objects/IsoGenerator",
+      "route": "instance_method",
+      "binding": "receiver:getTotalPowerUsing",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 2847
+      },
+      "method_metadata": [
+        {
+          "name": "getTotalPowerUsing",
+          "descriptor": "()F",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "043ed34899b9fa6eead1d08841c018419a183f4083bcb906154bc480f8e8c86d",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getServerTimeMills",
+      "owner": "zombie/GameTime",
+      "route": "static_class",
+      "binding": "GameTime.getServerTimeMills",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 5311
+      },
+      "method_metadata": [
+        {
+          "name": "getServerTimeMills",
+          "descriptor": "()J",
+          "public": true,
+          "static": true,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "loose_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getModFileWriter",
+      "owner": "zombie/Lua/LuaManager$GlobalObject",
+      "route": "annotated_global",
+      "binding": "getModFileWriter",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 7022
+      },
+      "method_metadata": [
+        {
+          "name": "getModFileWriter",
+          "descriptor": "(Ljava/lang/String;Ljava/lang/String;ZZ)Lzombie/Lua/LuaManager$GlobalObject$LuaFileWriter;",
+          "public": true,
+          "static": true,
+          "annotations": [
+            {
+              "type": "Lse/krka/kahlua/integration/annotations/LuaMethod;",
+              "values": {
+                "name": "getModFileWriter",
+                "global": 1
+              }
+            }
+          ]
+        }
+      ],
+      "packaged_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getCurrentSaveName",
+      "owner": "zombie/Lua/LuaManager$GlobalObject",
+      "route": "annotated_global",
+      "binding": "getCurrentSaveName",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 7022
+      },
+      "method_metadata": [
+        {
+          "name": "getCurrentSaveName",
+          "descriptor": "()Ljava/lang/String;",
+          "public": true,
+          "static": true,
+          "annotations": [
+            {
+              "type": "Lse/krka/kahlua/integration/annotations/LuaMethod;",
+              "values": {
+                "name": "getCurrentSaveName",
+                "global": 1
+              }
+            }
+          ]
+        }
+      ],
+      "packaged_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "setAge",
+      "owner": "zombie/characters/animals/datas/AnimalData",
+      "route": "instance_method",
+      "binding": "receiver:setAge",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 747
+      },
+      "method_metadata": [
+        {
+          "name": "setAge",
+          "descriptor": "(I)V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getOwner",
+      "owner": "zombie/characters/IsoZombie",
+      "route": "instance_method",
+      "binding": "receiver:getOwner",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 894
+      },
+      "method_metadata": [
+        {
+          "name": "getOwner",
+          "descriptor": "()Lzombie/core/raknet/UdpConnection;",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "doSprinter",
+      "owner": "zombie/characters/IsoZombie",
+      "route": "instance_method",
+      "binding": "receiver:doSprinter",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 894
+      },
+      "method_metadata": [
+        {
+          "name": "doSprinter",
+          "descriptor": "()V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "doFastShambler",
+      "owner": "zombie/characters/IsoZombie",
+      "route": "instance_method",
+      "binding": "receiver:doFastShambler",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 894
+      },
+      "method_metadata": [
+        {
+          "name": "doFastShambler",
+          "descriptor": "()V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "doShambler",
+      "owner": "zombie/characters/IsoZombie",
+      "route": "instance_method",
+      "binding": "receiver:doShambler",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 894
+      },
+      "method_metadata": [
+        {
+          "name": "doShambler",
+          "descriptor": "()V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getSpeedType",
+      "owner": "zombie/characters/IsoZombie",
+      "route": "instance_method",
+      "binding": "receiver:getSpeedType",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 894
+      },
+      "method_metadata": [
+        {
+          "name": "getSpeedType",
+          "descriptor": "()I",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "makeInactive",
+      "owner": "zombie/characters/IsoZombie",
+      "route": "instance_method",
+      "binding": "receiver:makeInactive",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 894
+      },
+      "method_metadata": [
+        {
+          "name": "makeInactive",
+          "descriptor": "(Z)V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "setFrameSpeedPerFrame",
+      "owner": "zombie/iso/sprite/IsoSpriteInstance",
+      "route": "instance_method",
+      "binding": "receiver:setFrameSpeedPerFrame",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 3022
+      },
+      "method_metadata": [
+        {
+          "name": "setFrameSpeedPerFrame",
+          "descriptor": "(F)V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "a1babc9ed32ea54583f871539657919ce96a802fd62b01c035a03c82d4c2b9c4",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getEquipParent",
+      "owner": "zombie/inventory/InventoryItem",
+      "route": "instance_method",
+      "binding": "receiver:getEquipParent",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 2581
+      },
+      "method_metadata": [
+        {
+          "name": "getEquipParent",
+          "descriptor": "()Lzombie/characters/IsoGameCharacter;",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getId",
+      "owner": "zombie/iso/areas/SafeHouse",
+      "route": "instance_method",
+      "binding": "receiver:getId",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 2686
+      },
+      "method_metadata": [
+        {
+          "name": "getId",
+          "descriptor": "()Ljava/lang/String;",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "217d78299ea10c5d892b7ef36e8b39016f390941c57a8957fc01cb4964274c2d",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "shouldUpdateInWorld",
+      "owner": "zombie/inventory/InventoryItem",
+      "route": "instance_method",
+      "binding": "receiver:shouldUpdateInWorld",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 2581
+      },
+      "method_metadata": [
+        {
+          "name": "shouldUpdateInWorld",
+          "descriptor": "()Z",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "getThumpableFor",
+      "owner": "zombie/iso/IsoObject",
+      "route": "instance_method",
+      "binding": "receiver:getThumpableFor",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 3400
+      },
+      "method_metadata": [
+        {
+          "name": "getThumpableFor",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;)Lzombie/iso/objects/interfaces/Thumpable;",
+          "public": true,
+          "static": false,
+          "annotations": []
+        },
+        {
+          "name": "getThumpableFor",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;Lzombie/inventory/types/HandWeapon;)Lzombie/iso/objects/interfaces/Thumpable;",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "Thump",
+      "owner": "zombie/iso/IsoObject",
+      "route": "instance_method",
+      "binding": "receiver:Thump",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 3400
+      },
+      "method_metadata": [
+        {
+          "name": "Thump",
+          "descriptor": "(Lzombie/iso/IsoMovingObject;I)V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "AddXPNoMultiplier",
+      "owner": "zombie/characters/IsoGameCharacter$XP",
+      "route": "instance_method",
+      "binding": "receiver:AddXPNoMultiplier",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 810
+      },
+      "method_metadata": [
+        {
+          "name": "AddXPNoMultiplier",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;F)V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+      "loose_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "request",
+      "owner": "zombie/world/moddata/ModData",
+      "route": "static_class",
+      "binding": "ModData.request",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 6648
+      },
+      "method_metadata": [
+        {
+          "name": "request",
+          "descriptor": "(Ljava/lang/String;)V",
+          "public": true,
+          "static": true,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "5a19f07f06db59c8e2c074e303c3eb9a08e860b09e54e2bba2598f154a1cb808",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "setConditionLowerChance",
+      "owner": "zombie/inventory/types/Clothing",
+      "route": "instance_method",
+      "binding": "receiver:setConditionLowerChance",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 2448
+      },
+      "method_metadata": [
+        {
+          "name": "setConditionLowerChance",
+          "descriptor": "(I)V",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "a32e0ffb3f15b2dca12b17556ca5dbc9d515bd02efdc83ac24ba6e31dd598f1d",
+      "loose_sha256": null,
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    },
+    {
+      "symbol": "helmetFall",
+      "owner": "zombie/characters/IsoGameCharacter",
+      "route": "instance_method",
+      "binding": "receiver:helmetFall",
+      "registration": {
+        "method": "exposeAll",
+        "offset": 726
+      },
+      "method_metadata": [
+        {
+          "name": "helmetFall",
+          "descriptor": "(Z)Z",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "exposure_claim": "SOURCE_ROUTE_VERIFIED",
+      "invocation": "NOT_TESTED",
+      "runtime_status": "NOT_TESTED",
+      "limits": "Binding construction source path only; initialized environment, receiver lifetime, argument conversion, overload dispatch, return usability, authority and runtime safety not verified."
+    }
+  ],
+  "fluid_conflict": {
+    "status": "UNKNOWN",
+    "hierarchy": [
+      {
+        "name": "zombie/entity/components/fluids/FluidContainer",
+        "sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+        "parent": "zombie/entity/Component",
+        "interfaces": [],
+        "getFluidAmount_declared": false,
+        "getFluidAmount_annotation_alias": false,
+        "getAmount_descriptors": [
+          "()F"
+        ]
+      },
+      {
+        "name": "zombie/entity/Component",
+        "sha256": "8702b1a682853b883c2aaa30c71112b31238f9b4968d91bf61617fc99b2c9159",
+        "parent": "java/lang/Object",
+        "interfaces": [],
+        "getFluidAmount_declared": false,
+        "getFluidAmount_annotation_alias": false,
+        "getAmount_descriptors": []
+      }
+    ],
+    "packaged_binding": "NOT_FOUND on inspected FluidContainer hierarchy; no annotation alias",
+    "limits": "Does not prove absence under arbitrary runtime/injected/computed metatable changes; shipped caller remains conflicting evidence. getAmount is a distinct fluid-component method, not permission for a blind substitution."
+  }
+}

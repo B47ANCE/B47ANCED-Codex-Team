@@ -19,7 +19,7 @@ class ApiLibrary(unittest.TestCase):
     def test_curated_catalog_valid(self):
         data = m.read(m.CURATED)
         self.assertEqual(len(data["records"]), 93)
-        self.assertEqual({r["status"] for r in data["records"]}, {"VERIFIED", "INFERRED", "UNKNOWN"})
+        self.assertEqual({r["status"] for r in data["records"]}, {"VERIFIED", "UNKNOWN"})
         self.assertTrue(all(r["runtime_status"] == "NOT_TESTED" for r in data["records"]))
 
     def test_build_and_hash_rechecks_never_promote_runtime(self):
@@ -112,7 +112,7 @@ class ApiLibrary(unittest.TestCase):
 class SharedUncertainty(unittest.TestCase):
     def test_hash_match_does_not_promote_inferred_or_unknown(self):
         for status in ("INFERRED", "UNKNOWN"):
-            entry = copy.deepcopy(next(r for r in m.read(m.CURATED)["records"] if r["status"] == status))
+            entry = copy.deepcopy(m.read(m.CURATED)["records"][0]); entry["status"] = status
             with tempfile.TemporaryDirectory() as td:
                 root = pathlib.Path(td)
                 entry["evidence"] = [copy.deepcopy(m.read(m.CURATED)["records"][0]["evidence"][0])]
@@ -125,16 +125,6 @@ class SharedUncertainty(unittest.TestCase):
                 self.assertEqual(result["record"]["runtime_status"], "NOT_TESTED")
 
 class DeepAuditEvidence(unittest.TestCase):
-    def test_native_only_refinements_remain_inferred(self):
-        data = m.read(m.CURATED)
-        records = [r for r in data["records"] if r["signature_scope"].startswith("native_descriptor_only")]
-        self.assertTrue(records)
-        for entry in records:
-            self.assertEqual(entry["status"], "INFERRED")
-            self.assertEqual(entry["runtime_status"], "NOT_TESTED")
-            self.assertFalse(any(p["kind"] == "vanilla_lua" for p in entry["evidence"]))
-            self.assertTrue(any(p["kind"] == "native_inspection" for p in entry["evidence"]))
-
     def test_conflicting_receiver_is_not_verified_from_name_match(self):
         record = next(r for r in m.read(m.CURATED)["records"] if r["symbol"] == "getFluidAmount")
         self.assertEqual(record["status"], "UNKNOWN")
@@ -157,3 +147,38 @@ class DeepAuditEvidence(unittest.TestCase):
             self.assertIn("vanilla_lua", kinds)
             self.assertIn("native_inspection", kinds)
             self.assertTrue(any(r["public"] for r in metadata[record["symbol"]]["methods"]))
+
+class ExposureRoutes(unittest.TestCase):
+    def test_source_routes_require_reviewed_visibility_and_registration(self):
+        report = json.loads((m.CURATED.parent / "lua-exposure-25485521.json").read_text())
+        routes = {r["symbol"]: r for r in report["findings"]}
+        records = [r for r in m.read(m.CURATED)["records"] if r["signature_scope"].startswith("verified_source_exposure_route")]
+        self.assertEqual(len(records), 21)
+        for record in records:
+            row = routes[record["symbol"]]
+            self.assertEqual(record["status"], "VERIFIED")
+            self.assertEqual(record["runtime_status"], "NOT_TESTED")
+            self.assertEqual(row["invocation"], "NOT_TESTED")
+            self.assertTrue(row["registration"])
+            self.assertTrue(all(x["public"] for x in row["method_metadata"]))
+            self.assertFalse(any(a["type"].endswith("/HiddenFromLua;") for x in row["method_metadata"] for a in x["annotations"]))
+            proof = next(p for p in record["evidence"] if p["path"].endswith("lua-exposure-25485521.json"))
+            self.assertEqual(proof["sha256"], hashlib.sha256((m.CURATED.parent / "lua-exposure-25485521.json").read_bytes()).hexdigest())
+
+    def test_annotated_globals_and_static_clock_are_distinct(self):
+        report = json.loads((m.CURATED.parent / "lua-exposure-25485521.json").read_text())
+        rows = {r["symbol"]: r for r in report["findings"]}
+        for symbol in ("getModFileWriter", "getCurrentSaveName"):
+            row = rows[symbol]
+            self.assertEqual(row["route"], "annotated_global")
+            annotations = row["method_metadata"][0]["annotations"]
+            self.assertTrue(any(a["values"].get("global") == 1 and a["values"].get("name") == symbol for a in annotations))
+        self.assertEqual(rows["getServerTimeMills"]["route"], "static_class")
+        self.assertEqual(rows["getServerTimeMills"]["binding"], "GameTime.getServerTimeMills")
+
+    def test_signature_only_evidence_still_cannot_prove_exposure(self):
+        entry = copy.deepcopy(next(r for r in m.read(m.CURATED)["records"] if r["signature_scope"].startswith("verified_source_exposure_route")))
+        entry["evidence"] = [p for p in entry["evidence"] if p["kind"] == "native_inspection"]
+        with self.assertRaises(ValueError): m.validate({"schema": 1, "records": [entry]})
+        entry["status"] = "INFERRED"
+        m.validate({"schema": 1, "records": [entry]})

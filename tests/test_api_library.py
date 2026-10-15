@@ -123,3 +123,37 @@ class SharedUncertainty(unittest.TestCase):
                 self.assertEqual(result["reuse"], "SOURCE_HASH_MATCH")
                 self.assertEqual(result["record"]["status"], status)
                 self.assertEqual(result["record"]["runtime_status"], "NOT_TESTED")
+
+class DeepAuditEvidence(unittest.TestCase):
+    def test_native_only_refinements_remain_inferred(self):
+        data = m.read(m.CURATED)
+        records = [r for r in data["records"] if r["signature_scope"].startswith("native_descriptor_only")]
+        self.assertTrue(records)
+        for entry in records:
+            self.assertEqual(entry["status"], "INFERRED")
+            self.assertEqual(entry["runtime_status"], "NOT_TESTED")
+            self.assertFalse(any(p["kind"] == "vanilla_lua" for p in entry["evidence"]))
+            self.assertTrue(any(p["kind"] == "native_inspection" for p in entry["evidence"]))
+
+    def test_conflicting_receiver_is_not_verified_from_name_match(self):
+        record = next(r for r in m.read(m.CURATED)["records"] if r["symbol"] == "getFluidAmount")
+        self.assertEqual(record["status"], "UNKNOWN")
+        self.assertEqual(record["runtime_status"], "NOT_TESTED")
+        report = json.loads((m.CURATED.parent / "native-metadata-25485521.json").read_text())
+        metadata = next(r for r in report["findings"] if r["symbol"] == "getFluidAmount")
+        self.assertEqual(metadata["methods"], [])
+        self.assertIsNone(metadata["declaring_class"])
+        self.assertTrue(metadata["alternative_IsoObject_methods"])
+
+    def test_observed_refinements_have_source_and_public_native_correspondence(self):
+        report = json.loads((m.CURATED.parent / "native-metadata-25485521.json").read_text())
+        metadata = {r["symbol"]: r for r in report["findings"]}
+        for record in m.read(m.CURATED)["records"]:
+            if not record["signature_scope"].startswith("observed_vanilla_call; contextual"):
+                continue
+            self.assertEqual(record["status"], "VERIFIED")
+            self.assertEqual(record["runtime_status"], "NOT_TESTED")
+            kinds = {p["kind"] for p in record["evidence"]}
+            self.assertIn("vanilla_lua", kinds)
+            self.assertIn("native_inspection", kinds)
+            self.assertTrue(any(r["public"] for r in metadata[record["symbol"]]["methods"]))

@@ -1,0 +1,2758 @@
+{
+  "steam_build": "25485521",
+  "game_version": "UNKNOWN",
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "binary_line_convention": "Evidence [1,1] on projectzomboid.jar denotes binary metadata, not textual line numbers.",
+  "scope": "Offline metadata inspection only; classes were never loaded or executed. Descriptors/public flags do not prove Lua exposure. Only selected callers are source verified. Hierarchies and available loose-class declared methods are recorded separately; no classloader precedence, injected transformations or effective process behavior is certified.",
+  "findings": [
+    {
+      "symbol": "getMonth",
+      "receiver": "zombie/GameTime",
+      "declaring_class": "zombie/GameTime",
+      "methods": [
+        {
+          "name": "getMonth",
+          "descriptor": "()I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "loose_class_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/GameTime",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+          "loose_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getMonth",
+              "descriptor": "()I",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getYear",
+      "receiver": "zombie/GameTime",
+      "declaring_class": "zombie/GameTime",
+      "methods": [
+        {
+          "name": "getYear",
+          "descriptor": "()I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "loose_class_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/GameTime",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+          "loose_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getYear",
+              "descriptor": "()I",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getDay",
+      "receiver": "zombie/GameTime",
+      "declaring_class": "zombie/GameTime",
+      "methods": [
+        {
+          "name": "getDay",
+          "descriptor": "()I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "loose_class_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/GameTime",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+          "loose_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getDay",
+              "descriptor": "()I",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "daysInMonth",
+      "receiver": "zombie/GameTime",
+      "declaring_class": "zombie/GameTime",
+      "methods": [
+        {
+          "name": "daysInMonth",
+          "descriptor": "(II)I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "loose_class_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/GameTime",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+          "loose_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "daysInMonth",
+              "descriptor": "(II)I",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getWorldAgeHours",
+      "receiver": "zombie/GameTime",
+      "declaring_class": "zombie/GameTime",
+      "methods": [
+        {
+          "name": "getWorldAgeHours",
+          "descriptor": "()D",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "loose_class_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/GameTime",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+          "loose_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getWorldAgeHours",
+              "descriptor": "()D",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getTotalPowerUsing",
+      "receiver": "zombie/iso/objects/IsoGenerator",
+      "declaring_class": "zombie/iso/objects/IsoGenerator",
+      "methods": [
+        {
+          "name": "getTotalPowerUsing",
+          "descriptor": "()F",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "043ed34899b9fa6eead1d08841c018419a183f4083bcb906154bc480f8e8c86d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/objects/IsoGenerator",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "043ed34899b9fa6eead1d08841c018419a183f4083bcb906154bc480f8e8c86d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getServerTimeMills",
+      "receiver": "zombie/GameTime",
+      "declaring_class": "zombie/GameTime",
+      "methods": [
+        {
+          "name": "getServerTimeMills",
+          "descriptor": "()J",
+          "public": true,
+          "static": true
+        }
+      ],
+      "packaged_class_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+      "loose_class_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/GameTime",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "ec030ac26790d8c06712c3e1d5935bb29cc816ac3b6f1ea55b06ebeccb7e7125",
+          "loose_sha256": "3996064c908602780345837dc1f6afc78e302f96fe15ff4af62e6845c1595837",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getServerTimeMills",
+              "descriptor": "()J",
+              "public": true,
+              "static": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getModFileWriter",
+      "receiver": "zombie/Lua/LuaManager$GlobalObject",
+      "declaring_class": "zombie/Lua/LuaManager$GlobalObject",
+      "methods": [
+        {
+          "name": "getModFileWriter",
+          "descriptor": "(Ljava/lang/String;Ljava/lang/String;ZZ)Lzombie/Lua/LuaManager$GlobalObject$LuaFileWriter;",
+          "public": true,
+          "static": true
+        }
+      ],
+      "packaged_class_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/Lua/LuaManager$GlobalObject",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getCurrentSaveName",
+      "receiver": "zombie/Lua/LuaManager$GlobalObject",
+      "declaring_class": "zombie/Lua/LuaManager$GlobalObject",
+      "methods": [
+        {
+          "name": "getCurrentSaveName",
+          "descriptor": "()Ljava/lang/String;",
+          "public": true,
+          "static": true
+        }
+      ],
+      "packaged_class_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/Lua/LuaManager$GlobalObject",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getAge",
+      "receiver": "zombie/characters/animals/datas/AnimalData",
+      "declaring_class": "zombie/characters/animals/datas/AnimalData",
+      "methods": [
+        {
+          "name": "getAge",
+          "descriptor": "()I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/animals/datas/AnimalData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "setAge",
+      "receiver": "zombie/characters/animals/datas/AnimalData",
+      "declaring_class": "zombie/characters/animals/datas/AnimalData",
+      "methods": [
+        {
+          "name": "setAge",
+          "descriptor": "(I)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/animals/datas/AnimalData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getWeight",
+      "receiver": "zombie/characters/animals/datas/AnimalData",
+      "declaring_class": "zombie/characters/animals/datas/AnimalData",
+      "methods": [
+        {
+          "name": "getWeight",
+          "descriptor": "()F",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/animals/datas/AnimalData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "setWeight",
+      "receiver": "zombie/characters/animals/datas/AnimalData",
+      "declaring_class": "zombie/characters/animals/datas/AnimalData",
+      "methods": [
+        {
+          "name": "setWeight",
+          "descriptor": "(F)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/animals/datas/AnimalData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "setAttachedPlayer",
+      "receiver": "zombie/characters/animals/datas/AnimalData",
+      "declaring_class": "zombie/characters/animals/datas/AnimalData",
+      "methods": [
+        {
+          "name": "setAttachedPlayer",
+          "descriptor": "(Lzombie/characters/IsoPlayer;)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/animals/datas/AnimalData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "83682360c981361cdb0885fb4615578a681592ed71e2d5c6b3ab25abf050fbb5",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getUsername",
+      "receiver": "zombie/characters/IsoPlayer",
+      "declaring_class": "zombie/characters/IsoPlayer",
+      "methods": [
+        {
+          "name": "getUsername",
+          "descriptor": "()Ljava/lang/String;",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "getUsername",
+          "descriptor": "(Ljava/lang/Boolean;)Ljava/lang/String;",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "getUsername",
+          "descriptor": "(Ljava/lang/Boolean;Ljava/lang/Boolean;)Ljava/lang/String;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "loose_class_sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoPlayer",
+          "parent": "zombie/characters/IsoLivingCharacter",
+          "packaged_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+          "loose_sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getUsername",
+              "descriptor": "()Ljava/lang/String;",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "getUsername",
+              "descriptor": "(Ljava/lang/Boolean;)Ljava/lang/String;",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "getUsername",
+              "descriptor": "(Ljava/lang/Boolean;Ljava/lang/Boolean;)Ljava/lang/String;",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoLivingCharacter",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "04398e7fee60de3edc44ea5a908fbbbb1862743bb1cc05b075d525d6fdc55b55",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getOnlineID",
+      "receiver": "zombie/characters/animals/IsoAnimal",
+      "declaring_class": "zombie/characters/IsoPlayer",
+      "methods": [
+        {
+          "name": "getOnlineID",
+          "descriptor": "()S",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+      "loose_class_sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/animals/IsoAnimal",
+          "parent": "zombie/characters/IsoPlayer",
+          "packaged_sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+          "loose_sha256": "f3037ea9c860c41bc6266f8e7fb06488a84259b9394a2f1852e440b4184126e0",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/characters/IsoPlayer",
+          "parent": "zombie/characters/IsoLivingCharacter",
+          "packaged_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+          "loose_sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getOnlineID",
+              "descriptor": "()S",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoLivingCharacter",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "04398e7fee60de3edc44ea5a908fbbbb1862743bb1cc05b075d525d6fdc55b55",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getOwner",
+      "receiver": "zombie/characters/IsoZombie",
+      "declaring_class": "zombie/characters/IsoZombie",
+      "methods": [
+        {
+          "name": "getOwner",
+          "descriptor": "()Lzombie/core/raknet/UdpConnection;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_class_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoZombie",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getOwner",
+              "descriptor": "()Lzombie/core/raknet/UdpConnection;",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getOwner",
+              "descriptor": "()Lzombie/core/raknet/UdpConnection;",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "doSprinter",
+      "receiver": "zombie/characters/IsoZombie",
+      "declaring_class": "zombie/characters/IsoZombie",
+      "methods": [
+        {
+          "name": "doSprinter",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_class_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoZombie",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "doSprinter",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "doFastShambler",
+      "receiver": "zombie/characters/IsoZombie",
+      "declaring_class": "zombie/characters/IsoZombie",
+      "methods": [
+        {
+          "name": "doFastShambler",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_class_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoZombie",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "doFastShambler",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "doShambler",
+      "receiver": "zombie/characters/IsoZombie",
+      "declaring_class": "zombie/characters/IsoZombie",
+      "methods": [
+        {
+          "name": "doShambler",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_class_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoZombie",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "doShambler",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getSpeedType",
+      "receiver": "zombie/characters/IsoZombie",
+      "declaring_class": "zombie/characters/IsoZombie",
+      "methods": [
+        {
+          "name": "getSpeedType",
+          "descriptor": "()I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_class_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoZombie",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getSpeedType",
+              "descriptor": "()I",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "makeInactive",
+      "receiver": "zombie/characters/IsoZombie",
+      "declaring_class": "zombie/characters/IsoZombie",
+      "methods": [
+        {
+          "name": "makeInactive",
+          "descriptor": "(Z)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_class_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoZombie",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "makeInactive",
+              "descriptor": "(Z)V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getSpriteDef",
+      "receiver": "zombie/characters/IsoGameCharacter",
+      "declaring_class": "zombie/characters/IsoGameCharacter",
+      "methods": [
+        {
+          "name": "getSpriteDef",
+          "descriptor": "()Lzombie/iso/sprite/IsoSpriteInstance;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "loose_class_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getSpriteDef",
+              "descriptor": "()Lzombie/iso/sprite/IsoSpriteInstance;",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getFrame",
+      "receiver": "zombie/iso/sprite/IsoSpriteInstance",
+      "declaring_class": "zombie/iso/sprite/IsoSpriteInstance",
+      "methods": [
+        {
+          "name": "getFrame",
+          "descriptor": "()F",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "a1babc9ed32ea54583f871539657919ce96a802fd62b01c035a03c82d4c2b9c4",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/sprite/IsoSpriteInstance",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "a1babc9ed32ea54583f871539657919ce96a802fd62b01c035a03c82d4c2b9c4",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "setFrameSpeedPerFrame",
+      "receiver": "zombie/iso/sprite/IsoSpriteInstance",
+      "declaring_class": "zombie/iso/sprite/IsoSpriteInstance",
+      "methods": [
+        {
+          "name": "setFrameSpeedPerFrame",
+          "descriptor": "(F)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "a1babc9ed32ea54583f871539657919ce96a802fd62b01c035a03c82d4c2b9c4",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/sprite/IsoSpriteInstance",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "a1babc9ed32ea54583f871539657919ce96a802fd62b01c035a03c82d4c2b9c4",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "isCrawling",
+      "receiver": "zombie/characters/IsoZombie",
+      "declaring_class": "zombie/characters/IsoZombie",
+      "methods": [
+        {
+          "name": "isCrawling",
+          "descriptor": "()Z",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+      "loose_class_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoZombie",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "9dd82f9e5022c27d64bb3c64ebc4a061f37393e1fc865f2919a18e1d07673bb2",
+          "loose_sha256": "338b5c3b3261b7cafeac707da1b5e2fc6932dd9f00a93d07ac460b90e627ffca",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "isCrawling",
+              "descriptor": "()Z",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "isCrawling",
+              "descriptor": "()Z",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "isDead",
+      "receiver": "zombie/characters/IsoPlayer",
+      "declaring_class": "zombie/characters/IsoGameCharacter",
+      "methods": [
+        {
+          "name": "isDead",
+          "descriptor": "()Z",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "loose_class_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoPlayer",
+          "parent": "zombie/characters/IsoLivingCharacter",
+          "packaged_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+          "loose_sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/characters/IsoLivingCharacter",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "04398e7fee60de3edc44ea5a908fbbbb1862743bb1cc05b075d525d6fdc55b55",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "isDead",
+              "descriptor": "()Z",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "UseAndSync",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "UseAndSync",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "syncItemModData",
+      "receiver": "zombie/Lua/LuaManager$GlobalObject",
+      "declaring_class": "zombie/Lua/LuaManager$GlobalObject",
+      "methods": [
+        {
+          "name": "syncItemModData",
+          "descriptor": "(Lzombie/characters/IsoPlayer;Lzombie/inventory/InventoryItem;)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/Lua/LuaManager$GlobalObject",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "80ecbd3bd702db2f992db6cba7cb09c32d775fa6f2a3297e0460874ff5ba20c7",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "syncItemFields",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "syncItemFields",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getEquipParent",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "getEquipParent",
+          "descriptor": "()Lzombie/characters/IsoGameCharacter;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getAllInputItems",
+      "receiver": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+      "declaring_class": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+      "methods": [
+        {
+          "name": "getAllInputItems",
+          "descriptor": "()Ljava/util/ArrayList;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "2a1ee224278519c0728f97ea0681182166f8e76b641e07e59d70e1b8c7bab52e",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "2a1ee224278519c0728f97ea0681182166f8e76b641e07e59d70e1b8c7bab52e",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "luaCallOnCreate",
+      "receiver": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+      "declaring_class": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+      "methods": [
+        {
+          "name": "luaCallOnCreate",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "luaCallOnCreate",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "2a1ee224278519c0728f97ea0681182166f8e76b641e07e59d70e1b8c7bab52e",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "2a1ee224278519c0728f97ea0681182166f8e76b641e07e59d70e1b8c7bab52e",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "processDestroyAndUsedItems",
+      "receiver": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+      "declaring_class": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+      "methods": [
+        {
+          "name": "processDestroyAndUsedItems",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "2a1ee224278519c0728f97ea0681182166f8e76b641e07e59d70e1b8c7bab52e",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/entity/components/crafting/recipe/CraftRecipeData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "2a1ee224278519c0728f97ea0681182166f8e76b641e07e59d70e1b8c7bab52e",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getId",
+      "receiver": "zombie/iso/areas/SafeHouse",
+      "declaring_class": "zombie/iso/areas/SafeHouse",
+      "methods": [
+        {
+          "name": "getId",
+          "descriptor": "()Ljava/lang/String;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "217d78299ea10c5d892b7ef36e8b39016f390941c57a8957fc01cb4964274c2d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/areas/SafeHouse",
+          "parent": "zombie/characters/Invite",
+          "packaged_sha256": "217d78299ea10c5d892b7ef36e8b39016f390941c57a8957fc01cb4964274c2d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/characters/Invite",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "2a6041a56cc5d168043c06b92d62dba19fa95abe21964ddbaeb81e1ae3c30f6c",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getPlayers",
+      "receiver": "zombie/iso/areas/SafeHouse",
+      "declaring_class": "zombie/iso/areas/SafeHouse",
+      "methods": [
+        {
+          "name": "getPlayers",
+          "descriptor": "()Ljava/util/ArrayList;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "217d78299ea10c5d892b7ef36e8b39016f390941c57a8957fc01cb4964274c2d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/areas/SafeHouse",
+          "parent": "zombie/characters/Invite",
+          "packaged_sha256": "217d78299ea10c5d892b7ef36e8b39016f390941c57a8957fc01cb4964274c2d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/characters/Invite",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "2a6041a56cc5d168043c06b92d62dba19fa95abe21964ddbaeb81e1ae3c30f6c",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getModData",
+      "receiver": "zombie/characters/animals/IsoAnimal",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "getModData",
+          "descriptor": "()Lse/krka/kahlua/vm/KahluaTable;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/animals/IsoAnimal",
+          "parent": "zombie/characters/IsoPlayer",
+          "packaged_sha256": "b3395fce0260301069cfe6e1e112d949533532dc7da1ec31861ac525100b9bbb",
+          "loose_sha256": "f3037ea9c860c41bc6266f8e7fb06488a84259b9394a2f1852e440b4184126e0",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/characters/IsoPlayer",
+          "parent": "zombie/characters/IsoLivingCharacter",
+          "packaged_sha256": "3f1c4634d3a8e7e36baf4b33f76cf7ef79d88c3351bd0eb2a6a6bb34c2d9858f",
+          "loose_sha256": "80ace57ecff39cd926e69b7fad38cf7f3d923584b89b1e558dde7073c5baab56",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/characters/IsoLivingCharacter",
+          "parent": "zombie/characters/IsoGameCharacter",
+          "packaged_sha256": "04398e7fee60de3edc44ea5a908fbbbb1862743bb1cc05b075d525d6fdc55b55",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getModData",
+              "descriptor": "()Lse/krka/kahlua/vm/KahluaTable;",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getDeadBodyObject",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "getDeadBodyObject",
+          "descriptor": "()Lzombie/iso/objects/IsoDeadBody;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getStaticMovingObjectIndex",
+      "receiver": "zombie/iso/objects/IsoDeadBody",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "getStaticMovingObjectIndex",
+          "descriptor": "()I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/objects/IsoDeadBody",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "09f2aaf80526c97a2f05e8abbedaf758e7c17d86aea03074fdb5e118eef1ef96",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getStaticMovingObjectIndex",
+              "descriptor": "()I",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "pickUpCorpse",
+      "receiver": "zombie/characters/IsoGameCharacter",
+      "declaring_class": "zombie/characters/IsoGameCharacter",
+      "methods": [
+        {
+          "name": "pickUpCorpse",
+          "descriptor": "(Lzombie/iso/objects/IsoDeadBody;Ljava/lang/String;)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "loose_class_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "pickUpCorpse",
+              "descriptor": "(Lzombie/iso/objects/IsoDeadBody;Ljava/lang/String;)V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "shouldUpdateInWorld",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "shouldUpdateInWorld",
+          "descriptor": "()Z",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getThumpableFor",
+      "receiver": "zombie/iso/IsoObject",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "getThumpableFor",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;)Lzombie/iso/objects/interfaces/Thumpable;",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "getThumpableFor",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;Lzombie/inventory/types/HandWeapon;)Lzombie/iso/objects/interfaces/Thumpable;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getThumpableFor",
+              "descriptor": "(Lzombie/characters/IsoGameCharacter;)Lzombie/iso/objects/interfaces/Thumpable;",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "getThumpableFor",
+              "descriptor": "(Lzombie/characters/IsoGameCharacter;Lzombie/inventory/types/HandWeapon;)Lzombie/iso/objects/interfaces/Thumpable;",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "Thump",
+      "receiver": "zombie/iso/IsoObject",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "Thump",
+          "descriptor": "(Lzombie/iso/IsoMovingObject;I)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "Thump",
+              "descriptor": "(Lzombie/iso/IsoMovingObject;I)V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getXP",
+      "receiver": "zombie/characters/IsoGameCharacter$XP",
+      "declaring_class": "zombie/characters/IsoGameCharacter$XP",
+      "methods": [
+        {
+          "name": "getXP",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;)F",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+      "loose_class_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter$XP",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+          "loose_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getXP",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;)F",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "AddXP",
+      "receiver": "zombie/characters/IsoGameCharacter$XP",
+      "declaring_class": "zombie/characters/IsoGameCharacter$XP",
+      "methods": [
+        {
+          "name": "AddXP",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;F)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "AddXP",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZ)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "AddXP",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZZ)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "AddXP",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZZZ)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "AddXP",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZZZZ)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "AddXP",
+          "descriptor": "(Lzombie/inventory/types/HandWeapon;I)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+      "loose_class_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter$XP",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+          "loose_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "AddXP",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;F)V",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "AddXP",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZ)V",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "AddXP",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZZ)V",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "AddXP",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZZZ)V",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "AddXP",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;FZZZZ)V",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "AddXP",
+              "descriptor": "(Lzombie/inventory/types/HandWeapon;I)V",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "AddXPNoMultiplier",
+      "receiver": "zombie/characters/IsoGameCharacter$XP",
+      "declaring_class": "zombie/characters/IsoGameCharacter$XP",
+      "methods": [
+        {
+          "name": "AddXPNoMultiplier",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;F)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+      "loose_class_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter$XP",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+          "loose_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "AddXPNoMultiplier",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;F)V",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "setXPToLevel",
+      "receiver": "zombie/characters/IsoGameCharacter$XP",
+      "declaring_class": "zombie/characters/IsoGameCharacter$XP",
+      "methods": [
+        {
+          "name": "setXPToLevel",
+          "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;I)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+      "loose_class_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter$XP",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "1d1b9edc1746adf55cbaa7aa371b0e9acd1c0c27248d346b37af6b7a573ee5cc",
+          "loose_sha256": "6fdffadbc8fcb7598d26a85627af935a4f5a193e336510b796e02735bf20ac06",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "setXPToLevel",
+              "descriptor": "(Lzombie/characters/skills/PerkFactory$Perk;I)V",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "hasRoomFor",
+      "receiver": "zombie/inventory/ItemContainer",
+      "declaring_class": "zombie/inventory/ItemContainer",
+      "methods": [
+        {
+          "name": "hasRoomFor",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;Lzombie/inventory/InventoryItem;)Z",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "hasRoomFor",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;F)Z",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "hasRoomFor",
+          "descriptor": "(Lzombie/characters/IsoGameCharacter;FF)Z",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "a2ac7dd6235f91255dc57b91419a2c8609bdb105214cddf7fb445b70507b6f96",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/ItemContainer",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "a2ac7dd6235f91255dc57b91419a2c8609bdb105214cddf7fb445b70507b6f96",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "isItemAllowed",
+      "receiver": "zombie/inventory/ItemContainer",
+      "declaring_class": "zombie/inventory/ItemContainer",
+      "methods": [
+        {
+          "name": "isItemAllowed",
+          "descriptor": "(Lzombie/inventory/InventoryItem;)Z",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "a2ac7dd6235f91255dc57b91419a2c8609bdb105214cddf7fb445b70507b6f96",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/ItemContainer",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "a2ac7dd6235f91255dc57b91419a2c8609bdb105214cddf7fb445b70507b6f96",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getMediaData",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "getMediaData",
+          "descriptor": "()Lzombie/radio/media/MediaData;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "isKnownMediaLine",
+      "receiver": "zombie/characters/IsoGameCharacter",
+      "declaring_class": "zombie/characters/IsoGameCharacter",
+      "methods": [
+        {
+          "name": "isKnownMediaLine",
+          "descriptor": "(Ljava/lang/String;)Z",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "loose_class_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "isKnownMediaLine",
+              "descriptor": "(Ljava/lang/String;)Z",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "setAttachedSlot",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "setAttachedSlot",
+          "descriptor": "(I)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "addFloor",
+      "receiver": "zombie/iso/IsoGridSquare",
+      "declaring_class": "zombie/iso/IsoGridSquare",
+      "methods": [
+        {
+          "name": "addFloor",
+          "descriptor": "(Ljava/lang/String;)Lzombie/iso/IsoObject;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "loose_class_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoGridSquare",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+          "loose_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "addFloor",
+              "descriptor": "(Ljava/lang/String;)Lzombie/iso/IsoObject;",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "RemoveTileObject",
+      "receiver": "zombie/iso/IsoGridSquare",
+      "declaring_class": "zombie/iso/IsoGridSquare",
+      "methods": [
+        {
+          "name": "RemoveTileObject",
+          "descriptor": "(Lzombie/iso/IsoObject;)I",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "RemoveTileObject",
+          "descriptor": "(Lzombie/iso/IsoObject;Z)I",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "loose_class_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoGridSquare",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+          "loose_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "RemoveTileObject",
+              "descriptor": "(Lzombie/iso/IsoObject;)I",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "RemoveTileObject",
+              "descriptor": "(Lzombie/iso/IsoObject;Z)I",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "RecalcProperties",
+      "receiver": "zombie/iso/IsoGridSquare",
+      "declaring_class": "zombie/iso/IsoGridSquare",
+      "methods": [
+        {
+          "name": "RecalcProperties",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "loose_class_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoGridSquare",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+          "loose_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "RecalcProperties",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "disableErosion",
+      "receiver": "zombie/iso/IsoGridSquare",
+      "declaring_class": "zombie/iso/IsoGridSquare",
+      "methods": [
+        {
+          "name": "disableErosion",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "loose_class_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoGridSquare",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+          "loose_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "disableErosion",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "setSprite",
+      "receiver": "zombie/iso/IsoObject",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "setSprite",
+          "descriptor": "(Lzombie/iso/sprite/IsoSprite;)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "setSprite",
+          "descriptor": "(Ljava/lang/String;)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "setSprite",
+              "descriptor": "(Lzombie/iso/sprite/IsoSprite;)V",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "setSprite",
+              "descriptor": "(Ljava/lang/String;)V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "transmitUpdatedSpriteToClients",
+      "receiver": "zombie/iso/IsoObject",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "transmitUpdatedSpriteToClients",
+          "descriptor": "(Lzombie/core/raknet/UdpConnection;)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "transmitUpdatedSpriteToClients",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "transmitUpdatedSpriteToClients",
+              "descriptor": "(Lzombie/core/raknet/UdpConnection;)V",
+              "public": true,
+              "static": false
+            },
+            {
+              "name": "transmitUpdatedSpriteToClients",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "transmitUpdatedSpriteToServer",
+      "receiver": "zombie/iso/IsoObject",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "transmitUpdatedSpriteToServer",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "transmitUpdatedSpriteToServer",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "transmitCompleteItemToClients",
+      "receiver": "zombie/iso/IsoObject",
+      "declaring_class": "zombie/iso/IsoObject",
+      "methods": [
+        {
+          "name": "transmitCompleteItemToClients",
+          "descriptor": "()V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+      "loose_class_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "transmitCompleteItemToClients",
+              "descriptor": "()V",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getFloor",
+      "receiver": "zombie/iso/IsoGridSquare",
+      "declaring_class": "zombie/iso/IsoGridSquare",
+      "methods": [
+        {
+          "name": "getFloor",
+          "descriptor": "()Lzombie/iso/IsoObject;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+      "loose_class_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/iso/IsoGridSquare",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "e8192f87d88da607abe0293228c84efbd822ed4ac0a331102c030bc3eeaba467",
+          "loose_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "getFloor",
+              "descriptor": "()Lzombie/iso/IsoObject;",
+              "public": true,
+              "static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "symbol": "getFluidContainer",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/entity/GameEntity",
+      "methods": [
+        {
+          "name": "getFluidContainer",
+          "descriptor": "()Lzombie/entity/components/fluids/FluidContainer;",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getCapacity",
+      "receiver": "zombie/entity/components/fluids/FluidContainer",
+      "declaring_class": "zombie/entity/components/fluids/FluidContainer",
+      "methods": [
+        {
+          "name": "getCapacity",
+          "descriptor": "()F",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/entity/components/fluids/FluidContainer",
+          "parent": "zombie/entity/Component",
+          "packaged_sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/Component",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "8702b1a682853b883c2aaa30c71112b31238f9b4968d91bf61617fc99b2c9159",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getAmount",
+      "receiver": "zombie/entity/components/fluids/FluidContainer",
+      "declaring_class": "zombie/entity/components/fluids/FluidContainer",
+      "methods": [
+        {
+          "name": "getAmount",
+          "descriptor": "()F",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/entity/components/fluids/FluidContainer",
+          "parent": "zombie/entity/Component",
+          "packaged_sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/Component",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "8702b1a682853b883c2aaa30c71112b31238f9b4968d91bf61617fc99b2c9159",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "getFluidAmount",
+      "receiver": "zombie/entity/components/fluids/FluidContainer",
+      "declaring_class": null,
+      "methods": [],
+      "packaged_class_sha256": null,
+      "loose_class_sha256": null,
+      "alternative_IsoObject_methods": [
+        {
+          "name": "getFluidAmount",
+          "descriptor": "()F",
+          "public": true,
+          "static": false
+        }
+      ],
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/entity/components/fluids/FluidContainer",
+          "parent": "zombie/entity/Component",
+          "packaged_sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/Component",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "8702b1a682853b883c2aaa30c71112b31238f9b4968d91bf61617fc99b2c9159",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "addFluid",
+      "receiver": "zombie/entity/components/fluids/FluidContainer",
+      "declaring_class": "zombie/entity/components/fluids/FluidContainer",
+      "methods": [
+        {
+          "name": "addFluid",
+          "descriptor": "(Ljava/lang/String;F)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "addFluid",
+          "descriptor": "(Lzombie/entity/components/fluids/FluidType;F)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "addFluid",
+          "descriptor": "(Lzombie/entity/components/fluids/Fluid;F)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "addFluid",
+          "descriptor": "(Lzombie/entity/components/fluids/FluidInstance;F)V",
+          "public": false,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/entity/components/fluids/FluidContainer",
+          "parent": "zombie/entity/Component",
+          "packaged_sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/Component",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "8702b1a682853b883c2aaa30c71112b31238f9b4968d91bf61617fc99b2c9159",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "request",
+      "receiver": "zombie/world/moddata/ModData",
+      "declaring_class": "zombie/world/moddata/ModData",
+      "methods": [
+        {
+          "name": "request",
+          "descriptor": "(Ljava/lang/String;)V",
+          "public": true,
+          "static": true
+        }
+      ],
+      "packaged_class_sha256": "5a19f07f06db59c8e2c074e303c3eb9a08e860b09e54e2bba2598f154a1cb808",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/world/moddata/ModData",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "5a19f07f06db59c8e2c074e303c3eb9a08e860b09e54e2bba2598f154a1cb808",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "setCondition",
+      "receiver": "zombie/inventory/InventoryItem",
+      "declaring_class": "zombie/inventory/InventoryItem",
+      "methods": [
+        {
+          "name": "setCondition",
+          "descriptor": "(IZ)V",
+          "public": true,
+          "static": false
+        },
+        {
+          "name": "setCondition",
+          "descriptor": "(I)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "setConditionLowerChance",
+      "receiver": "zombie/inventory/types/Clothing",
+      "declaring_class": "zombie/inventory/types/Clothing",
+      "methods": [
+        {
+          "name": "setConditionLowerChance",
+          "descriptor": "(I)V",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "a32e0ffb3f15b2dca12b17556ca5dbc9d515bd02efdc83ac24ba6e31dd598f1d",
+      "loose_class_sha256": null,
+      "loose_comparison": "MISSING",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/inventory/types/Clothing",
+          "parent": "zombie/inventory/InventoryItem",
+          "packaged_sha256": "a32e0ffb3f15b2dca12b17556ca5dbc9d515bd02efdc83ac24ba6e31dd598f1d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/inventory/InventoryItem",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "48f01be16d1ef1b76e37638fac6e25ca4eb285ad38ab2f462caa5597318c7f9d",
+          "loose_sha256": null
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    },
+    {
+      "symbol": "helmetFall",
+      "receiver": "zombie/characters/IsoGameCharacter",
+      "declaring_class": "zombie/characters/IsoGameCharacter",
+      "methods": [
+        {
+          "name": "helmetFall",
+          "descriptor": "(Z)Z",
+          "public": true,
+          "static": false
+        }
+      ],
+      "packaged_class_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+      "loose_class_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+      "loose_comparison": "DIFFERENT",
+      "receiver_hierarchy": [
+        {
+          "class_name": "zombie/characters/IsoGameCharacter",
+          "parent": "zombie/iso/IsoMovingObject",
+          "packaged_sha256": "29040e19c3e420499f73bc0ea0d5b86d7f7d38655acdc13d0107df736eb54c0b",
+          "loose_sha256": "d8554b2a4012f381731da9c91fe605b17e3ba15cd429609607fbf496ad6bbdfa",
+          "loose_declared_methods_for_symbol": [
+            {
+              "name": "helmetFall",
+              "descriptor": "(Z)Z",
+              "public": true,
+              "static": false
+            }
+          ]
+        },
+        {
+          "class_name": "zombie/iso/IsoMovingObject",
+          "parent": "zombie/iso/IsoObject",
+          "packaged_sha256": "7e6e84fe9d3cb264e8d8e682d91e0abe919d481b7349d17b997e8a78f2293a5f",
+          "loose_sha256": "e73e14bb864d475559edf4923ca94290f8f33078c6d9e5e44f6d85af5520e456",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/iso/IsoObject",
+          "parent": "zombie/entity/GameEntity",
+          "packaged_sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+          "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+          "loose_declared_methods_for_symbol": []
+        },
+        {
+          "class_name": "zombie/entity/GameEntity",
+          "parent": "java/lang/Object",
+          "packaged_sha256": "fb46c896c05e72b5f951943b1adfac580a57ae709a6f496b77aa954b6a1886ee",
+          "loose_sha256": null
+        }
+      ]
+    }
+  ]
+}

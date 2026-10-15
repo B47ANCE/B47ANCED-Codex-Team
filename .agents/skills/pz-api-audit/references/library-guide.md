@@ -1,6 +1,6 @@
 # API catalog and audit memory
 
-`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. The catalog contains 93 observations from Steam build 25485521. See [population provenance](population-provenance.md) for coverage, status counts and limits. Full engine version is explicitly UNKNOWN and every runtime status is NOT_TESTED.
+`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. The catalog contains 93 observations from Steam build 25485521. See [population provenance](population-provenance.md) for coverage, status counts and limits. Full engine version is explicitly UNKNOWN and every runtime status is NOT_TESTED. [Deep review](deep-review-25485521.md) records refined receivers, native-only findings and a conflicting fluid API.
 
 ## Record contents
 
@@ -32,3 +32,5 @@ To share a verified finding, use `record --entry <record.json> --library <review
 Source rechecking uses game-root only for vanilla/native evidence files. Document/runtime evidence stays in its owning project and requires separate inspection. This library never grants authorization to run the game/server or turns a cached entry into a runtime PASS.
 
 Shared catalog membership is not evidence approval: INFERRED and UNKNOWN records remain unresolved. `call_site_name_only` signatures contain placeholders, not invocation instructions. A matching short name never verifies the historical receiver type. Project evidence paths beginning `projects/` resolve beneath the owning developer's mod repository root; those files are not bundled. Recheck the cited installed Lua locally; request missing project evidence instead of treating its fingerprint as proof.
+
+Native evidence against projectzomboid.jar uses [1,1] as a binary sentinel, not textual source lines. The companion native-metadata-25485521.json identifies entries, method descriptors and packaged/loose hashes. Descriptor return types do not prove Lua conversion, nullability, side effects or dispatch. Source observations and metadata remain separate evidence layers.

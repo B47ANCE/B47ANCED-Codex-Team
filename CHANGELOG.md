@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.4.1 - 2026-10-14
+- Share 90 audit-derived API observations alongside the three existing catalog entries: 23 source-verified observations, 52 inferred matches and 18 unknowns; all runtime NOT_TESTED.
+- Preserve build/source fingerprints and bounded verification scope; document historical provenance, modified-installation limits and teammate rechecking.
+- Test that source/hash checks never promote inferred or unknown findings to verified/runtime evidence.
+
 ## 13.4.0 - 2026-10-14
 - Add a build-bound API evidence catalog inside pz-api-audit with validated search/record helper and unmanaged per-user drafts.
 - Seed three source-observed vanilla Mod Selector calls without claiming full version or runtime verification.

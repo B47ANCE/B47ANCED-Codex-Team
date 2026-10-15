@@ -6,7 +6,7 @@ Read the current global guide and active project instructions. Identify the inst
 
 ## Consult the library first
 
-Use [the API catalog](references/api-library.json) for relevant symbols, not as a complete engine API reference. [Catalog guidance](references/library-guide.md) explains the entry fields and recording workflow. The helper searches the curated catalog plus the developer's local draft by default:
+Use [the API catalog](references/api-library.json) for relevant symbols, not as a complete engine API reference. [Catalog guidance](references/library-guide.md) explains the entry fields and recording workflow. Shared membership does not promote INFERRED or UNKNOWN findings. Call-name-only records are research leads, not usable signatures; inspect receiver and arguments before implementation. The helper searches the curated catalog plus the developer's local draft by default:
 
 ```powershell
 python <skill-folder>/scripts/api_library.py search --symbol getModInfo --steam-build <installed-build-id> --game-root <verified-game-root>

@@ -417,6 +417,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -439,14 +449,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Only native method metadata was rechecked. Historical fuel-consumption interpretation was not reverified here; never treat this as rated power or spare output. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only native method metadata was rechecked. Historical fuel-consumption interpretation was not reverified here; never treat this as rated power or spare output. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.iso.objects.IsoGenerator",
       "returns": "Packaged JVM descriptor(s): ()F. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.iso.objects.IsoGenerator.getTotalPowerUsing ()F",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:getTotalPowerUsing; native descriptors ()F",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getTotalPowerUsing",
       "verified_on": "2026-10-14"
@@ -671,6 +681,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -703,14 +723,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "The packaged method is static GameTime.getServerTimeMills, not evidence for a bare global function. Clock synchronization, initial zero, SP policy and expiry behavior were not reverified. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] static_class registration supported by reviewed binding construction, not a signature-only inference. The packaged method is static GameTime.getServerTimeMills, not evidence for a bare global function. Clock synchronization, initial zero, SP policy and expiry behavior were not reverified. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.GameTime",
       "returns": "Packaged JVM descriptor(s): ()J. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.GameTime.getServerTimeMills ()J",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING GameTime.getServerTimeMills; native descriptors ()J",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getServerTimeMills",
       "verified_on": "2026-10-14"
@@ -935,6 +955,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -967,14 +997,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "A writer candidate does not establish a private world-save transaction. Do not write installed mod files for persistence from this record. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] annotated_global registration supported by reviewed binding construction, not a signature-only inference. A writer candidate does not establish a private world-save transaction. Do not write installed mod files for persistence from this record. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.Lua.LuaManager$GlobalObject",
       "returns": "Packaged JVM descriptor(s): (Ljava/lang/String;Ljava/lang/String;ZZ)Lzombie/Lua/LuaManager$GlobalObject$LuaFileWriter;. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.Lua.LuaManager$GlobalObject.getModFileWriter (Ljava/lang/String;Ljava/lang/String;ZZ)Lzombie/Lua/LuaManager$GlobalObject$LuaFileWriter;",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING getModFileWriter; native descriptors (Ljava/lang/String;Ljava/lang/String;ZZ)Lzombie/Lua/LuaManager$GlobalObject$LuaFileWriter;",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getModFileWriter",
       "verified_on": "2026-10-14"
@@ -982,6 +1012,16 @@
     {
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
         {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
@@ -1045,14 +1085,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Return type does not prove save-local storage ownership or durable identity. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] annotated_global registration supported by reviewed binding construction, not a signature-only inference. Return type does not prove save-local storage ownership or durable identity. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.Lua.LuaManager$GlobalObject",
       "returns": "Packaged JVM descriptor(s): ()Ljava/lang/String;. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.Lua.LuaManager$GlobalObject.getCurrentSaveName ()Ljava/lang/String;",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING getCurrentSaveName; native descriptors ()Ljava/lang/String;",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getCurrentSaveName",
       "verified_on": "2026-10-14"
@@ -1139,6 +1179,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -1181,14 +1231,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Food InventoryItem.setAge is not proof for AnimalData.setAge. The animal UI uses the animal setAge command / setAgeDebug route instead of a direct AnimalData.setAge call. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Food InventoryItem.setAge is not proof for AnimalData.setAge. The animal UI uses the animal setAge command / setAgeDebug route instead of a direct AnimalData.setAge call. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.animals.datas.AnimalData",
       "returns": "Packaged JVM descriptor(s): (I)V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.animals.datas.AnimalData.setAge (I)V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:setAge; native descriptors (I)V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "setAge",
       "verified_on": "2026-10-14"
@@ -1723,6 +1773,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -1775,14 +1835,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Removed unrelated fluid-panel owner evidence. Packaged IsoZombie.getOwner returns a UdpConnection candidate, not a username or permission decision. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Removed unrelated fluid-panel owner evidence. Packaged IsoZombie.getOwner returns a UdpConnection candidate, not a username or permission decision. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoZombie",
       "returns": "Packaged JVM descriptor(s): ()Lzombie/core/raknet/UdpConnection;. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoZombie.getOwner ()Lzombie/core/raknet/UdpConnection;",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:getOwner; native descriptors ()Lzombie/core/raknet/UdpConnection;",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getOwner",
       "verified_on": "2026-10-14"
@@ -1791,6 +1851,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -1813,14 +1883,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoZombie",
       "returns": "Packaged JVM descriptor(s): ()V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoZombie.doSprinter ()V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:doSprinter; native descriptors ()V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "doSprinter",
       "verified_on": "2026-10-14"
@@ -1829,6 +1899,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -1851,14 +1931,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoZombie",
       "returns": "Packaged JVM descriptor(s): ()V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoZombie.doFastShambler ()V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:doFastShambler; native descriptors ()V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "doFastShambler",
       "verified_on": "2026-10-14"
@@ -1867,6 +1947,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -1889,14 +1979,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoZombie",
       "returns": "Packaged JVM descriptor(s): ()V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoZombie.doShambler ()V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:doShambler; native descriptors ()V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "doShambler",
       "verified_on": "2026-10-14"
@@ -1904,6 +1994,16 @@
     {
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
         {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
@@ -1937,14 +2037,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoZombie",
       "returns": "Packaged JVM descriptor(s): ()I. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoZombie.getSpeedType ()I",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:getSpeedType; native descriptors ()I",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getSpeedType",
       "verified_on": "2026-10-14"
@@ -1952,6 +2052,16 @@
     {
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
         {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
@@ -2005,14 +2115,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Metadata only. Historical policy against activity interception is not relaxed and no safe dynamic activity adapter is established. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Metadata only. Historical policy against activity interception is not relaxed and no safe dynamic activity adapter is established. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoZombie",
       "returns": "Packaged JVM descriptor(s): (Z)V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoZombie.makeInactive (Z)V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:makeInactive; native descriptors (Z)V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "makeInactive",
       "verified_on": "2026-10-14"
@@ -2117,6 +2227,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -2139,14 +2259,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "The only located Lua text was commented out. No active call is claimed and a matching frame-speed getter/rollback contract is not established. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. The only located Lua text was commented out. No active call is claimed and a matching frame-speed getter/rollback contract is not established. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.iso.sprite.IsoSpriteInstance",
       "returns": "Packaged JVM descriptor(s): (F)V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.iso.sprite.IsoSpriteInstance.setFrameSpeedPerFrame (F)V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:setFrameSpeedPerFrame; native descriptors (F)V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "setFrameSpeedPerFrame",
       "verified_on": "2026-10-14"
@@ -2515,6 +2635,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -2537,14 +2667,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.inventory.InventoryItem",
       "returns": "Packaged JVM descriptor(s): ()Lzombie/characters/IsoGameCharacter;. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.inventory.InventoryItem.getEquipParent ()Lzombie/characters/IsoGameCharacter;",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:getEquipParent; native descriptors ()Lzombie/characters/IsoGameCharacter;",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getEquipParent",
       "verified_on": "2026-10-14"
@@ -2961,6 +3091,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -3003,14 +3143,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Removed model-attachment ID caller. SafeHouse.getId metadata is the relevant candidate; title/online-ID lookup equivalence is not established. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Removed model-attachment ID caller. SafeHouse.getId metadata is the relevant candidate; title/online-ID lookup equivalence is not established. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.iso.areas.SafeHouse",
       "returns": "Packaged JVM descriptor(s): ()Ljava/lang/String;. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.iso.areas.SafeHouse.getId ()Ljava/lang/String;",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:getId; native descriptors ()Ljava/lang/String;",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getId",
       "verified_on": "2026-10-14"
@@ -3329,6 +3469,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -3351,14 +3501,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.inventory.InventoryItem",
       "returns": "Packaged JVM descriptor(s): ()Z. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.inventory.InventoryItem.shouldUpdateInWorld ()Z",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:shouldUpdateInWorld; native descriptors ()Z",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "shouldUpdateInWorld",
       "verified_on": "2026-10-14"
@@ -3366,6 +3516,16 @@
     {
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
         {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
@@ -3399,14 +3559,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.iso.IsoObject",
       "returns": "Packaged JVM descriptor(s): (Lzombie/characters/IsoGameCharacter;)Lzombie/iso/objects/interfaces/Thumpable;; (Lzombie/characters/IsoGameCharacter;Lzombie/inventory/types/HandWeapon;)Lzombie/iso/objects/interfaces/Thumpable;. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.iso.IsoObject.getThumpableFor (Lzombie/characters/IsoGameCharacter;)Lzombie/iso/objects/interfaces/Thumpable; | (Lzombie/characters/IsoGameCharacter;Lzombie/inventory/types/HandWeapon;)Lzombie/iso/objects/interfaces/Thumpable;",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:getThumpableFor; native descriptors (Lzombie/characters/IsoGameCharacter;)Lzombie/iso/objects/interfaces/Thumpable; | (Lzombie/characters/IsoGameCharacter;Lzombie/inventory/types/HandWeapon;)Lzombie/iso/objects/interfaces/Thumpable;",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "getThumpableFor",
       "verified_on": "2026-10-14"
@@ -3414,6 +3574,16 @@
     {
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
         {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
@@ -3457,14 +3627,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.iso.IsoObject",
       "returns": "Packaged JVM descriptor(s): (Lzombie/iso/IsoMovingObject;I)V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.iso.IsoObject.Thump (Lzombie/iso/IsoMovingObject;I)V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:Thump; native descriptors (Lzombie/iso/IsoMovingObject;I)V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "Thump",
       "verified_on": "2026-10-14"
@@ -3589,6 +3759,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -3611,14 +3791,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Native method presence does not establish universal multiplier bypass or raw XP restoration; distinct from the global addXpNoMultiplier. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Native method presence does not establish universal multiplier bypass or raw XP restoration; distinct from the global addXpNoMultiplier. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoGameCharacter$XP",
       "returns": "Packaged JVM descriptor(s): (Lzombie/characters/skills/PerkFactory$Perk;F)V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoGameCharacter$XP.AddXPNoMultiplier (Lzombie/characters/skills/PerkFactory$Perk;F)V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:AddXPNoMultiplier; native descriptors (Lzombie/characters/skills/PerkFactory$Perk;F)V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "AddXPNoMultiplier",
       "verified_on": "2026-10-14"
@@ -4867,6 +5047,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "vanilla_lua",
           "path": "media/lua/client/ISUI/ISInventoryPane.lua",
           "sha256": "8cce738cc0dfec8655d2970c42572596bf6294b85e4917a245dc41d1827a56be",
@@ -4909,7 +5099,7 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "UNKNOWN: packaged GameEntity.getFluidContainer returns FluidContainer; that class hierarchy lacks getFluidAmount, while IsoObject has it. Runtime overrides may differ. Prefer researching FluidContainer.getAmount; no automatic replacement is justified for every historical caller. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "UNKNOWN: packaged GameEntity.getFluidContainer returns FluidContainer; that class hierarchy lacks getFluidAmount, while IsoObject has it. Runtime overrides may differ. Prefer researching FluidContainer.getAmount; no automatic replacement is justified for every historical caller. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Exposure follow-up checked interfaces and annotation aliases: no packaged binding found on FluidContainer/Component. No runtime invocation; UNKNOWN retained.",
       "receiver_type": "zombie.entity.components.fluids.FluidContainer",
       "returns": "Packaged JVM descriptor(s): NO MATCH on intended receiver. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
@@ -5149,6 +5339,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -5221,14 +5421,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Candidate ModData.request(String), not proof that the old unqualified request reference intended that surface. Network privacy and sender/table authorization are unverified. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] static_class registration supported by reviewed binding construction, not a signature-only inference. Candidate ModData.request(String), not proof that the old unqualified request reference intended that surface. Network privacy and sender/table authorization are unverified. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.world.moddata.ModData",
       "returns": "Packaged JVM descriptor(s): (Ljava/lang/String;)V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.world.moddata.ModData.request (Ljava/lang/String;)V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING ModData.request; native descriptors (Ljava/lang/String;)V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "request",
       "verified_on": "2026-10-14"
@@ -5285,6 +5485,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
+        {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
           "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
@@ -5307,14 +5517,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Only the inspected receiver and call-site evidence are refined; original audit behavior is not silently promoted. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.inventory.types.Clothing",
       "returns": "Packaged JVM descriptor(s): (I)V. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.inventory.types.Clothing.setConditionLowerChance (I)V",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:setConditionLowerChance; native descriptors (I)V",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "setConditionLowerChance",
       "verified_on": "2026-10-14"
@@ -5322,6 +5532,16 @@
     {
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
+          "sha256": "207159dc9d09e17f391fb3095dd86ee224fc8fad6eb04b8d9125c22358bd527e",
+          "lines": [
+            1,
+            635
+          ],
+          "statement": "Reviewed static analysis verifies binding registration route through the initializer, exposer, visibility filters and method/annotation metadata. This offline evidence is NOT an invocation or game/runtime test."
+        },
         {
           "kind": "native_inspection",
           "path": "projectzomboid.jar",
@@ -5345,14 +5565,14 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller invokes a potentially state-changing operation; authority, validation, idempotency, persistence and network outcomes remain unverified.",
-      "notes": "Metadata only. This does not expose a successful knock-off callback or establish an interception point. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "notes": "[VERIFIED source exposure route] instance_method registration supported by reviewed binding construction, not a signature-only inference. Metadata only. This does not expose a successful knock-off callback or establish an interception point. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Source exposure refinement supersedes only earlier binding uncertainty; historical behavior restrictions, Lua-only boundaries and runtime gates remain. No call was executed.",
       "receiver_type": "zombie.characters.IsoGameCharacter",
       "returns": "Packaged JVM descriptor(s): (Z)Z. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
       "side": "UNKNOWN",
-      "signature": "NATIVE_CANDIDATE zombie.characters.IsoGameCharacter.helmetFall (Z)Z",
-      "signature_scope": "native_descriptor_only; Lua call form and binding UNKNOWN",
-      "status": "INFERRED",
+      "signature": "SOURCE_BINDING receiver:helmetFall; native descriptors (Z)Z",
+      "signature_scope": "verified_source_exposure_route; invocation and runtime behavior NOT_TESTED",
+      "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "helmetFall",
       "verified_on": "2026-10-14"

@@ -1,3 +1,5 @@
+Historical 13.4.2 review. [The exposure follow-up](lua-exposure-review.md) supersedes binding uncertainty only; runtime limits remain.
+
 # Build 25485521 API deep review — 2026-10-14
 
 All 70 previously unresolved records were reviewed. Forty-eight have source-verified contextual receivers and observed call forms; eighteen formerly unknown native methods become INFERRED, three remain INFERRED, and one prior inferred fluid call becomes UNKNOWN. Shared totals are **71 VERIFIED, 21 INFERRED, 1 UNKNOWN**, out of 93. Every runtime status remains **NOT_TESTED**; full engine version remains **UNKNOWN**.

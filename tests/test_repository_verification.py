@@ -69,7 +69,8 @@ class RepositoryVerification(unittest.TestCase):
                     str(self.home / '.codex/AGENTS.md').replace('\\', '/').upper()]
         for index, reference in enumerate(variants):
             self.project('Custom' + str(index), 'Read `' + reference + '` before work.')
-        self.assertEqual(self.verify()['Projects'], len(variants))
+        self.project('Sentence', 'Read %USERPROFILE%/.codex/AGENTS.md.')
+        self.assertEqual(self.verify()['Projects'], len(variants) + 1)
 
     def test_existing_managed_startup_accepted(self):
         self.project('Managed', '<!-- PZ-CODEX-MANAGED-STARTUP -->\nExisting instructions')

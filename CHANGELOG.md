@@ -1,5 +1,9 @@
 # Changelog
 
+## 13.4.0 - 2026-10-14
+- Add a build-bound API evidence catalog inside pz-api-audit with validated search/record helper and unmanaged per-user drafts.
+- Seed three source-observed vanilla Mod Selector calls without claiming full version or runtime verification.
+
 ## 13.3.1 - 2026-10-14
 - Use a directly resized 512x512 B47.png for fallback Workshop thumbnails; keep the 64x64 icon and 128x128 poster separate.
 

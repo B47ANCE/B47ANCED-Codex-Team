@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "symbol": "getModDirectoryTable",
+      "signature": "getModDirectoryTable()",
+      "signature_scope": "observed_vanilla_call",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "client",
+      "returns": "Value iterated with ipairs by the vanilla Mod Selector; complete return contract UNKNOWN.",
+      "mutation": "Metadata read in the client UI; no shared gameplay mutation observed. Server availability/authority UNKNOWN.",
+      "status": "VERIFIED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/OptionScreens/ModSelector/ModSelectorModel.lua",
+          "sha256": "a42f02da40a1f3be4e221b94ef126d38c92e71119472b097a1fdcfa826c7f67e",
+          "lines": [
+            61,
+            61
+          ],
+          "statement": "Vanilla Mod Selector enumerates the returned directory table."
+        }
+      ],
+      "notes": "Windows installed vanilla Lua source observation only. Steam build checked locally; full engine version not independently verified. Not an exhaustive signature/overload reference or runtime guarantee.",
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "global function"
+    },
+    {
+      "symbol": "getModInfo",
+      "signature": "getModInfo(directory)",
+      "signature_scope": "observed_vanilla_call",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "client",
+      "returns": "A modInfo object or falsy value is checked by this caller; exact native type/other outcomes UNKNOWN.",
+      "mutation": "Metadata read in the client UI; no shared gameplay mutation observed. Server availability/authority UNKNOWN.",
+      "status": "VERIFIED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/OptionScreens/ModSelector/ModSelectorModel.lua",
+          "sha256": "a42f02da40a1f3be4e221b94ef126d38c92e71119472b097a1fdcfa826c7f67e",
+          "lines": [
+            62,
+            62
+          ],
+          "statement": "Vanilla Mod Selector obtains mod metadata from each enumerated directory."
+        }
+      ],
+      "notes": "Windows installed vanilla Lua source observation only. Steam build checked locally; full engine version not independently verified. Not an exhaustive signature/overload reference or runtime guarantee.",
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "global function"
+    },
+    {
+      "symbol": "modInfo:getIcon",
+      "signature": "modInfo:getIcon()",
+      "signature_scope": "observed_vanilla_call",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "client",
+      "returns": "Used as an icon texture path; empty-string fallback observed. Complete native contract UNKNOWN.",
+      "mutation": "Metadata read in the client UI; no shared gameplay mutation observed. Server availability/authority UNKNOWN.",
+      "status": "VERIFIED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/OptionScreens/ModSelector/ModSelectorModel.lua",
+          "sha256": "a42f02da40a1f3be4e221b94ef126d38c92e71119472b097a1fdcfa826c7f67e",
+          "lines": [
+            69,
+            73
+          ],
+          "statement": "Vanilla Mod Selector reads the icon into its UI model and checks for an empty string."
+        }
+      ],
+      "notes": "Windows installed vanilla Lua source observation only. Steam build checked locally; full engine version not independently verified. Not an exhaustive signature/overload reference or runtime guarantee.",
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "UNKNOWN: modInfo returned by getModInfo"
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # Changelog
 
+## 13.4.5 - 2026-10-14
+- Add 12 receiver/bootstrap findings from the all-mod source audit, including missing next/table.unpack dependencies and script-item versus inventory-item distinctions. All runtime evidence remains NOT_TESTED.
+- Record bounded coverage, applied local fixes and user-deferred overlays. Add catalog/evidence regression checks; preserve earlier reports as historical evidence.
+
 ## 13.4.4 - 2026-10-14
 - Document the supported FluidContainer.getAmount storage query and distinguish IsoObject.getFluidAmount world-source semantics; retain the conflicting component API as UNKNOWN.
 - Audit local mod usage: three Quartermaster world-object callers and no confirmed invalid component caller. Preserve valid finite-source guards and all mod code.

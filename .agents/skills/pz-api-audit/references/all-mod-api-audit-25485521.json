@@ -1,0 +1,332 @@
+{
+  "schema": 1,
+  "steam_build": "25485521",
+  "game_version": "UNKNOWN",
+  "runtime": "NOT_TESTED",
+  "scope": "Read-only packaged metadata and installed Lua inspection plus Windows host fixtures. Loose class overrides exist; packaged bindings do not establish effective runtime.",
+  "coverage": {
+    "projects": 27,
+    "lua_files": 1028,
+    "call_sites": 11380,
+    "unresolved_name_sites": 141,
+    "typed_root_chain_observations": 100,
+    "typed_candidates": 0
+  },
+  "projects": [
+    {
+      "name": "AuthenticZGlowstickMPPatch",
+      "lua_files": 7
+    },
+    {
+      "name": "B47ANCE Costume",
+      "lua_files": 3
+    },
+    {
+      "name": "B47ANCEDActiveHours",
+      "lua_files": 3
+    },
+    {
+      "name": "B47ANCEDBuildableFences",
+      "lua_files": 8
+    },
+    {
+      "name": "B47ANCEDDogmeat",
+      "lua_files": 21
+    },
+    {
+      "name": "B47ANCEDEyewear",
+      "lua_files": 63
+    },
+    {
+      "name": "B47ANCEDHelicopterEvents",
+      "lua_files": 0
+    },
+    {
+      "name": "B47ANCEDMedicalChecks",
+      "lua_files": 6
+    },
+    {
+      "name": "B47ANCEDMedicalChecks-authority-audit",
+      "lua_files": 6
+    },
+    {
+      "name": "B47ANCEDMedicalChecks-cooperative",
+      "lua_files": 8
+    },
+    {
+      "name": "B47ANCEDQuartermaster",
+      "lua_files": 79
+    },
+    {
+      "name": "B47ANCEDRooms",
+      "lua_files": 22
+    },
+    {
+      "name": "CATConstruction",
+      "lua_files": 35
+    },
+    {
+      "name": "experienceWorks",
+      "lua_files": 34
+    },
+    {
+      "name": "farmWorks",
+      "lua_files": 8
+    },
+    {
+      "name": "foodWorks",
+      "lua_files": 7
+    },
+    {
+      "name": "groundWorks",
+      "lua_files": 121
+    },
+    {
+      "name": "itjustWorks",
+      "lua_files": 28
+    },
+    {
+      "name": "junkWorks",
+      "lua_files": 11
+    },
+    {
+      "name": "Last Known Address",
+      "lua_files": 9
+    },
+    {
+      "name": "lightWorks",
+      "lua_files": 63
+    },
+    {
+      "name": "medWorks",
+      "lua_files": 38
+    },
+    {
+      "name": "powerWorks",
+      "lua_files": 42
+    },
+    {
+      "name": "Project MORTIS",
+      "lua_files": 247
+    },
+    {
+      "name": "Project Nightfall",
+      "lua_files": 106
+    },
+    {
+      "name": "waterWorks",
+      "lua_files": 44
+    },
+    {
+      "name": "weatherWorks",
+      "lua_files": 9
+    }
+  ],
+  "findings": [
+    {
+      "receiver": "zombie.inventory.InventoryItem",
+      "symbol": "setTorchDot",
+      "status": "UNKNOWN",
+      "signature": "UNKNOWN: no public packaged/installed loose setter found.",
+      "notes": "Do not call this setter. lightWorks now keeps its dot override in its existing Lua rendering cache.",
+      "packaged_methods": [],
+      "loose_class_sha256": null,
+      "loose_declared_methods": []
+    },
+    {
+      "receiver": "zombie.inventory.InventoryItem",
+      "symbol": "getTorchDot",
+      "status": "INFERRED",
+      "signature": "()F native descriptor; effective Lua invocation NOT_TESTED.",
+      "notes": "Packaged getter reads the script-item torchDot. Native metadata is not independent Lua-exposure proof.",
+      "packaged_methods": [
+        {
+          "declaring_class": "zombie/inventory/InventoryItem",
+          "descriptor": "()F",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "loose_class_sha256": null,
+      "loose_declared_methods": []
+    },
+    {
+      "receiver": "zombie.iso.IsoGridSquare",
+      "symbol": "haveRoof",
+      "status": "UNKNOWN",
+      "signature": "UNKNOWN: no public packaged/installed loose method found.",
+      "notes": "groundWorks now checks haveRoofFull instead; outside/exterior does not establish lack of roofing.",
+      "packaged_methods": [],
+      "loose_class_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "loose_declared_methods": []
+    },
+    {
+      "receiver": "zombie.iso.IsoGridSquare",
+      "symbol": "haveRoofFull",
+      "status": "INFERRED",
+      "signature": "()Z native descriptor; effective Lua invocation NOT_TESTED.",
+      "notes": "Public native method found. Packaged logic checks roof coverage; actual precipitation/shelter behavior needs PZ testing.",
+      "packaged_methods": [
+        {
+          "declaring_class": "zombie/iso/IsoGridSquare",
+          "descriptor": "()Z",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "loose_class_sha256": "92be3b470227da4f28151ea8b6f7c0aca4f0296b0b646dda6bb44929e8149ec6",
+      "loose_declared_methods": [
+        {
+          "descriptor": "()Z",
+          "public": true
+        }
+      ]
+    },
+    {
+      "receiver": "zombie.scripting.objects.Item",
+      "symbol": "getLightStrength",
+      "status": "UNKNOWN",
+      "signature": "UNKNOWN: InventoryItem getter is not a verified script-item getter.",
+      "notes": "ScriptManager.getAllItems supplies script Item definitions. lightWorks reports unavailable metadata as UNKNOWN.",
+      "packaged_methods": [],
+      "loose_class_sha256": "3074550cc4081872ed75e33a08446030122158ab8158a6872d0b6c64e0f39fe1",
+      "loose_declared_methods": []
+    },
+    {
+      "receiver": "zombie.scripting.objects.Item",
+      "symbol": "getLightDistance",
+      "status": "UNKNOWN",
+      "signature": "UNKNOWN: no corresponding public script-item method found.",
+      "notes": "Do not infer zero from an absent script-item getter; diagnostic fallback now preserves unknown values.",
+      "packaged_methods": [],
+      "loose_class_sha256": "3074550cc4081872ed75e33a08446030122158ab8158a6872d0b6c64e0f39fe1",
+      "loose_declared_methods": []
+    },
+    {
+      "receiver": "zombie.scripting.objects.Item",
+      "symbol": "getTorchCone",
+      "status": "UNKNOWN",
+      "signature": "UNKNOWN: no corresponding public script-item getter found.",
+      "notes": "Neither a guarded missing getter nor its false default establishes cone metadata. Keep diagnostic output UNKNOWN.",
+      "packaged_methods": [],
+      "loose_class_sha256": "3074550cc4081872ed75e33a08446030122158ab8158a6872d0b6c64e0f39fe1",
+      "loose_declared_methods": []
+    },
+    {
+      "receiver": "zombie.scripting.objects.Item",
+      "symbol": "getItemType",
+      "status": "INFERRED",
+      "signature": "()Lzombie/scripting/objects/ItemType; native descriptor.",
+      "notes": "Use the script-item receiver contract; getTypeString belongs to other receiver families. Lua conversion/runtime remain untested.",
+      "packaged_methods": [
+        {
+          "declaring_class": "zombie/scripting/objects/Item",
+          "descriptor": "()Lzombie/scripting/objects/ItemType;",
+          "public": true,
+          "static": false,
+          "annotations": []
+        }
+      ],
+      "loose_class_sha256": "3074550cc4081872ed75e33a08446030122158ab8158a6872d0b6c64e0f39fe1",
+      "loose_declared_methods": [
+        {
+          "descriptor": "()Lzombie/scripting/objects/ItemType;",
+          "public": true
+        }
+      ]
+    }
+  ],
+  "bootstrap": {
+    "classes": [
+      {
+        "class_name": "se/krka/kahlua/stdlib/TableLib",
+        "class_sha256": "97c294f5c050c48b901315eaa737f0d12587185554923d01e5c9f25602e51156"
+      },
+      {
+        "class_name": "se/krka/kahlua/stdlib/BaseLib",
+        "class_sha256": "03816f584acbe2ef78e167f3e7ef4773865adc5a68c7ee9732cfa7ba81f4a927"
+      },
+      {
+        "class_name": "se/krka/kahlua/j2se/J2SEPlatform",
+        "class_sha256": "5c1ce45a49034dc05378475ee772e5d1645971fae475c57070770c8cba0af492"
+      }
+    ],
+    "root_stdlib_sha256": "583c294996ae65310fb1191b9a70584b59c163a0f2d257af53f06728ba3931eb",
+    "table_registration": [
+      "concat",
+      "insert",
+      "remove",
+      "newarray",
+      "pairs",
+      "isempty",
+      "wipe",
+      "ipairs"
+    ],
+    "base_registration": [
+      "pcall",
+      "print",
+      "select",
+      "type",
+      "tostring",
+      "tonumber",
+      "getmetatable",
+      "setmetatable",
+      "error",
+      "unpack",
+      "setfenv",
+      "getfenv",
+      "rawequal",
+      "rawset",
+      "rawget",
+      "collectgarbage",
+      "debugstacktrace",
+      "bytecodeloader"
+    ],
+    "review": "J2SEPlatform registers TableLib and BaseLib and loads root stdlib.lua through setupLibraryText. Root Lua aliases pairs=table.pairs. These inspected bootstrap sources do not install global next or table.unpack. Additional runtime/mod globals are UNKNOWN."
+  },
+  "triage": {
+    "updateLight": 1,
+    "byte": 10,
+    "gsub": 22,
+    "gmatch": 6,
+    "getPreCookItems": 1,
+    "setLx": 10,
+    "setLy": 10,
+    "setLz": 10,
+    "getDeadBodies": 2,
+    "haveRoof": 1,
+    "upper": 4,
+    "getTeachedRecipes": 1,
+    "getActivated": 16,
+    "core": 2,
+    "setTorchDot": 4,
+    "getTorchCone": 2,
+    "onCollision": 4,
+    "onTrip": 4,
+    "onDamaged": 4,
+    "onNativeStateChanged": 4,
+    "canRun": 2,
+    "serialize": 2,
+    "deserialize": 2,
+    "Is": 2,
+    "UV": 4,
+    "Authority": 2,
+    "ZombieHunger": 4,
+    "getWaterAmount": 2,
+    "getWaterMax": 2,
+    "setTaintedWater": 1
+  },
+  "fix_status": {
+    "lightWorks": "LOCAL_ONLY: Lua torch-dot cache and truthful script-item diagnostic metadata; no Git/version onboarding.",
+    "groundWorks": "LOCAL_ONLY: haveRoofFull shelter probe; no Git/version onboarding.",
+    "Medical Checks cooperative": "APPLIED development 0.3.0-dev.3: pairs-based fresh-store check; original-fail/fixed-pass offline regression.",
+    "itjustWorks": "PENDING by user choice: global unpack fallback, tested overlay only.",
+    "weatherWorks": "PENDING by user choice: pairs-based empty-store check, tested overlay only.",
+    "powerWorks": "PENDING by user choice: pairs-based identity-set check, tested overlay only.",
+    "Last Known Address": "PENDING by user choice: pairs-based world-identity initialization, tested overlay only.",
+    "experienceWorks": "PENDING: guarded claim migration next dependency; baseline general test does not exercise it.",
+    "Dogmeat": "PENDING: three development-source next emptiness checks; concurrent development preserved."
+  }
+}

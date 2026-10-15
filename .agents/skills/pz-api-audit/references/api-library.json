@@ -5892,6 +5892,462 @@
       "steam_build": "25485521",
       "symbol": "getFluidAmount",
       "verified_on": "2026-10-14"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.inventory.InventoryItem",
+      "symbol": "setTorchDot",
+      "signature": "UNKNOWN: no public packaged/installed loose setter found.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "UNKNOWN",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Do not call this setter. lightWorks now keeps its dot override in its existing Lua rendering cache. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.inventory.InventoryItem",
+      "symbol": "getTorchDot",
+      "signature": "()F native descriptor; effective Lua invocation NOT_TESTED.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "INFERRED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Packaged getter reads the script-item torchDot. Native metadata is not independent Lua-exposure proof. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.iso.IsoGridSquare",
+      "symbol": "haveRoof",
+      "signature": "UNKNOWN: no public packaged/installed loose method found.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "UNKNOWN",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "groundWorks now checks haveRoofFull instead; outside/exterior does not establish lack of roofing. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.iso.IsoGridSquare",
+      "symbol": "haveRoofFull",
+      "signature": "()Z native descriptor; effective Lua invocation NOT_TESTED.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "INFERRED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Public native method found. Packaged logic checks roof coverage; actual precipitation/shelter behavior needs PZ testing. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.scripting.objects.Item",
+      "symbol": "getLightStrength",
+      "signature": "UNKNOWN: InventoryItem getter is not a verified script-item getter.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "UNKNOWN",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "ScriptManager.getAllItems supplies script Item definitions. lightWorks reports unavailable metadata as UNKNOWN. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.scripting.objects.Item",
+      "symbol": "getLightDistance",
+      "signature": "UNKNOWN: no corresponding public script-item method found.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "UNKNOWN",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Do not infer zero from an absent script-item getter; diagnostic fallback now preserves unknown values. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.scripting.objects.Item",
+      "symbol": "getTorchCone",
+      "signature": "UNKNOWN: no corresponding public script-item getter found.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "UNKNOWN",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Neither a guarded missing getter nor its false default establishes cone metadata. Keep diagnostic output UNKNOWN. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "zombie.scripting.objects.Item",
+      "symbol": "getItemType",
+      "signature": "()Lzombie/scripting/objects/ItemType; native descriptor.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "INFERRED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Use the script-item receiver contract; getTypeString belongs to other receiver families. Lua conversion/runtime remain untested. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "global function",
+      "symbol": "next",
+      "signature": "UNKNOWN: absent from inspected bootstrap registration/root stdlib.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "UNKNOWN",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Do not depend on stock Lua next without verifying runtime availability. For table emptiness use a local pairs loop; no global shim. Tested overlays reproduce absent-global failures. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "table standard library",
+      "symbol": "unpack",
+      "signature": "table.unpack(...) NOT registered by the inspected TableLib.",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "UNKNOWN",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Global unpack is registered by BaseLib. Prefer (unpack or table.unpack) locally when supporting both Kahlua and standard host Lua. Do not assume host Lua is identical to Kahlua. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "global function",
+      "symbol": "pairs",
+      "signature": "pairs(table): root bootstrap alias to table.pairs",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "VERIFIED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "stdlib.lua",
+          "sha256": "583c294996ae65310fb1191b9a70584b59c163a0f2d257af53f06728ba3931eb",
+          "lines": [
+            25,
+            26
+          ],
+          "statement": "Root bootstrap assigns the table iteration aliases."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Root stdlib.lua explicitly aliases pairs to table.pairs. Empty checks can return true on the first pair; no ordering guarantee. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "receiver_type": "global function",
+      "symbol": "unpack",
+      "signature": "unpack(table [, start [, end]]): registered builtin; full effective runtime contract NOT_TESTED",
+      "signature_scope": "all_mod_source_audit; bounded receiver/bootstrap evidence, not full invocation contract",
+      "game_version": "UNKNOWN",
+      "steam_build": "25485521",
+      "side": "shared",
+      "returns": "UNKNOWN for missing or uninvoked methods; see bounded signature and notes.",
+      "mutation": "No new gameplay authority or synchronization established by this audit. Caller side effects and runtime behavior require owning-project validation.",
+      "status": "VERIFIED",
+      "runtime_status": "NOT_TESTED",
+      "verified_on": "2026-10-14",
+      "evidence": [
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel; exact packaged methods/registration summary is in the companion report. No runtime invocation."
+        },
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/all-mod-api-audit-25485521.json",
+          "sha256": "00c30688f822012d1e61ca282b793d131a6770c5503463da257031463f64b58f",
+          "lines": [
+            1,
+            332
+          ],
+          "statement": "Original reviewed static-analysis summary and explicitly offline regression results; no PZ execution."
+        }
+      ],
+      "notes": "Reviewed BaseLib registration exposes global unpack; J2SEPlatform initializes this library. This source-route result is not an invocation test. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
     }
   ]
 }

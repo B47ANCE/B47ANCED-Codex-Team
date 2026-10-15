@@ -1,5 +1,8 @@
 # Changelog
 
+## 13.3.1 - 2026-10-14
+- Use a directly resized 512x512 B47.png for fallback Workshop thumbnails; keep the 64x64 icon and 128x128 poster separate.
+
 ## 13.3.0 - 2026-10-14
 - Add portable exact user-supplied fallback PNG data; manually supplied artwork takes precedence.
 - Register fallback branding for seven selected projects and future team mods; UI excluded.

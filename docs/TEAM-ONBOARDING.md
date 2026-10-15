@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.4.6.
+Links follow main and may advance beyond this document's configuration version, 13.4.7.
 
 ## Prerequisites
 
@@ -81,6 +81,9 @@ and unrelated references still fail. Keep existing custom project instructions;
 no guide rewrite or connector run is needed just to satisfy verification.
 
 ## Updates
+
+For mod development, update relevant GitHub documentation in the same branch/PR as each code iteration, rather than waiting for release. Keep behavior, setup, configuration, compatibility, limitations and test evidence current. Review affected docs before pushing and explain in the PR if none need changes. Preserve historical validation and project-specific instructions.
+
 
 The least-privilege sign-in task applies validated main updates. Updates check the full manifest, exact-commit CI, local drift and version progression; create a backup and roll back failed transactions. Downloaded executable code is installed inert. Bootstrap changes need manual review/setup.
 

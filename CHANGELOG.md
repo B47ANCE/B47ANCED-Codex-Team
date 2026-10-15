@@ -1,5 +1,9 @@
 # Changelog
 
+## 13.4.7 - 2026-10-15
+- Require affected GitHub documentation to stay current in the same branch/PR as each mod development iteration, including behavior, setup, compatibility, limitations and actual validation evidence.
+- Add the documentation review to the shared versioning skill and onboarding guidance; preserve project instructions and historical evidence.
+
 ## 13.4.6 - 2026-10-15
 - Make read-only repository verification skip the .worktrees container and accept custom guides referencing the shared global AGENTS.md. Preserve missing-guide/skill failures and all project instructions/settings.
 - Add six PowerShell regression fixtures covering custom references, lookalikes, exclusions and byte-preservation; document supported references.

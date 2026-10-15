@@ -18,7 +18,8 @@ class ApiLibrary(unittest.TestCase):
 
     def test_curated_catalog_valid(self):
         data = m.read(m.CURATED)
-        self.assertEqual(len(data["records"]), 3)
+        self.assertEqual(len(data["records"]), 93)
+        self.assertEqual({r["status"] for r in data["records"]}, {"VERIFIED", "INFERRED", "UNKNOWN"})
         self.assertTrue(all(r["runtime_status"] == "NOT_TESTED" for r in data["records"]))
 
     def test_build_and_hash_rechecks_never_promote_runtime(self):
@@ -107,3 +108,18 @@ class ApiLibrary(unittest.TestCase):
             installer.install(ROOT, home, home/".codex/backups")
             self.assertEqual(draft.read_bytes(), before)
             self.assertTrue((home/".agents/skills/pz-api-audit/references/api-library.json").is_file())
+
+class SharedUncertainty(unittest.TestCase):
+    def test_hash_match_does_not_promote_inferred_or_unknown(self):
+        for status in ("INFERRED", "UNKNOWN"):
+            entry = copy.deepcopy(next(r for r in m.read(m.CURATED)["records"] if r["status"] == status))
+            with tempfile.TemporaryDirectory() as td:
+                root = pathlib.Path(td)
+                entry["evidence"] = [copy.deepcopy(m.read(m.CURATED)["records"][0]["evidence"][0])]
+                proof = entry["evidence"][0]
+                path = root / proof["path"]; path.parent.mkdir(parents=True); path.write_bytes(b"source fixture")
+                proof["sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+                result = m.search({"schema": 1, "records": [entry]}, entry["symbol"], entry["steam_build"], game_root=root)[0]
+                self.assertEqual(result["reuse"], "SOURCE_HASH_MATCH")
+                self.assertEqual(result["record"]["status"], status)
+                self.assertEqual(result["record"]["runtime_status"], "NOT_TESTED")

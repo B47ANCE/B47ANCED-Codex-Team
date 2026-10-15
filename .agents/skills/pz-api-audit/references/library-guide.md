@@ -1,6 +1,6 @@
 # API catalog and audit memory
 
-`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. Three initial records describe vanilla Mod Selector call forms from Steam build 25485521; full engine version is explicitly UNKNOWN and runtime is NOT_TESTED.
+`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. The catalog contains 93 observations from Steam build 25485521. See [population provenance](population-provenance.md) for coverage, status counts and limits. Full engine version is explicitly UNKNOWN and every runtime status is NOT_TESTED.
 
 ## Record contents
 
@@ -30,3 +30,5 @@ Repeat identical writes are idempotent. A different record with the same identit
 To share a verified finding, use `record --entry <record.json> --library <reviewed-team-checkout>/.agents/skills/pz-api-audit/references/api-library.json`, then validate and commit through the normal team workflow. The helper refuses writes inside installed managed skill/hub stores and rejects linked destinations and private absolute paths. Do not bypass the team updater's manifest/drift protections.
 
 Source rechecking uses game-root only for vanilla/native evidence files. Document/runtime evidence stays in its owning project and requires separate inspection. This library never grants authorization to run the game/server or turns a cached entry into a runtime PASS.
+
+Shared catalog membership is not evidence approval: INFERRED and UNKNOWN records remain unresolved. `call_site_name_only` signatures contain placeholders, not invocation instructions. A matching short name never verifies the historical receiver type. Project evidence paths beginning `projects/` resolve beneath the owning developer's mod repository root; those files are not bundled. Recheck the cited installed Lua locally; request missing project evidence instead of treating its fingerprint as proof.

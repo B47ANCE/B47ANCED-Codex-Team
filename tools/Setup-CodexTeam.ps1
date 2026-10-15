@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$HomeDirectory=$env:USERPROFILE, [string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$MigrateExisting,[switch]$EnableUpdates)
+param([string]$HomeDirectory=$env:USERPROFILE, [string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$MigrateExisting,[switch]$EnableUpdates,[switch]$SkipVSCode)
 $ErrorActionPreference='Stop'
 if($RepositoryRoot -and -not(Test-Path -LiteralPath $RepositoryRoot -PathType Container)){throw 'RepositoryRoot must be an existing directory; choose your actual mod repository folder'}
 $root=Split-Path $PSScriptRoot -Parent
@@ -16,3 +16,4 @@ if($EnableUpdates){
  & (Join-Path $HomeDirectory '.codex/b47anced-team-tools/Update-CodexTeam.ps1') -HomeDirectory $HomeDirectory -CheckOnly
  & (Join-Path $PSScriptRoot 'Register-CodexTeamUpdater.ps1') -HomeDirectory $HomeDirectory
 }
+if(-not $SkipVSCode){ & (Join-Path $PSScriptRoot 'Setup-VSCode.ps1') }

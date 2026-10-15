@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.4.7.
+Links follow main and may advance beyond this document's configuration version, 13.5.0.
 
 ## Prerequisites
 
@@ -61,6 +61,10 @@ New-Item -ItemType Directory -Force $modRepositories | Out-Null
 ```
 
 Python is discovered automatically; supply `-PythonExe` for a nonstandard runtime. Existing unmanaged team files require reviewed `-MigrateExisting`; rerun setup with that switch only after inspection. Customized managed files block updates. Custom guide text, project instructions, unrelated skills and local config remain independent. Never edit managed team files to store machine-specific settings.
+
+## Default editor
+
+Setup installs VS Code and the official Codex extension by default. If VS Code is absent, Windows App Installer/winget is required; alternatively install VS Code manually first. Pass `-SkipVSCode` for another editor or disposable test setup. Follow [VS Code setup and activation](VSCODE.md), including sign-in and the read-only editor verification command. Editor provisioning runs only during explicit setup, never automatic updates or rollback.
 
 ## Verify
 

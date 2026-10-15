@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.5.0 - 2026-10-15
+- Default explicit Windows setup to VS Code and the official OpenAI Codex extension, with idempotent provisioning, read-only verification and a SkipVSCode opt-out.
+- Preserve editor settings, credentials, unrelated extensions and project instructions. Automatic updates install the helper inert and never provision or launch the editor.
+- Document editor activation and the distinction between editor features and Codex tools.
+
 ## 13.4.7 - 2026-10-15
 - Require affected GitHub documentation to stay current in the same branch/PR as each mod development iteration, including behavior, setup, compatibility, limitations and actual validation evidence.
 - Add the documentation review to the shared versioning skill and onboarding guidance; preserve project instructions and historical evidence.

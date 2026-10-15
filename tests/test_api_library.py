@@ -18,8 +18,8 @@ class ApiLibrary(unittest.TestCase):
 
     def test_curated_catalog_valid(self):
         data = m.read(m.CURATED)
-        self.assertEqual(len(data["records"]), 94)
-        self.assertEqual({r["status"] for r in data["records"]}, {"VERIFIED", "UNKNOWN"})
+        self.assertEqual(len(data["records"]), 106)
+        self.assertEqual({r["status"] for r in data["records"]}, {"VERIFIED", "UNKNOWN", "INFERRED"})
         self.assertTrue(all(r["runtime_status"] == "NOT_TESTED" for r in data["records"]))
 
     def test_build_and_hash_rechecks_never_promote_runtime(self):
@@ -182,6 +182,33 @@ class ExposureRoutes(unittest.TestCase):
         with self.assertRaises(ValueError): m.validate({"schema": 1, "records": [entry]})
         entry["status"] = "INFERRED"
         m.validate({"schema": 1, "records": [entry]})
+
+class AllModAudit(unittest.TestCase):
+    def test_negative_and_signature_candidates_do_not_claim_runtime_or_exposure(self):
+        records = [r for r in m.read(m.CURATED)["records"] if r["signature_scope"].startswith("all_mod_source_audit")]
+        self.assertEqual(len(records), 12)
+        for r in records:
+            self.assertEqual(r["runtime_status"], "NOT_TESTED")
+            if r["symbol"] in {"setTorchDot", "haveRoof", "getLightStrength", "getLightDistance", "getTorchCone", "next"}:
+                self.assertEqual(r["status"], "UNKNOWN")
+            if r["symbol"] in {"getTorchDot", "haveRoofFull", "getItemType"}:
+                self.assertEqual(r["status"], "INFERRED")
+        self.assertEqual(next(r for r in records if r["receiver_type"] == "table standard library")["status"], "UNKNOWN")
+
+    def test_bounded_bootstrap_evidence_and_summary_fingerprint(self):
+        path = m.CURATED.parent / "all-mod-api-audit-25485521.json"
+        report = json.loads(path.read_text())
+        self.assertNotIn("next", report["bootstrap"]["base_registration"])
+        self.assertNotIn("unpack", report["bootstrap"]["table_registration"])
+        self.assertIn("unpack", report["bootstrap"]["base_registration"])
+        self.assertIn("pairs", report["bootstrap"]["table_registration"])
+        self.assertEqual(report["runtime"], "NOT_TESTED")
+        self.assertTrue(report["fix_status"]["weatherWorks"].startswith("PENDING"))
+        self.assertEqual(report["coverage"]["projects"], 27)
+        for r in m.read(m.CURATED)["records"]:
+            for p in r["evidence"]:
+                if p["path"].endswith(path.name):
+                    self.assertEqual(p["sha256"], hashlib.sha256(path.read_bytes()).hexdigest())
 
 class FluidReceiverContracts(unittest.TestCase):
     def test_world_and_component_receivers_are_not_conflated(self):

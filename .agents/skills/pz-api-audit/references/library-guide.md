@@ -38,3 +38,5 @@ Native evidence against projectzomboid.jar uses [1,1] as a binary sentinel, not 
 [Lua exposure follow-up](lua-exposure-review.md) distinguishes verified source binding routes from observed Lua callers and actual invocation. Its offline_test evidence is a reviewed static-analysis summary, not game execution. The summary is bundled with this skill; resolve its .agents/skills path beneath the team checkout or via the installed skill folder, separately from --game-root.
 
 [Fluid API resolution](fluid-api-resolution.md) explains the component-level alternative, world-source semantics and local mod usage. Select by receiver and purpose; never mechanically rename world-object getFluidAmount calls.
+
+[All-mod API audit](all-mod-api-audit.md) covers receiver mismatches, Kahlua bootstrap differences, offline fixes and explicit pending work. Negative findings stay UNKNOWN and signature-only alternatives stay INFERRED.

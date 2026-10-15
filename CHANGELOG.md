@@ -1,5 +1,9 @@
 # Changelog
 
+## 13.3.0 - 2026-10-14
+- Add portable exact user-supplied fallback PNG data; manually supplied artwork takes precedence.
+- Register fallback branding for seven selected projects and future team mods; UI excluded.
+
 ## 13.2.3 - 2026-10-14
 - Automatically gracefully restart the verified Steam desktop client after confirmed successful Workshop publication; report restart independently and never force termination.
 

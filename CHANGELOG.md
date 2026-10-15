@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.4.4 - 2026-10-14
+- Document the supported FluidContainer.getAmount storage query and distinguish IsoObject.getFluidAmount world-source semantics; retain the conflicting component API as UNKNOWN.
+- Audit local mod usage: three Quartermaster world-object callers and no confirmed invalid component caller. Preserve valid finite-source guards and all mod code.
+- Add source/usage evidence and a verified world-object record. All 94 catalog records remain runtime NOT_TESTED.
+
 ## 13.4.3 - 2026-10-14
 - Trace all 21 remaining candidates through packaged Lua binding construction: 19 registered class methods and two annotated globals. Verification is source exposure only; invocation and runtime remain NOT_TESTED.
 - Keep FluidContainer.getFluidAmount UNKNOWN after checking the hierarchy, interfaces and annotation aliases; no packaged binding was found.

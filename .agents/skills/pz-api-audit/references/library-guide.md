@@ -1,6 +1,6 @@
 # API catalog and audit memory
 
-`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. The catalog contains 93 observations from Steam build 25485521. See [population provenance](population-provenance.md) for coverage, status counts and limits. Full engine version is explicitly UNKNOWN and every runtime status is NOT_TESTED. [Deep review](deep-review-25485521.md) records refined receivers, native-only findings and a conflicting fluid API.
+`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. The catalog contains 94 observations from Steam build 25485521. See [population provenance](population-provenance.md) for coverage, status counts and limits. Full engine version is explicitly UNKNOWN and every runtime status is NOT_TESTED. [Deep review](deep-review-25485521.md) records refined receivers, native-only findings and a conflicting fluid API.
 
 ## Record contents
 
@@ -36,3 +36,5 @@ Shared catalog membership is not evidence approval: INFERRED and UNKNOWN records
 Native evidence against projectzomboid.jar uses [1,1] as a binary sentinel, not textual source lines. The companion native-metadata-25485521.json identifies entries, method descriptors and packaged/loose hashes. Descriptor return types do not prove Lua conversion, nullability, side effects or dispatch. Source observations and metadata remain separate evidence layers.
 
 [Lua exposure follow-up](lua-exposure-review.md) distinguishes verified source binding routes from observed Lua callers and actual invocation. Its offline_test evidence is a reviewed static-analysis summary, not game execution. The summary is bundled with this skill; resolve its .agents/skills path beneath the team checkout or via the installed skill folder, separately from --game-root.
+
+[Fluid API resolution](fluid-api-resolution.md) explains the component-level alternative, world-source semantics and local mod usage. Select by receiver and purpose; never mechanically rename world-object getFluidAmount calls.

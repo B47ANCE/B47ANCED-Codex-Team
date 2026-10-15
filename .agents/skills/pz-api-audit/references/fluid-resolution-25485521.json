@@ -1,0 +1,271 @@
+{
+  "steam_build": "25485521",
+  "game_version": "UNKNOWN",
+  "jar_sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+  "source_only": true,
+  "runtime": "NOT_TESTED",
+  "component": {
+    "owner": "zombie/entity/components/fluids/FluidContainer",
+    "sha256": "747f8527f9320669a9685ca4af6a578456a1db8f8b1e0a76a8f892b1ea9d4e1b",
+    "method": "getAmount",
+    "descriptor": "()F",
+    "calls": "recalculateCaches then reads amountCache",
+    "getFluidAmount_binding": "NOT_FOUND; no declared method, interface or annotation alias in inspected hierarchy"
+  },
+  "world_object": {
+    "owner": "zombie/iso/IsoObject",
+    "sha256": "22387ecf47c1cf9aac192466de6298067f27584160c76a72baee38c6ad36dff2",
+    "method": "getFluidAmount",
+    "descriptor": "()F",
+    "source_branches": [
+      "checkExternalFluidSource",
+      "getAmount",
+      "getFluidAmount",
+      "getFluidContainer",
+      "getProperties",
+      "getPuddlesInGround",
+      "getReserveWaterAmount",
+      "has",
+      "hasReserveWater",
+      "isUnmovedPipedWaterSource",
+      "isWaterInfinite",
+      "solidfloor",
+      "sprite",
+      "square",
+      "usesExternalWaterSource",
+      "water"
+    ],
+    "infinite_source_constant": 10000.0,
+    "loose_sha256": "78e9c2248c12bb8d230fa790c4b0cd11539ced3c4542f59901badc8b6297f0a4",
+    "loose_instruction_snapshot_identical": false,
+    "limits": "Loose bytes/instructions differ; no equivalence or effective process claim. Packaged source distinguishes local component storage from external/infinite/reserve/puddle source behavior."
+  },
+  "usage_scan": {
+    "scope": "Immediate mod-root folders recursively scanned for Lua identifiers, including src/Contents mirrors, prototypes and tests; docs, research, historical/archive/generated folders and hidden worktrees excluded. Concatenated/computed method names and external/remote copies are not exhaustively resolved.",
+    "repositories": [
+      {
+        "repository": "AuthenticZGlowstickMPPatch",
+        "lua_files": {
+          "prototype": 1,
+          "source_or_mirror": 6
+        }
+      },
+      {
+        "repository": "B47ANCE Costume",
+        "lua_files": {
+          "source_or_mirror": 3
+        }
+      },
+      {
+        "repository": "B47ANCEDActiveHours",
+        "lua_files": {
+          "source_or_mirror": 3
+        }
+      },
+      {
+        "repository": "B47ANCEDBuildableFences",
+        "lua_files": {
+          "prototype": 5,
+          "source_or_mirror": 3
+        }
+      },
+      {
+        "repository": "B47ANCEDDogmeat",
+        "lua_files": {
+          "source_or_mirror": 21,
+          "test_fixture": 21
+        }
+      },
+      {
+        "repository": "B47ANCEDEyewear",
+        "lua_files": {
+          "source_or_mirror": 63
+        }
+      },
+      {
+        "repository": "B47ANCEDHelicopterEvents",
+        "lua_files": {}
+      },
+      {
+        "repository": "B47ANCEDMedicalChecks",
+        "lua_files": {
+          "source_or_mirror": 6,
+          "test_fixture": 3
+        }
+      },
+      {
+        "repository": "B47ANCEDMedicalChecks-authority-audit",
+        "lua_files": {
+          "source_or_mirror": 6,
+          "test_fixture": 3
+        }
+      },
+      {
+        "repository": "B47ANCEDMedicalChecks-cooperative",
+        "lua_files": {
+          "source_or_mirror": 8,
+          "test_fixture": 4
+        }
+      },
+      {
+        "repository": "B47ANCEDQuartermaster",
+        "lua_files": {
+          "source_or_mirror": 79,
+          "test_fixture": 79
+        }
+      },
+      {
+        "repository": "B47ANCEDRooms",
+        "lua_files": {
+          "source_or_mirror": 22,
+          "test_fixture": 10
+        }
+      },
+      {
+        "repository": "CATConstruction",
+        "lua_files": {
+          "source_or_mirror": 35,
+          "test_fixture": 9
+        }
+      },
+      {
+        "repository": "experienceWorks",
+        "lua_files": {
+          "source_or_mirror": 34,
+          "test_fixture": 14
+        }
+      },
+      {
+        "repository": "farmWorks",
+        "lua_files": {
+          "source_or_mirror": 8,
+          "test_fixture": 7
+        }
+      },
+      {
+        "repository": "foodWorks",
+        "lua_files": {
+          "source_or_mirror": 7,
+          "test_fixture": 5
+        }
+      },
+      {
+        "repository": "groundWorks",
+        "lua_files": {
+          "source_or_mirror": 121,
+          "test_fixture": 35
+        }
+      },
+      {
+        "repository": "itjustWorks",
+        "lua_files": {
+          "source_or_mirror": 28,
+          "test_fixture": 26
+        }
+      },
+      {
+        "repository": "junkWorks",
+        "lua_files": {
+          "source_or_mirror": 11,
+          "test_fixture": 7
+        }
+      },
+      {
+        "repository": "Last Known Address",
+        "lua_files": {
+          "source_or_mirror": 9
+        }
+      },
+      {
+        "repository": "lightWorks",
+        "lua_files": {
+          "source_or_mirror": 63,
+          "test_fixture": 25
+        }
+      },
+      {
+        "repository": "medWorks",
+        "lua_files": {
+          "source_or_mirror": 38,
+          "test_fixture": 15
+        }
+      },
+      {
+        "repository": "powerWorks",
+        "lua_files": {
+          "source_or_mirror": 42,
+          "test_fixture": 19
+        }
+      },
+      {
+        "repository": "Project MORTIS",
+        "lua_files": {
+          "source_or_mirror": 247,
+          "test_fixture": 43
+        }
+      },
+      {
+        "repository": "Project Nightfall",
+        "lua_files": {
+          "source_or_mirror": 106,
+          "test_fixture": 57
+        }
+      },
+      {
+        "repository": "waterWorks",
+        "lua_files": {
+          "source_or_mirror": 44,
+          "test_fixture": 50
+        }
+      },
+      {
+        "repository": "weatherWorks",
+        "lua_files": {
+          "source_or_mirror": 9,
+          "test_fixture": 9
+        }
+      }
+    ],
+    "lua_files": 1469,
+    "getFluidAmount_hits": [
+      {
+        "path": "B47ANCEDQuartermaster/src/B47ANCEDQuartermaster/42/media/lua/shared/B47ANCEDQuartermaster/AutoClean/BuildingNative.lua",
+        "line": 96,
+        "category": "source_or_mirror",
+        "sha256": "79138bd98bf12e71e0bf5a4b59a7fcee1afdea96061a7f09f20c23887ffb7b98",
+        "classification": "world_IsoObject_contract"
+      },
+      {
+        "path": "B47ANCEDQuartermaster/src/B47ANCEDQuartermaster/42/media/lua/shared/B47ANCEDQuartermaster/AutoClean/BuildingNative.lua",
+        "line": 154,
+        "category": "source_or_mirror",
+        "sha256": "79138bd98bf12e71e0bf5a4b59a7fcee1afdea96061a7f09f20c23887ffb7b98",
+        "classification": "world_IsoObject_contract"
+      },
+      {
+        "path": "B47ANCEDQuartermaster/src/B47ANCEDQuartermaster/42/media/lua/shared/B47ANCEDQuartermaster/AutoClean/NativePort.lua",
+        "line": 113,
+        "category": "source_or_mirror",
+        "sha256": "304e55bd1d4636a448b932e699ce69e8d5c58de8e99019aa34b22fa4ea271c02",
+        "classification": "world_IsoObject_contract"
+      },
+      {
+        "path": "B47ANCEDQuartermaster/tests/test_auto_clean_guard.lua",
+        "line": 133,
+        "category": "test_fixture",
+        "sha256": "594a7d24f74e3c3276c35ece5b2fbe18a89e333ed8d42bd9eb2a17004c0b5455",
+        "classification": "world_IsoObject_contract"
+      }
+    ],
+    "production_calls": 3,
+    "confirmed_invalid_component_calls": 0,
+    "fixes_required": "No confirmed owned-mod issue from this scan; no mod edits.",
+    "supported_component_consumers": [
+      "waterWorks",
+      "groundWorks",
+      "CATConstruction",
+      "B47ANCEDQuartermaster"
+    ]
+  },
+  "freshness_limits": "Local source snapshots only. Quartermaster matches its upstream feature branch but is dirty; waterWorks, groundWorks and CATConstruction have no Git metadata. No edits or remote/current-main equivalence claimed for these projects."
+}

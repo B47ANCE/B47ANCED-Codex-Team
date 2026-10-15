@@ -18,7 +18,7 @@ class ApiLibrary(unittest.TestCase):
 
     def test_curated_catalog_valid(self):
         data = m.read(m.CURATED)
-        self.assertEqual(len(data["records"]), 93)
+        self.assertEqual(len(data["records"]), 94)
         self.assertEqual({r["status"] for r in data["records"]}, {"VERIFIED", "UNKNOWN"})
         self.assertTrue(all(r["runtime_status"] == "NOT_TESTED" for r in data["records"]))
 
@@ -182,3 +182,30 @@ class ExposureRoutes(unittest.TestCase):
         with self.assertRaises(ValueError): m.validate({"schema": 1, "records": [entry]})
         entry["status"] = "INFERRED"
         m.validate({"schema": 1, "records": [entry]})
+
+class FluidReceiverContracts(unittest.TestCase):
+    def test_world_and_component_receivers_are_not_conflated(self):
+        data = m.read(m.CURATED)
+        rows = [r for r in data["records"] if r["symbol"] == "getFluidAmount"]
+        self.assertEqual(len(rows), 2)
+        world = next(r for r in rows if r["receiver_type"] == "zombie.iso.IsoObject")
+        component = next(r for r in rows if r["receiver_type"] == "zombie.entity.components.fluids.FluidContainer")
+        self.assertEqual(world["status"], "VERIFIED")
+        self.assertEqual(component["status"], "UNKNOWN")
+        self.assertTrue(all(r["runtime_status"] == "NOT_TESTED" for r in rows))
+        amount = next(r for r in data["records"] if r["symbol"] == "getAmount")
+        self.assertEqual(amount["receiver_type"], "zombie.entity.components.fluids.FluidContainer")
+        self.assertEqual(amount["status"], "VERIFIED")
+
+    def test_resolution_summary_distinguishes_storage_and_effective_sources(self):
+        path = m.CURATED.parent / "fluid-resolution-25485521.json"
+        report = json.loads(path.read_text())
+        self.assertEqual(report["component"]["method"], "getAmount")
+        self.assertEqual(report["component"]["descriptor"], "()F")
+        self.assertIn("checkExternalFluidSource", report["world_object"]["source_branches"])
+        self.assertIn("getReserveWaterAmount", report["world_object"]["source_branches"])
+        self.assertEqual(report["runtime"], "NOT_TESTED")
+        for record in m.read(m.CURATED)["records"]:
+            for proof in record["evidence"]:
+                if proof["path"].endswith("fluid-resolution-25485521.json"):
+                    self.assertEqual(proof["sha256"], hashlib.sha256(path.read_bytes()).hexdigest())

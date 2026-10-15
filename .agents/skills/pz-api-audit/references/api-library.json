@@ -4999,6 +4999,16 @@
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
         {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/fluid-resolution-25485521.json",
+          "sha256": "1de982fa7d38139b0546d3e391c8f49e88f0db18b51c4c6ca47c61127135ffc9",
+          "lines": [
+            1,
+            271
+          ],
+          "statement": "Reviewed offline source/metadata and local mod-usage audit. Distinguishes component storage amount from world-object effective source amount; no runtime test."
+        },
+        {
           "kind": "vanilla_lua",
           "path": "media/lua/client/Fluids/ISFluidContainerPanel.lua",
           "sha256": "1d393c089fe60f109c9b5ee780d9dde8abec9776edabb6c854d21241dbca0a93",
@@ -5030,10 +5040,10 @@
         }
       ],
       "game_version": "UNKNOWN",
-      "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "Replaced InputScript amount evidence with a fluid-component call. Values are used as volume in the UI; units, precision and transaction semantics are not independently specified. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained.",
+      "mutation": "Getter refreshes internal caches. It reads local component storage, not effective external/infinite/reserve/puddle water availability; no fluid consumption or shared-state mutation is authorized.",
+      "notes": "Replaced InputScript amount evidence with a fluid-component call. Values are used as volume in the UI; units, precision and transaction semantics are not independently specified. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Supported component-level alternative to the conflicting getFluidAmount caller, with an explicit nil component check. Zero is an empty amount; nil means missing component and must not be fabricated as zero. Does not replace world-object availability checks or establish transfer atomicity.",
       "receiver_type": "zombie.entity.components.fluids.FluidContainer",
-      "returns": "Packaged JVM descriptor(s): ()F. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
+      "returns": "Packaged float amountCache after recalculateCaches; shipped fluid UI multiplies by 1000 when formatting mL. Actual runtime value/lifetime/conversion remains untested.",
       "runtime_status": "NOT_TESTED",
       "side": "client",
       "signature": "item:getFluidContainer():getAmount()",
@@ -5046,6 +5056,26 @@
     {
       "api_library": "Project Zomboid installed API audit observations",
       "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/fluid-resolution-25485521.json",
+          "sha256": "1de982fa7d38139b0546d3e391c8f49e88f0db18b51c4c6ca47c61127135ffc9",
+          "lines": [
+            1,
+            271
+          ],
+          "statement": "Reviewed offline source/metadata and local mod-usage audit. Distinguishes component storage amount from world-object effective source amount; no runtime test."
+        },
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ISUI/ISInventoryPaneContextMenu.lua",
+          "sha256": "4cbbc52cbab591cee0c7d1c5927125bf59c70c588936b04d3ce0fe75648a96cc",
+          "lines": [
+            2340,
+            2344
+          ],
+          "statement": "Second installed UI caller uses the conflicting component method; occurrence does not prove binding availability."
+        },
         {
           "kind": "offline_test",
           "path": ".agents/skills/pz-api-audit/references/lua-exposure-25485521.json",
@@ -5099,7 +5129,7 @@
       ],
       "game_version": "UNKNOWN",
       "mutation": "Caller reads/uses a value; native allocation, side effects, lifetime and cross-peer consistency remain unverified.",
-      "notes": "UNKNOWN: packaged GameEntity.getFluidContainer returns FluidContainer; that class hierarchy lacks getFluidAmount, while IsoObject has it. Runtime overrides may differ. Prefer researching FluidContainer.getAmount; no automatic replacement is justified for every historical caller. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Exposure follow-up checked interfaces and annotation aliases: no packaged binding found on FluidContainer/Component. No runtime invocation; UNKNOWN retained.",
+      "notes": "UNKNOWN: packaged GameEntity.getFluidContainer returns FluidContainer; that class hierarchy lacks getFluidAmount, while IsoObject has it. Runtime overrides may differ. Prefer researching FluidContainer.getAmount; no automatic replacement is justified for every historical caller. Deep review uses packaged native metadata plus installed Lua where stated. Modified loose classes are separately fingerprinted; packaged behavior is not proof of effective runtime behavior. Full engine version UNKNOWN. No SP or dedicated MP test. Original assertions remain historical; their portable project fingerprints are retained. Exposure follow-up checked interfaces and annotation aliases: no packaged binding found on FluidContainer/Component. No runtime invocation; UNKNOWN retained. Resolution guidance: use FluidContainer:getAmount() only for stored component volume after a nil component check. Keep IsoObject:getFluidAmount() for effective world-source semantics; do not mass replace object calls. Three local Quartermaster production calls are world-object reads; no invalid component caller found in scanned owned-mod Lua. Two installed vanilla UI files retain conflicting callers; game files remain untouched.",
       "receiver_type": "zombie.entity.components.fluids.FluidContainer",
       "returns": "Packaged JVM descriptor(s): NO MATCH on intended receiver. This is native metadata, not a complete Lua conversion/nullability/return guarantee.",
       "runtime_status": "NOT_TESTED",
@@ -5813,6 +5843,54 @@
       "status": "VERIFIED",
       "steam_build": "25485521",
       "symbol": "processDestroyAndUsedItems",
+      "verified_on": "2026-10-14"
+    },
+    {
+      "api_library": "Project Zomboid installed API audit observations",
+      "evidence": [
+        {
+          "kind": "offline_test",
+          "path": ".agents/skills/pz-api-audit/references/fluid-resolution-25485521.json",
+          "sha256": "1de982fa7d38139b0546d3e391c8f49e88f0db18b51c4c6ca47c61127135ffc9",
+          "lines": [
+            1,
+            271
+          ],
+          "statement": "Reviewed offline source/metadata and local mod-usage audit. Distinguishes component storage amount from world-object effective source amount; no runtime test."
+        },
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/ClientCommands.lua",
+          "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+          "lines": [
+            311,
+            315
+          ],
+          "statement": "Vanilla server command queries effective world-object fluid amount."
+        },
+        {
+          "kind": "native_inspection",
+          "path": "projectzomboid.jar",
+          "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+          "lines": [
+            1,
+            1
+          ],
+          "statement": "Binary sentinel [1,1]; IsoObject.getFluidAmount()F public source path includes distinct world-source branches. Metadata/branch summary in fluid-resolution-25485521.json."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Source query may inspect/update external-source discovery/cache state; not a pure component-storage accessor or an authorization check.",
+      "notes": "Source-supported world-object API, distinct from the UNKNOWN FluidContainer receiver. Quartermaster intentionally compares object availability to finite component storage. Preserve those guards; no universal replacement with getAmount. Loose class instructions differ and active process behavior remains unverified.",
+      "receiver_type": "zombie.iso.IsoObject",
+      "returns": "Packaged float source amount; branches can consult infinite/external/reserve/puddle sources rather than only the attached component. The infinite-source branch uses 10000.0. Runtime values and effective modified implementation untested.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "obj:getFluidAmount()",
+      "signature_scope": "observed_vanilla_world_object_call and packaged source semantics; runtime NOT_TESTED",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "getFluidAmount",
       "verified_on": "2026-10-14"
     }
   ]

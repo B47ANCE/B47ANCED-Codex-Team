@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.4.5.
+Links follow main and may advance beyond this document's configuration version, 13.4.6.
 
 ## Prerequisites
 
@@ -72,6 +72,13 @@ Get-Content "$env:USERPROFILE\.codex\b47anced-team-state.json"
 ```
 
 Open a new Codex chat and confirm 23 global team skills. Desktop activation is a separate manual check; absence of the Codex CLI is not a failure.
+
+Repository verification is read-only. It skips the `.worktrees` container and
+accepts either the managed startup marker or a custom guide referencing the global
+`.codex/AGENTS.md`: `%USERPROFILE%`, `$env:USERPROFILE`, `~`, or the absolute path
+under the selected `-HomeDirectory`, with either path separator. Missing guides
+and unrelated references still fail. Keep existing custom project instructions;
+no guide rewrite or connector run is needed just to satisfy verification.
 
 ## Updates
 

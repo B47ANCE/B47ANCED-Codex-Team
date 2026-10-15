@@ -1,5 +1,9 @@
 # Changelog
 
+## 13.4.6 - 2026-10-15
+- Make read-only repository verification skip the .worktrees container and accept custom guides referencing the shared global AGENTS.md. Preserve missing-guide/skill failures and all project instructions/settings.
+- Add six PowerShell regression fixtures covering custom references, lookalikes, exclusions and byte-preservation; document supported references.
+
 ## 13.4.5 - 2026-10-14
 - Add 12 receiver/bootstrap findings from the all-mod source audit, including missing next/table.unpack dependencies and script-item versus inventory-item distinctions. All runtime evidence remains NOT_TESTED.
 - Record bounded coverage, applied local fixes and user-deferred overlays. Add catalog/evidence regression checks; preserve earlier reports as historical evidence.

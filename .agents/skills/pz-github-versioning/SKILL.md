@@ -21,6 +21,9 @@ Trigger on `commit`, a requested version iteration, or explicit GitHub backup.
 Safety: Never force-push, delete branches, reset user changes, make repos private, or commit secrets. Respect Codex sandbox and approval prompts.
 
 ## Team branches and review
+
+Documentation ships with each development iteration. Before commit/push, review the relevant README, CHANGELOG and existing feature/design, setup, sandbox/configuration, compatibility, API and validation docs against the implemented change. Update affected documents in the same branch/PR, including current limitations and exact offline/SP/dedicated evidence; do not wait for release. Record a reason in the PR when no documentation update is needed. Preserve project instructions and historical evidence. Only update documents affected by the change; a version mirror update does not by itself document changed behavior.
+
 Use a named feature/fix branch for team work and open a PR before merging shared main. In B47ANCE-owned repositories, owner B47ANCE may self-merge their own PR after required CI passes without approval from another developer or a temporary protection exception; other developers require reviewer approval. An explicit merge request authorizes this owner self-merge; never bypass required CI. Preserve the intended remote/upstream and unrelated user changes. A commit request authorizes the intended iteration commit/push; it does not authorize merging shared main, changing repository visibility or settings, or creating an unverified stable release. Prefer available CI and report missing gates.
 
 ## Workshop test distribution exception

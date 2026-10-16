@@ -1,5 +1,8 @@
 # Changelog
 
+## 13.8.1
+- Ask and wait for explicit confirmation before each post-publication Steam desktop restart or launch. Revoke standing automatic-restart approval and inspect combined upload/restart wrappers before execution. Preserve graceful shutdown and upload verification safeguards.
+
 ## 13.8.0
 - Promote 64 independently rechecked vanilla Lua observations into the shared API catalog; preserve all 106 earlier records and their uncertainty labels. All runtime statuses remain NOT_TESTED.
 - Add portable clean-room research guidance and animation contracts with provenance and explicit UNKNOWN/runtime gates; no third-party code or assets distributed.

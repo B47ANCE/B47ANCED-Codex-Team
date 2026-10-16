@@ -4,7 +4,7 @@
 
 ## Quick setup
 
-Install Git, Python 3.10+ and GitHub CLI. Authenticate GitHub CLI locally with your own account. Clone main, review the files, then run:
+Install Git, Python 3.11+, Node.js LTS, Codex CLI and GitHub CLI for the default setup. [Meshy prerequisites and exact commands](docs/MESHY.md). Authenticate GitHub CLI locally with your own account. Clone main, review the files, then run:
 
 ```powershell
 & ./tools/Setup-CodexTeam.ps1 -Workspace "$env:USERPROFILE/Desktop/PZ/Codex" -RepositoryRoot "$env:USERPROFILE/Desktop/PZ/Mods" -EnableUpdates
@@ -13,6 +13,8 @@ Install Git, Python 3.10+ and GitHub CLI. Authenticate GitHub CLI locally with y
 Choose your own paths and an existing mod root. Omit RepositoryRoot for global-only setup. Existing untracked global/team files require reviewed `-MigrateExisting`; custom instructions/config/unrelated skills are preserved. [Complete onboarding](docs/TEAM-ONBOARDING.md).
 
 Explicit Windows setup now installs VS Code and the official Codex extension by default. Use `-SkipVSCode` for another editor or headless setup. [Editor setup and activation](docs/VSCODE.md). Existing editor settings and credentials are preserved.
+
+Setup also adds the official [Meshy MCP integration](docs/MESHY.md) globally for Codex, with a pinned npx package, per-developer environment authentication and paid tools disabled by default. Requires Node.js LTS, Codex CLI and Python 3.11+; use `-SkipMeshy` to omit it. Set your own API key only through the masked local prompt, then run the free balance verifier. Automatic updates never run either provisioning helper.
 
 ## One policy and skill store
 

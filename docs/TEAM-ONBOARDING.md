@@ -6,10 +6,15 @@ Links follow main and may advance beyond this document's configuration version, 
 
 ## Prerequisites
 
-Install Codex, [Git for Windows](https://git-scm.com/downloads/win), [Python 3.10+](https://www.python.org/downloads/windows/) and [GitHub CLI](https://cli.github.com/). Enable Python's PATH option. Open a new PowerShell window:
+Install [Git for Windows](https://git-scm.com/downloads/win), [Python 3.11+](https://www.python.org/downloads/windows/), [Node.js LTS](https://nodejs.org/en/download) and [GitHub CLI](https://cli.github.com/). Enable Python's PATH option. Open a new PowerShell window and install the official Codex CLI for the default Meshy integration:
 
 ```powershell
 git --version
+npm.cmd install -g @openai/codex
+node --version
+npm.cmd --version
+npx.cmd --version
+codex.cmd --version
 py -3 --version
 gh --version
 gh auth login --hostname github.com --git-protocol https --web
@@ -67,6 +72,8 @@ Python is discovered automatically; supply `-PythonExe` for a nonstandard runtim
 Setup installs VS Code and the official Codex extension by default. If VS Code is absent, Windows App Installer/winget is required; alternatively install VS Code manually first. Pass `-SkipVSCode` for another editor or disposable test setup. Follow [VS Code setup and activation](VSCODE.md), including sign-in and the read-only editor verification command. Editor provisioning runs only during explicit setup, never automatic updates or rollback.
 
 ## Verify
+
+Meshy MCP is also configured by default for Codex CLI and the Codex VS Code extension. Install Node.js LTS, Codex CLI and Python 3.11+ first; follow [Meshy setup](MESHY.md) for exact prerequisites, masked local API-key entry and the free balance verification command. Use `-SkipMeshy` to omit this optional service. No shared keys or paid generation are part of team setup.
 
 ```powershell
 & .\tools\Test-CodexTeamInstall.ps1 -PackageRoot . -Installed

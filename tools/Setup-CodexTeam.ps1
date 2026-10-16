@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$HomeDirectory=$env:USERPROFILE, [string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$MigrateExisting,[switch]$EnableUpdates,[switch]$SkipVSCode)
+param([string]$HomeDirectory=$env:USERPROFILE, [string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$MigrateExisting,[switch]$EnableUpdates,[switch]$SkipVSCode,[switch]$SkipMeshy)
 $ErrorActionPreference='Stop'
 if($RepositoryRoot -and -not(Test-Path -LiteralPath $RepositoryRoot -PathType Container)){throw 'RepositoryRoot must be an existing directory; choose your actual mod repository folder'}
 $root=Split-Path $PSScriptRoot -Parent
@@ -17,3 +17,4 @@ if($EnableUpdates){
  & (Join-Path $PSScriptRoot 'Register-CodexTeamUpdater.ps1') -HomeDirectory $HomeDirectory
 }
 if(-not $SkipVSCode){ & (Join-Path $PSScriptRoot 'Setup-VSCode.ps1') }
+if(-not $SkipMeshy){ & (Join-Path $PSScriptRoot 'Setup-Meshy.ps1') -HomeDirectory $HomeDirectory -PythonExe $PythonExe }

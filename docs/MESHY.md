@@ -43,6 +43,10 @@ All 28 tools are exposed. The global server entry sets `default_tools_approval_m
 
 `test_meshy_connection.py --balance` performs MCP initialization, tools/list and only meshy_check_balance (a free GET). It prints tool names and balance fields, suppressing raw errors and key material. A missing key, network failure or API rejection is a failed live check. Tool discovery can pass without authentication; it does not prove API connectivity. Usage listing can require a Studio/Enterprise team; it is not called during setup. No model is generated, downloaded or converted during verification.
 
+## Asset skills
+
+Use `pz-3d-asset-pipeline` for geometry/materials/export and `pz-character-animation` for skeletons, retargeting and clips. Both use [one shared Meshy MCP reference](../.agents/skills/pz-3d-asset-pipeline/references/meshy-workflow.md), preserving the existing 23-skill set. It covers paid-job approval, task recovery, verified downloads and Blender/PZ validation. API humanoid rigging and web-app quadruped rigging are distinct; animal MCP compatibility is not assumed. Official vendor generation skills currently use a separate CLI and are references, not automatically installed competing integrations.
+
 ## Updates and removal
 
 Automatic team updates install these helpers inert and never execute provisioning or prompts. The server version is pinned; package upgrades require an explicit reviewed setup change. Team rollback restores managed team files, not local MCP config, npm cache, software or environment keys. If you need to remove only Meshy, use `codex.cmd mcp remove meshy` and verify other integrations remain. Review local integration backups before any restore; do not overwrite newer unrelated settings with an old whole-file backup. Keep or remove your user environment key yourself as appropriate for other Meshy clients.

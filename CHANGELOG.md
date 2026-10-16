@@ -1,5 +1,8 @@
 # Changelog
 
+## 13.6.0 - 2026-10-15
+- Include a private saved-chat VS Code workspace in explicit setup, with metadata-only discovery, project selection, supported CLI resume, refresh/browse tasks and an opt-out. Empty histories succeed; no chats start automatically. Preserve original history, custom outputs, existing workspaces and desktop monitors; automatic updates remain inert.
+
 ## 13.5.0 - 2026-10-15
 - Update the 3D and skeletal-animation skills to share one Meshy MCP workflow, including humanoid/animal capability boundaries, paid-job approval, task recovery, output verification and Blender/PZ evidence gates. Retain all 23 skill identities; do not install a competing vendor CLI or duplicate service instructions.
 - Default daily work to VS Code's integrated terminal with Codex CLI; generate a developer-local multi-folder workspace with manual project selection, verification/update/rollback-preview/Meshy tasks and documented desktop handoff limits. Preserve project files, settings and active monitors; no automatic deployment or publication.

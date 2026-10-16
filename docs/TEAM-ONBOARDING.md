@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.5.0.
+Links follow main and may advance beyond this document's configuration version, 13.6.0.
 
 ## Prerequisites
 
@@ -68,6 +68,8 @@ New-Item -ItemType Directory -Force $modRepositories | Out-Null
 Python is discovered automatically; supply `-PythonExe` for a nonstandard runtime. Existing unmanaged team files require reviewed `-MigrateExisting`; rerun setup with that switch only after inspection. Customized managed files block updates. Custom guide text, project instructions, unrelated skills and local config remain independent. Never edit managed team files to store machine-specific settings.
 
 ## Default editor
+
+Setup also creates B47ANCED-Saved-Chats.code-workspace for existing local Codex conversations. Open it and run Chats: Resume saved chat, then choose a chat and owning project. No sessions start automatically. Empty histories are supported; each developer supplies their own history. Use -SkipChatWorkspace to omit it. See [saved-chat setup, privacy and refresh](SAVED-CHATS.md).
 
 Daily work uses Codex CLI inside VS Code. Setup creates B47ANCED.code-workspace in $teamWorkspace. Open it, run Terminal > Run Task > Codex CLI: Start in project, and choose the owning mod repository. The official extension is optional alongside this terminal workflow. See [daily use and workspace setup](VSCODE.md) and [the workflow map](CLI-WORKFLOWS.md). Use -SkipCLIWorkspace only to omit CLI/workspace provisioning intentionally. Existing desktop monitors remain active until a tested replacement exists.
 

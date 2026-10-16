@@ -14,4 +14,4 @@ After upload, humans test the exact subscribed package: download/install, server
 
 Upload success proves distribution, not MP correctness. Known failures must remain explicit and evaluated; never silently mark them PASS.
 
-After confirmed upload success, automatically gracefully exit and restart the verified Steam desktop client under the shared publishing policy. This does not launch a game/server or prove subscribed package synchronization. Report restart success or failure separately from upload success.
+After confirmed upload success, ask whether to restart the Steam desktop client and wait for explicit confirmation for that specific restart. If declined or unanswered, leave Steam unchanged. The previous automatic-restart preference is revoked. Inspect existing upload wrappers and separate or skip any automatic restart stage until confirmation. Once confirmed, use the verified executable and graceful bounded restart under the shared publishing policy. This does not launch a game/server or prove subscribed package synchronization. Report restart success or failure separately from upload success.

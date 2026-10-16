@@ -41,6 +41,8 @@ codex.cmd --cd . --sandbox workspace-write --ask-for-approval on-request --searc
 
 ## Desktop handoff limits
 
+Explicit team setup now adds a separate [saved-chat workspace](SAVED-CHATS.md) using supported CLI resume, with private local metadata, refresh and browse tasks. It does not import history into another agent's sidebar or move desktop monitors. Use -SkipChatWorkspace to omit it.
+
 Skills, shell tools, Git/GitHub CLI, vanilla API research and configured MCP servers are portable. Desktop-only browser/UI bridges, Pages/side panels, app thread-management tools and heartbeat scheduling are not assumed available in the CLI. Inspect actual capabilities. Native web research uses --search; account-changing browser work needs a separately verified browser integration.
 
 Preserve private chat/session history. Resume compatible sessions offered by codex resume, or use a concise local handoff describing files, pending work and evidence. Keep an active desktop monitor running until an equivalent CLI-compatible scheduler has been configured and tested. Changing the default editor does not migrate an automation host. This remains a stated migration gap, not a claim that the monitor runs inside VS Code.

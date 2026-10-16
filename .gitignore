@@ -15,3 +15,7 @@ backups/
 __pycache__/
 *.pyc
 *.zip
+# Private generated saved-chat metadata and workspaces
+chats.local.json
+outputs.local.json
+B47ANCED-Saved-Chats.code-workspace

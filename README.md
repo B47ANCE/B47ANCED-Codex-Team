@@ -1,16 +1,22 @@
-# B47ANCE Workshop Codex Team 13.4.7
+# B47ANCE Workshop Codex Team 13.5.0
 
 23 Lua-only Project Zomboid skills, shared rules, templates and validated Windows sign-in updates. Canonical source: https://github.com/B47ANCE/B47ANCED-Codex-Team.git, branch main.
 
 ## Quick setup
 
-Install Git, Python 3.10+, Codex and GitHub CLI. Authenticate GitHub CLI locally with your own account. Clone main, review the files, then run:
+The team default is **VS Code with Codex CLI in the selected project's integrated terminal**. Setup creates a local multi-folder workspace and manual workflow tasks; the official IDE extension remains available alongside the CLI. [Daily workflow and migration boundaries](docs/VSCODE.md), [all 23 skills/workflow map](docs/CLI-WORKFLOWS.md).
+
+Install Git, Python 3.11+, Node.js LTS, Codex CLI and GitHub CLI for the default setup. [Meshy prerequisites and exact commands](docs/MESHY.md). Authenticate GitHub CLI locally with your own account. Clone main, review the files, then run:
 
 ```powershell
 & ./tools/Setup-CodexTeam.ps1 -Workspace "$env:USERPROFILE/Desktop/PZ/Codex" -RepositoryRoot "$env:USERPROFILE/Desktop/PZ/Mods" -EnableUpdates
 ```
 
 Choose your own paths and an existing mod root. Omit RepositoryRoot for global-only setup. Existing untracked global/team files require reviewed `-MigrateExisting`; custom instructions/config/unrelated skills are preserved. [Complete onboarding](docs/TEAM-ONBOARDING.md).
+
+Explicit Windows setup now installs VS Code and the official Codex extension by default. Use `-SkipVSCode` for another editor or headless setup. [Editor setup and activation](docs/VSCODE.md). Existing editor settings and credentials are preserved.
+
+Setup also adds the official [Meshy MCP integration](docs/MESHY.md) globally for Codex, with a pinned npx package, per-developer environment authentication and all tools exposed under prompt approval. Explicit approval is required before spending credits. Requires Node.js LTS, Codex CLI and Python 3.11+; use `-SkipMeshy` to omit it. Set your own API key only through the masked local prompt, then run the free balance verifier. Automatic updates never run either provisioning helper.
 
 ## One policy and skill store
 

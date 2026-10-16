@@ -1,5 +1,13 @@
 # Changelog
 
+## 13.5.0 - 2026-10-15
+- Update the 3D and skeletal-animation skills to share one Meshy MCP workflow, including humanoid/animal capability boundaries, paid-job approval, task recovery, output verification and Blender/PZ evidence gates. Retain all 23 skill identities; do not install a competing vendor CLI or duplicate service instructions.
+- Default daily work to VS Code's integrated terminal with Codex CLI; generate a developer-local multi-folder workspace with manual project selection, verification/update/rollback-preview/Meshy tasks and documented desktop handoff limits. Preserve project files, settings and active monitors; no automatic deployment or publication.
+- Include the official Meshy MCP integration in explicit team setup, with pinned package 0.6.4, additive global config, a user-environment key launcher, masked local key entry, all tools exposed with prompt approval and a free live balance/discovery verifier. Require explicit approval before spending credits; preserve unrelated integrations and run no paid tasks during setup.
+- Default explicit Windows setup to VS Code and the official OpenAI Codex extension, with idempotent provisioning, read-only verification and a SkipVSCode opt-out.
+- Preserve editor settings, credentials, unrelated extensions and project instructions. Automatic updates install the helper inert and never provision or launch the editor.
+- Document editor activation and the distinction between editor features and Codex tools.
+
 ## 13.4.7 - 2026-10-15
 - Require affected GitHub documentation to stay current in the same branch/PR as each mod development iteration, including behavior, setup, compatibility, limitations and actual validation evidence.
 - Add the documentation review to the shared versioning skill and onboarding guidance; preserve project instructions and historical evidence.

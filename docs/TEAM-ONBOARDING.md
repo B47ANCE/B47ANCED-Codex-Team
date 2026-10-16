@@ -2,14 +2,19 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.4.7.
+Links follow main and may advance beyond this document's configuration version, 13.5.0.
 
 ## Prerequisites
 
-Install Codex, [Git for Windows](https://git-scm.com/downloads/win), [Python 3.10+](https://www.python.org/downloads/windows/) and [GitHub CLI](https://cli.github.com/). Enable Python's PATH option. Open a new PowerShell window:
+Install [Git for Windows](https://git-scm.com/downloads/win), [Python 3.11+](https://www.python.org/downloads/windows/), [Node.js LTS](https://nodejs.org/en/download) and [GitHub CLI](https://cli.github.com/). Enable Python's PATH option. Open a new PowerShell window and install the official Codex CLI for the default Meshy integration:
 
 ```powershell
 git --version
+npm.cmd install -g @openai/codex
+node --version
+npm.cmd --version
+npx.cmd --version
+codex.cmd --version
 py -3 --version
 gh --version
 gh auth login --hostname github.com --git-protocol https --web
@@ -62,7 +67,15 @@ New-Item -ItemType Directory -Force $modRepositories | Out-Null
 
 Python is discovered automatically; supply `-PythonExe` for a nonstandard runtime. Existing unmanaged team files require reviewed `-MigrateExisting`; rerun setup with that switch only after inspection. Customized managed files block updates. Custom guide text, project instructions, unrelated skills and local config remain independent. Never edit managed team files to store machine-specific settings.
 
+## Default editor
+
+Daily work uses Codex CLI inside VS Code. Setup creates B47ANCED.code-workspace in $teamWorkspace. Open it, run Terminal > Run Task > Codex CLI: Start in project, and choose the owning mod repository. The official extension is optional alongside this terminal workflow. See [daily use and workspace setup](VSCODE.md) and [the workflow map](CLI-WORKFLOWS.md). Use -SkipCLIWorkspace only to omit CLI/workspace provisioning intentionally. Existing desktop monitors remain active until a tested replacement exists.
+
+Setup installs VS Code and the official Codex extension by default. If VS Code is absent, Windows App Installer/winget is required; alternatively install VS Code manually first. Pass `-SkipVSCode` for another editor or disposable test setup. Follow [VS Code setup and activation](VSCODE.md), including sign-in and the read-only editor verification command. Editor provisioning runs only during explicit setup, never automatic updates or rollback.
+
 ## Verify
+
+Meshy MCP is also configured by default for Codex CLI and the Codex VS Code extension. Install Node.js LTS, Codex CLI and Python 3.11+ first; follow [Meshy setup](MESHY.md) for exact prerequisites, masked local API-key entry and the free balance verification command. Use `-SkipMeshy` to omit this optional service. No shared keys or paid generation are part of team setup.
 
 ```powershell
 & .\tools\Test-CodexTeamInstall.ps1 -PackageRoot . -Installed

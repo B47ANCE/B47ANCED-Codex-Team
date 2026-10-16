@@ -48,3 +48,8 @@ Skills, shell tools, Git/GitHub CLI, vanilla API research and configured MCP ser
 Preserve private chat/session history. Resume compatible sessions offered by codex resume, or use a concise local handoff describing files, pending work and evidence. Keep an active desktop monitor running until an equivalent CLI-compatible scheduler has been configured and tested. Changing the default editor does not migrate an automation host. This remains a stated migration gap, not a claim that the monitor runs inside VS Code.
 
 Further official references: [Codex CLI reference](https://learn.chatgpt.com/docs/cli/reference), [Codex IDE settings](https://learn.chatgpt.com/docs/ide/settings), [VS Code tasks](https://code.visualstudio.com/docs/debugtest/tasks).
+
+
+Team setup automatically installs **All Existing Chats** inside the Codex sidebar,
+using your own local history. See [sidebar setup, privacy and recovery](CHAT-SIDEBAR.md).
+Use `-SkipChatSidebar` to omit it; settings and histories are preserved.

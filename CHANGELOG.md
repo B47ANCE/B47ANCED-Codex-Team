@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.7.0
+- Explicit setup installs the sidebar companion automatically, using each developer's own local history.
+- Offline VSIX build needs no npm downloads; private Python paths stay in generated local output.
+- Added read-only metadata, empty-profile, schema-failure, setup and lifecycle regression tests. Background updates remain inert.
+
 ## 13.6.0 - 2026-10-15
 - Include a private saved-chat VS Code workspace in explicit setup, with metadata-only discovery, project selection, supported CLI resume, refresh/browse tasks and an opt-out. Empty histories succeed; no chats start automatically. Preserve original history, custom outputs, existing workspaces and desktop monitors; automatic updates remain inert.
 

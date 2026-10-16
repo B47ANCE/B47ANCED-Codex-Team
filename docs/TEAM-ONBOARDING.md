@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.6.0.
+Links follow main and may advance beyond this document's configuration version, 13.7.0.
 
 ## Prerequisites
 
@@ -142,3 +142,8 @@ No setup/update/rollback command publishes mods, launches PZ or modifies a dedic
 ## Owner merges
 
 B47ANCE may self-merge their own PR after required CI passes without another developer approval. Other developers require reviewer approval. Keep feature branches and PRs; never bypass CI or force-push. The review bypass uses repository administrator role and applies through PRs only. Current settings cover all five existing B47ANCE-owned repositories; new repositories need equivalent setup.
+
+
+Team setup automatically installs **All Existing Chats** inside the Codex sidebar,
+using your own local history. See [sidebar setup, privacy and recovery](CHAT-SIDEBAR.md).
+Use `-SkipChatSidebar` to omit it; settings and histories are preserved.

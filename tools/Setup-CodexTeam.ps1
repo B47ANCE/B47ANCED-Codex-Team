@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$HomeDirectory=$env:USERPROFILE, [string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$MigrateExisting,[switch]$EnableUpdates,[switch]$SkipVSCode,[switch]$SkipMeshy,[switch]$SkipCLIWorkspace,[switch]$SkipChatWorkspace)
+param([string]$HomeDirectory=$env:USERPROFILE, [string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$MigrateExisting,[switch]$EnableUpdates,[switch]$SkipVSCode,[switch]$SkipMeshy,[switch]$SkipCLIWorkspace,[switch]$SkipChatWorkspace,[switch]$SkipChatSidebar)
 $ErrorActionPreference='Stop'
 if($RepositoryRoot -and -not(Test-Path -LiteralPath $RepositoryRoot -PathType Container)){throw 'RepositoryRoot must be an existing directory; choose your actual mod repository folder'}
 $root=Split-Path $PSScriptRoot -Parent
@@ -18,6 +18,7 @@ if($EnableUpdates){
 }
 if(-not $SkipCLIWorkspace){ & (Join-Path $PSScriptRoot 'Setup-CodexCLI.ps1') }
 if(-not $SkipVSCode){ & (Join-Path $PSScriptRoot 'Setup-VSCode.ps1') }
+if(-not $SkipVSCode -and -not $SkipChatSidebar){ & (Join-Path $PSScriptRoot 'Setup-ChatSidebar.ps1') -HomeDirectory $HomeDirectory -PythonExe $PythonExe }
 if(-not $SkipMeshy){ & (Join-Path $PSScriptRoot 'Setup-Meshy.ps1') -HomeDirectory $HomeDirectory -PythonExe $PythonExe }
 if(-not $SkipCLIWorkspace){ & (Join-Path $PSScriptRoot 'Setup-CodeWorkspace.ps1') -HomeDirectory $HomeDirectory -Workspace $Workspace -RepositoryRoot $RepositoryRoot -PythonExe $PythonExe }
 if(-not $SkipCLIWorkspace -and -not $SkipChatWorkspace){ & (Join-Path $PSScriptRoot 'Setup-ChatWorkspace.ps1') -HomeDirectory $HomeDirectory -Workspace $Workspace -PythonExe $PythonExe }

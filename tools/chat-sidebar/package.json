@@ -1,0 +1,66 @@
+{
+  "name": "codex-chat-sidebar",
+  "displayName": "Codex All Existing Chats",
+  "description": "Read-only saved-chat list inside the official Codex sidebar.",
+  "publisher": "b47ance",
+  "version": "0.2.0",
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "extensionDependencies": [
+    "openai.chatgpt"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "license": "MIT",
+  "contributes": {
+    "views": {
+      "codexViewContainer": [
+        {
+          "id": "b47ancedCodexChats.primary",
+          "name": "All Existing Chats",
+          "when": "chatgpt.doesNotSupportSecondarySidebar",
+          "visibility": "visible"
+        }
+      ],
+      "codexSecondaryViewContainer": [
+        {
+          "id": "b47ancedCodexChats.secondary",
+          "name": "All Existing Chats",
+          "when": "!chatgpt.doesNotSupportSecondarySidebar",
+          "visibility": "visible"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "b47ancedCodexChats.refresh",
+        "title": "Refresh Existing Chats",
+        "category": "Codex",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "b47ancedCodexChats.open",
+        "title": "Open Existing Chat",
+        "category": "Codex"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "b47ancedCodexChats.refresh",
+          "when": "view == b47ancedCodexChats.primary || view == b47ancedCodexChats.secondary",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}

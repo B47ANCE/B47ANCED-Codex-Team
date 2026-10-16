@@ -5,11 +5,12 @@ def verify(config_home, balance=False, timeout=180):
     import tomllib
     cfg = tomllib.loads((pathlib.Path(config_home)/'config.toml').read_text(encoding='utf-8-sig'))['mcp_servers']['meshy']
     env = dict(os.environ, TRANSPORT='stdio', MESHY_API_HOST='https://api.meshy.ai')
-    if os.name == 'nt' and not env.get('MESHY_API_KEY'):
+    key_available=bool(env.get('MESHY_API_KEY'))
+    if os.name == 'nt' and not key_available:
         import winreg
         try:
             with winreg.OpenKey(winreg.HKEY_CURRENT_USER, 'Environment') as key:
-                env['MESHY_API_KEY'] = winreg.QueryValueEx(key, 'MESHY_API_KEY')[0]
+                key_available=bool(winreg.QueryValueEx(key, 'MESHY_API_KEY')[0])
         except FileNotFoundError:
             pass
     child = subprocess.Popen([cfg['command'], *cfg['args']], stdin=subprocess.PIPE,
@@ -51,10 +52,10 @@ def verify(config_home, balance=False, timeout=180):
         if not required.issubset(names):
             raise RuntimeError('Required Meshy tool is missing')
         result = dict(server=init.get('serverInfo'), tool_count=len(tools),
-                      tools=sorted(t['name'] for t in tools), api_key_present=bool(env.get('MESHY_API_KEY')),
+                      tools=sorted(t['name'] for t in tools), api_key_present=key_available,
                       balance_status='NOT_REQUESTED', paid_operations=0)
         if balance:
-            if not env.get('MESHY_API_KEY'):
+            if not key_available:
                 result['balance_status']='KEY_MISSING'
             else:
                 response = request(3, 'tools/call', dict(name='meshy_check_balance', arguments={'response_format':'json'}))

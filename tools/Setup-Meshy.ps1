@@ -15,11 +15,11 @@ if(-not $PythonExe){
 }
 $codexHome=Join-Path $HomeDirectory '.codex'
 if($env:CODEX_HOME -and $HomeDirectory -eq $env:USERPROFILE){$codexHome=$env:CODEX_HOME}
-$params=@((Join-Path $PSScriptRoot 'meshy_setup.py'),'--codex-home',$codexHome,'--npx',(Get-Command npx.cmd).Source,'--command',$env:ComSpec)
+$params=@((Join-Path $PSScriptRoot 'meshy_setup.py'),'--codex-home',$codexHome,'--npx',(Get-Command npx.cmd).Source,'--command',(Get-Command powershell.exe).Source)
 if($CheckOnly){$params+='--check'}
 & $PythonExe @params
 if($LASTEXITCODE -ne 0){throw 'Meshy config was not changed; inspect existing Meshy entry or Python version'}
-Write-Output 'Meshy uses pinned official npx package 0.6.4; the first MCP start installs it into npm cache. Only read-only/download tools are enabled. No paid task was submitted.'
+Write-Output 'Meshy uses pinned official npx package 0.6.4. All tools are exposed with prompt approval policy. Explicit approval is required before spending credits. No paid task was submitted.'
 if(-not $CheckOnly){
  & $PythonExe (Join-Path $PSScriptRoot 'test_meshy_connection.py') --codex-home $codexHome
  if($LASTEXITCODE -ne 0){throw 'Meshy is configured but package installation or MCP discovery failed; rerun setup after fixing network/prerequisites'}

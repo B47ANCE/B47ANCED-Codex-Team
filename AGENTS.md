@@ -159,6 +159,7 @@ Command `commit`: commit and push the current intended development iteration to 
 - Keep current Lua-only, authority, sandbox, canonical version and G7 dedicated MP / G8 release policies. Historical bundle instructions do not replace current shared policy or unrelated global settings.
 
 ## Canonical setup artifacts
+- Meshy AI tools are development integrations, not runtime mod dependencies. All Meshy tools may be available, but obtain explicit user approval before each credit-consuming generation, remesh, conversion, rigging, animation or other paid operation. Installation, tool discovery and free balance checks do not authorize paid jobs. Never put API keys in chat, arguments, source or team configuration; use the developer's local MESHY_API_KEY environment variable. Preserve unrelated integrations.
 - Global AGENTS.md is the shared policy source. Workspace guides are lightweight references. The user-profile .agents/skills directory is the only installed team skill store; project-specific skills remain independent. Preserve all custom project text.
 - The installed hub templates directory is the only active new-project/template set. Prior bundle generations and setup changes are historical under `audits/`; do not install or execute historical examples as current guidance.
 - Use `tools/Setup-CodexTeam.ps1`, `tools/Connect-ModRepositories.ps1` and `tools/Test-ModRepositories.ps1` to refresh and verify setup. Local setup consistency is separate from Git freshness, Codex activation and PZ/runtime evidence.

@@ -55,13 +55,14 @@ class MeshyConfig(unittest.TestCase):
                 module.configure(td,'npx.cmd','cmd.exe',check=True)
             self.assertEqual(list(pathlib.Path(td).iterdir()),[])
 
-    def test_no_key_or_paid_tools_in_config(self):
+    def test_no_key_and_all_tools_require_approval(self):
         with tempfile.TemporaryDirectory() as td:
             module.configure(td,'npx.cmd','cmd.exe')
             cfg=module.tomllib.loads((pathlib.Path(td)/'config.toml').read_text())['mcp_servers']['meshy']
             self.assertEqual(cfg['env_vars'],['MESHY_API_KEY'])
-            for paid in ['meshy_text_to_3d','meshy_image_to_3d','meshy_remesh','meshy_convert','meshy_animate']:
-                self.assertNotIn(paid,cfg['enabled_tools'])
+            self.assertNotIn('enabled_tools',cfg)
+            self.assertNotIn('disabled_tools',cfg)
+            self.assertEqual(cfg['default_tools_approval_mode'],'prompt')
             self.assertNotIn('env',cfg)
 
     def test_automatic_update_does_not_provision_integrations(self):
@@ -71,3 +72,28 @@ class MeshyConfig(unittest.TestCase):
             self.assertNotIn('Set-MeshyApiKey.ps1',text)
         setup=(ROOT/'tools/Setup-CodexTeam.ps1').read_text()
         self.assertIn('if(-not $SkipMeshy)',setup)
+
+    def test_custom_launcher_is_preserved(self):
+        with tempfile.TemporaryDirectory() as td:
+            module.configure(td,'npx.cmd','powershell.exe')
+            home=pathlib.Path(td)
+            config=(home/'config.toml').read_bytes()
+            launcher=home/'meshy-runtime/Start-Meshy.ps1'
+            launcher.write_bytes(b'custom launcher')
+            with self.assertRaises(ValueError):
+                module.configure(td,'npx.cmd','powershell.exe')
+            self.assertEqual(launcher.read_bytes(),b'custom launcher')
+            self.assertEqual((home/'config.toml').read_bytes(),config)
+
+    def test_missing_launcher_check_fails_and_setup_repairs(self):
+        with tempfile.TemporaryDirectory() as td:
+            module.configure(td,'npx.cmd','powershell.exe')
+            home=pathlib.Path(td)
+            config=(home/'config.toml').read_bytes()
+            launcher=home/'meshy-runtime/Start-Meshy.ps1'
+            launcher.unlink()
+            with self.assertRaises(ValueError):
+                module.configure(td,'npx.cmd','powershell.exe',check=True)
+            module.configure(td,'npx.cmd','powershell.exe')
+            self.assertEqual(launcher.read_bytes(),(ROOT/'tools/Start-Meshy.ps1').read_bytes())
+            self.assertEqual((home/'config.toml').read_bytes(),config)

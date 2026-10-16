@@ -1,7 +1,7 @@
 # Changelog
 
 ## 13.5.0 - 2026-10-15
-- Include the official Meshy MCP integration in explicit team setup, with pinned package 0.6.4, additive global config, masked local environment-key entry, read-only default tools and a free live balance/discovery verifier. Preserve unrelated integrations; no paid tasks run during setup.
+- Include the official Meshy MCP integration in explicit team setup, with pinned package 0.6.4, additive global config, a user-environment key launcher, masked local key entry, all tools exposed with prompt approval and a free live balance/discovery verifier. Require explicit approval before spending credits; preserve unrelated integrations and run no paid tasks during setup.
 - Default explicit Windows setup to VS Code and the official OpenAI Codex extension, with idempotent provisioning, read-only verification and a SkipVSCode opt-out.
 - Preserve editor settings, credentials, unrelated extensions and project instructions. Automatic updates install the helper inert and never provision or launch the editor.
 - Document editor activation and the distinction between editor features and Codex tools.

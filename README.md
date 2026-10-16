@@ -14,7 +14,7 @@ Choose your own paths and an existing mod root. Omit RepositoryRoot for global-o
 
 Explicit Windows setup now installs VS Code and the official Codex extension by default. Use `-SkipVSCode` for another editor or headless setup. [Editor setup and activation](docs/VSCODE.md). Existing editor settings and credentials are preserved.
 
-Setup also adds the official [Meshy MCP integration](docs/MESHY.md) globally for Codex, with a pinned npx package, per-developer environment authentication and paid tools disabled by default. Requires Node.js LTS, Codex CLI and Python 3.11+; use `-SkipMeshy` to omit it. Set your own API key only through the masked local prompt, then run the free balance verifier. Automatic updates never run either provisioning helper.
+Setup also adds the official [Meshy MCP integration](docs/MESHY.md) globally for Codex, with a pinned npx package, per-developer environment authentication and all tools exposed under prompt approval. Explicit approval is required before spending credits. Requires Node.js LTS, Codex CLI and Python 3.11+; use `-SkipMeshy` to omit it. Set your own API key only through the masked local prompt, then run the free balance verifier. Automatic updates never run either provisioning helper.
 
 ## One policy and skill store
 

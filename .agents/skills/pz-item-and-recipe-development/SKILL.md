@@ -14,3 +14,5 @@ Use when the task concerns this domain. Follow the shared guide at `%USERPROFILE
 3. Read installed B42 script syntax and Lua hooks for items, clothing, crafting and loot. Verify full types, recipe callbacks, distributions, tags, durability and multiplayer authority. Keep vanilla behavior and migration compatibility. Test crafting inputs/outputs, failure paths, stacking, localization and persistence.
 4. Run available static/structural checks, retain evidence, and mark unavailable runtime validation NOT TESTED.
 5. Report changed files, validation results, licensing/provenance, outstanding blockers, and deployment/publication status.
+
+For audit-derived independent design checks, see [the items research notes](../pz-clean-room-research/references/workshop-knowledge.md#items); source signals are not runtime guarantees.

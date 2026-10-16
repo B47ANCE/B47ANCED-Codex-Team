@@ -37,7 +37,7 @@ Open a new Codex CLI or Codex VS Code extension session and inspect `/mcp`. Code
 
 ## Paid operations and supported tools
 
-The server supports text-to-3D, image-to-3D, multi-image-to-3D, task status, model downloads, remeshing, format conversion, rigging and animation. The verifier checks discovery; it does not submit generation, remesh, conversion, rigging or animation jobs. Those operations can consume credits, including conversion.
+The server exposes text-to-3D, image-to-3D, multi-image-to-3D, task status, model downloads, remeshing and format conversion. Rigging/motion tools may also be exposed, but team policy prohibits using them. The verifier checks discovery; it does not submit generation, remesh, conversion, rigging or animation jobs. Those operations can consume credits, including conversion.
 
 All 28 tools are exposed. The global server entry sets `default_tools_approval_mode = "prompt"`, and team policy requires explicit user approval before each credit-consuming job. Tool access is not spending authorization. Balance/discovery tests do not authorize any generation. Do not switch paid tools to automatic approval or interpret a previous job approval as unlimited spending. Customized Meshy settings are preserved and require manual review rather than being reset.
 
@@ -45,7 +45,7 @@ All 28 tools are exposed. The global server entry sets `default_tools_approval_m
 
 ## Asset skills
 
-Use `pz-3d-asset-pipeline` for geometry/materials/export and `pz-character-animation` for skeletons, retargeting and clips. Both use [one shared Meshy MCP reference](../.agents/skills/pz-3d-asset-pipeline/references/meshy-workflow.md), preserving the existing 23-skill set. It covers paid-job approval, task recovery, verified downloads and Blender/PZ validation. API humanoid rigging and web-app quadruped rigging are distinct; animal MCP compatibility is not assumed. Official vendor generation skills currently use a separate CLI and are references, not automatically installed competing integrations.
+Use `pz-3d-asset-pipeline` and its [static Meshy workflow](../.agents/skills/pz-3d-asset-pipeline/references/meshy-workflow.md) for approved geometry/materials/export. All rigging, skinning, retargeting and animation are authored by Codex through Blender/local tools in `pz-character-animation`. Never use Meshy rigging, motion clips, animation or text-to-motion, even when exposed. Missing local tooling is a blocker, not permission to substitute Meshy. Existing MCP configuration, credentials and tool exposure are preserved.
 
 ## Updates and removal
 

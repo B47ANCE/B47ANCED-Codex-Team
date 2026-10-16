@@ -1,0 +1,1228 @@
+{
+  "schema": 1,
+  "scope": "64 independent vanilla Lua registration/declaration observations prompted by bounded Workshop knowledge research",
+  "steam_build": "25485521",
+  "game_version": "UNKNOWN",
+  "runtime_status": "NOT_TESTED",
+  "imports": "NONE",
+  "new_records": 64,
+  "preserved_records": 106,
+  "records": [
+    {
+      "receiver_type": "Events.OnTick",
+      "symbol": "OnTick",
+      "signature": "Events.OnTick.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Chat/ISChat.lua",
+          "sha256": "0386ca1cd4bb936ea6a3591dc13f77f1ef830764c6b8a8ee2ded92559b16b483",
+          "lines": [
+            943,
+            943
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnGameStart",
+      "symbol": "OnGameStart",
+      "signature": "Events.OnGameStart.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Chat/ISAlert.lua",
+          "sha256": "76d3bf60b358774d789bfcacf422f84c0f67dbcf10e527b763d54c1e180f6c2f",
+          "lines": [
+            61,
+            61
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnPlayerUpdate",
+      "symbol": "OnPlayerUpdate",
+      "signature": "Events.OnPlayerUpdate.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Tutorial/Steps.lua",
+          "sha256": "71100a086e9389fb84c771bdb03b18327028c5baa90583859d4112c7c9964cf6",
+          "lines": [
+            1919,
+            1919
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnClientCommand",
+      "symbol": "OnClientCommand",
+      "signature": "Events.OnClientCommand.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/ClientCommands.lua",
+          "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+          "lines": [
+            1307,
+            1307
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnGameBoot",
+      "symbol": "OnGameBoot",
+      "signature": "Events.OnGameBoot.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Foraging/ISSearchManager.lua",
+          "sha256": "6c50503a81392d663c922e20da6e13d70e0ee84fe7437f402b409f726eda9b41",
+          "lines": [
+            1481,
+            1481
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.EveryOneMinute",
+      "symbol": "EveryOneMinute",
+      "signature": "Events.EveryOneMinute.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Camping/SCampfireSystem.lua",
+          "sha256": "88f434e22cf472c498e4fceabfa46849795a77c8da212248608644401ddde083",
+          "lines": [
+            183,
+            183
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnServerCommand",
+      "symbol": "OnServerCommand",
+      "signature": "Events.OnServerCommand.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ServerCommands.lua",
+          "sha256": "33b80f64168f96cc15444fc8a838fad4c81e52e48484963bd71e4e63971273bb",
+          "lines": [
+            218,
+            218
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnCreatePlayer",
+      "symbol": "OnCreatePlayer",
+      "signature": "Events.OnCreatePlayer.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Foraging/ISSearchManager.lua",
+          "sha256": "6c50503a81392d663c922e20da6e13d70e0ee84fe7437f402b409f726eda9b41",
+          "lines": [
+            1413,
+            1413
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnFillWorldObjectContextMenu",
+      "symbol": "OnFillWorldObjectContextMenu",
+      "signature": "Events.OnFillWorldObjectContextMenu.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/DebugUIs/AdminContextMenu.lua",
+          "sha256": "93b44a4ef611543bbfd5d31ef9296faebe8cee265923e9e591758cb3166dbf09",
+          "lines": [
+            88,
+            88
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnFillInventoryObjectContextMenu",
+      "symbol": "OnFillInventoryObjectContextMenu",
+      "signature": "Events.OnFillInventoryObjectContextMenu.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Context/ISContextManager.lua",
+          "sha256": "2dfdf2e8b85f0ab253b5cf37f1d124e8270bf545da0eb18f48f461a10ea1ad11",
+          "lines": [
+            42,
+            42
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnInitGlobalModData",
+      "symbol": "OnInitGlobalModData",
+      "signature": "Events.OnInitGlobalModData.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Vehicles/ProfessionVehicles.lua",
+          "sha256": "dd8f54aff597b75ff3662c74d9cac4f019030c9cf5e37b44982eeb1bdeeb8be6",
+          "lines": [
+            347,
+            347
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnKeyPressed",
+      "symbol": "OnKeyPressed",
+      "signature": "Events.OnKeyPressed.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Chat/ISChat.lua",
+          "sha256": "0386ca1cd4bb936ea6a3591dc13f77f1ef830764c6b8a8ee2ded92559b16b483",
+          "lines": [
+            1178,
+            1178
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnZombieDead",
+      "symbol": "OnZombieDead",
+      "signature": "Events.OnZombieDead.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Tutorial/Steps.lua",
+          "sha256": "71100a086e9389fb84c771bdb03b18327028c5baa90583859d4112c7c9964cf6",
+          "lines": [
+            840,
+            840
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnPlayerDeath",
+      "symbol": "OnPlayerDeath",
+      "signature": "Events.OnPlayerDeath.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Foraging/ISSearchManager.lua",
+          "sha256": "6c50503a81392d663c922e20da6e13d70e0ee84fe7437f402b409f726eda9b41",
+          "lines": [
+            1414,
+            1414
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.EveryTenMinutes",
+      "symbol": "EveryTenMinutes",
+      "signature": "Events.EveryTenMinutes.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Camping/SCampfireSystem.lua",
+          "sha256": "88f434e22cf472c498e4fceabfa46849795a77c8da212248608644401ddde083",
+          "lines": [
+            184,
+            184
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnMainMenuEnter",
+      "symbol": "OnMainMenuEnter",
+      "signature": "Events.OnMainMenuEnter.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/OptionScreens/MainScreen.lua",
+          "sha256": "f89d351830fcb0050cfc10bc7a7e1a216a260b4731fe0ac34da9bcd4269352e5",
+          "lines": [
+            2178,
+            2178
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.LoadGridsquare",
+      "symbol": "LoadGridsquare",
+      "signature": "Events.LoadGridsquare.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/DebugUIs/DebugScenarios.lua",
+          "sha256": "a87638b8ef1f790906c97f10a5bea7e7991efb566976452ff61f3f27ea6d8f4c",
+          "lines": [
+            101,
+            101
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnExitVehicle",
+      "symbol": "OnExitVehicle",
+      "signature": "Events.OnExitVehicle.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Vehicles/ISUI/ISVehicleDashboard.lua",
+          "sha256": "5b56f71248cd371f3d43aebe53fe6147f785ba97fc76c380bef07da69cdb7ce1",
+          "lines": [
+            718,
+            718
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.EveryHours",
+      "symbol": "EveryHours",
+      "signature": "Events.EveryHours.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/LastStand/WinterIsComing.lua",
+          "sha256": "a4a795aef28484e8b9a31122ee897d41c72592becac4ddda9ffca5c180593c25",
+          "lines": [
+            75,
+            75
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnServerStarted",
+      "symbol": "OnServerStarted",
+      "signature": "Events.OnServerStarted.Add(callback)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/Fishing/fishing_properties.lua",
+          "sha256": "87991e4bb9c16ec4e2bd79f838771d4f0abdcf4bc0b0fb0077615db31dc3bd56",
+          "lines": [
+            76,
+            76
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnSwitchVehicleSeat",
+      "symbol": "OnSwitchVehicleSeat",
+      "signature": "Events.OnSwitchVehicleSeat.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Vehicles/ISUI/ISVehicleDashboard.lua",
+          "sha256": "5b56f71248cd371f3d43aebe53fe6147f785ba97fc76c380bef07da69cdb7ce1",
+          "lines": [
+            719,
+            719
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnPreDistributionMerge",
+      "symbol": "OnPreDistributionMerge",
+      "signature": "Events.OnPreDistributionMerge.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Items/SuburbsDistributions.lua",
+          "sha256": "25a15471f95fb56ebe7ac405c4a85705d18b3ee12a2bd7fe379e2c71e3bc36b1",
+          "lines": [
+            208,
+            208
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnObjectAdded",
+      "symbol": "OnObjectAdded",
+      "signature": "Events.OnObjectAdded.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "lines": [
+            274,
+            274
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnLoad",
+      "symbol": "OnLoad",
+      "signature": "Events.OnLoad.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/XpSystem/XpUpdate.lua",
+          "sha256": "8ad8b9eb27e054a8d1051815c7796daa67e87416ac319288c79805e370d87b71",
+          "lines": [
+            393,
+            393
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnEnterVehicle",
+      "symbol": "OnEnterVehicle",
+      "signature": "Events.OnEnterVehicle.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Vehicles/ISUI/ISVehicleDashboard.lua",
+          "sha256": "5b56f71248cd371f3d43aebe53fe6147f785ba97fc76c380bef07da69cdb7ce1",
+          "lines": [
+            717,
+            717
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnEquipPrimary",
+      "symbol": "OnEquipPrimary",
+      "signature": "Events.OnEquipPrimary.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Fishing/FishingHandler.lua",
+          "sha256": "6975228698ab3219b4dec4838b6171ecad7645e6c49265b894f8c76d6b4b02cf",
+          "lines": [
+            20,
+            20
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnKeyStartPressed",
+      "symbol": "OnKeyStartPressed",
+      "signature": "Events.OnKeyStartPressed.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/DebugUIs/ISFastTeleportMove.lua",
+          "sha256": "fa955c4258c359c73c92bc2baa203be5e6cb2c0f27b42ecf498e5b4a246273cc",
+          "lines": [
+            59,
+            59
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnPlayerMove",
+      "symbol": "OnPlayerMove",
+      "signature": "Events.OnPlayerMove.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/XpSystem/XpUpdate.lua",
+          "sha256": "8ad8b9eb27e054a8d1051815c7796daa67e87416ac319288c79805e370d87b71",
+          "lines": [
+            377,
+            377
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnFillContainer",
+      "symbol": "OnFillContainer",
+      "signature": "Events.OnFillContainer.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Items/LootLog.lua",
+          "sha256": "a4b31da1fbbcc48c18805c53e317b372dd343ff4943a74cf788fece29a1a541e",
+          "lines": [
+            34,
+            34
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnPreUIDraw",
+      "symbol": "OnPreUIDraw",
+      "signature": "Events.OnPreUIDraw.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/erosion/debug/DebugDemoTime.lua",
+          "sha256": "2c71122499b1787d5d8e71a1977dad44e9c9195c10dfc3c106bd95a93964db44",
+          "lines": [
+            117,
+            117
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISContextMenu",
+      "symbol": "addOption",
+      "signature": "ISContextMenu:addOption(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "lines": [
+            873,
+            873
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISContextMenu",
+      "symbol": "addSubMenu",
+      "signature": "ISContextMenu:addSubMenu(option, menu)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "lines": [
+            1075,
+            1075
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISContextMenu",
+      "symbol": "addActionsOption",
+      "signature": "ISContextMenu:addActionsOption(text, getActionsFunction, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "lines": [
+            1079,
+            1079
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISContextMenu",
+      "symbol": "setOptionChecked",
+      "signature": "ISContextMenu:setOptionChecked(option, checked)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "lines": [
+            1084,
+            1084
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "isValid",
+      "signature": "ISBaseTimedAction:isValid()",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            12,
+            12
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "start",
+      "signature": "ISBaseTimedAction:start()",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            55,
+            55
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "stop",
+      "signature": "ISBaseTimedAction:stop()",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            63,
+            63
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "perform",
+      "signature": "ISBaseTimedAction:perform()",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            68,
+            68
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "getDuration",
+      "signature": "ISBaseTimedAction:getDuration()",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            74,
+            74
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "SGlobalObjectSystem",
+      "symbol": "new",
+      "signature": "SGlobalObjectSystem:new(name)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "lines": [
+            11,
+            11
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "SGlobalObjectSystem",
+      "symbol": "getIsoObjectAt",
+      "signature": "SGlobalObjectSystem:getIsoObjectAt(x, y, z)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "lines": [
+            71,
+            71
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "SGlobalObjectSystem",
+      "symbol": "newLuaObjectAt",
+      "signature": "SGlobalObjectSystem:newLuaObjectAt(x, y, z)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "lines": [
+            81,
+            81
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "CGlobalObjectSystem",
+      "symbol": "new",
+      "signature": "CGlobalObjectSystem:new(name)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Map/CGlobalObjectSystem.lua",
+          "sha256": "c3c8f8c8b2249266ee43476b6e97179f73a9493ff921340275a4082943a5d17c",
+          "lines": [
+            9,
+            9
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "CGlobalObjectSystem",
+      "symbol": "getIsoObjectAt",
+      "signature": "CGlobalObjectSystem:getIsoObjectAt(x, y, z)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Map/CGlobalObjectSystem.lua",
+          "sha256": "c3c8f8c8b2249266ee43476b6e97179f73a9493ff921340275a4082943a5d17c",
+          "lines": [
+            59,
+            59
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "CGlobalObjectSystem",
+      "symbol": "OnServerCommand",
+      "signature": "CGlobalObjectSystem:OnServerCommand(command, args)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/Map/CGlobalObjectSystem.lua",
+          "sha256": "c3c8f8c8b2249266ee43476b6e97179f73a9493ff921340275a4082943a5d17c",
+          "lines": [
+            106,
+            106
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISTimedActionQueue",
+      "symbol": "addAfter",
+      "signature": "ISTimedActionQueue.addAfter(previousAction, action)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/TimedActions/ISTimedActionQueue.lua",
+          "sha256": "23c98152728172b44ccb41bc8ddc97798fee7a91b57b20620fb11d5f41e7792c",
+          "lines": [
+            203,
+            203
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISTimedActionQueue",
+      "symbol": "queueActions",
+      "signature": "ISTimedActionQueue.queueActions(character, addActionsFunction, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/TimedActions/ISTimedActionQueue.lua",
+          "sha256": "23c98152728172b44ccb41bc8ddc97798fee7a91b57b20620fb11d5f41e7792c",
+          "lines": [
+            224,
+            224
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISInventoryTransferAction",
+      "symbol": "new",
+      "signature": "ISInventoryTransferAction:new(character, item, srcContainer, destContainer, time)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/TimedActions/ISInventoryTransferAction.lua",
+          "sha256": "96ee554609f9ae029809643d50e4f31dbc5a7d21a558934be0804fd909c345b4",
+          "lines": [
+            764,
+            764
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseObject",
+      "symbol": "derive",
+      "signature": "ISBaseObject:derive(type)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/ISBaseObject.lua",
+          "sha256": "5dae034ac3471c03f81f89fdaa371b493990636148f075fac58581ac573521ef",
+          "lines": [
+            9,
+            9
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.preAddCatDefs",
+      "symbol": "preAddCatDefs",
+      "signature": "preAddCatDefs: observed forageSystem payload",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_event_emission_only; subscription lifecycle/runtime not established",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/Foraging/forageSystem.lua",
+          "sha256": "74b3a75ab959e95320aa4f022e43b533ef03ef4a5f32ae37a1528ce26b42038e",
+          "lines": [
+            718,
+            718
+          ],
+          "statement": "Vanilla foraging emits this hook before populating foraging category definitions. Cat refers to category, not animal species; do not infer meaning from the short name."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnWeaponSwingHitPoint",
+      "symbol": "OnWeaponSwingHitPoint",
+      "signature": "Events.OnWeaponSwingHitPoint.Add(callback)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISReloadWeaponAction.lua",
+          "sha256": "e85cd77ded08a1b2e6957fd1c810ed5bd58b6fa84c157c3f34a16f7b750fe6d8",
+          "lines": [
+            542,
+            542
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnNewGame",
+      "symbol": "OnNewGame",
+      "signature": "Events.OnNewGame.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/DebugUIs/DebugScenarios.lua",
+          "sha256": "a87638b8ef1f790906c97f10a5bea7e7991efb566976452ff61f3f27ea6d8f4c",
+          "lines": [
+            100,
+            100
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnInitWorld",
+      "symbol": "OnInitWorld",
+      "signature": "Events.OnInitWorld.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/LastStand/LastStandSetup.lua",
+          "sha256": "34789a635fc62892f55225b11fd4ab6aba3123953498785acf2a46c2fe552d7c",
+          "lines": [
+            192,
+            192
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnDisconnect",
+      "symbol": "OnDisconnect",
+      "signature": "Events.OnDisconnect.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ISUI/ISMPEditAccount.lua",
+          "sha256": "2f647f2a03ab141dc8d4c3bdd675fdc6f35d74e0f0adcedd6e0f7604737ba987",
+          "lines": [
+            481,
+            481
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnHitZombie",
+      "symbol": "OnHitZombie",
+      "signature": "Events.OnHitZombie.Add(callback)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/Definitions/DamageModelDefinitions.lua",
+          "sha256": "f08372a85c7075c17aab6d0097d4d83616b53e28b6e486f4a1a23f4b12eff932",
+          "lines": [
+            69,
+            69
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnResolutionChange",
+      "symbol": "OnResolutionChange",
+      "signature": "Events.OnResolutionChange.Add(callback)",
+      "side": "client",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/client/ISUI/ISServerDisconnectUI.lua",
+          "sha256": "f6fc11c2ae982098d0558518a6780773a22542ff51be3ff958f3dbcddb68b6c8",
+          "lines": [
+            82,
+            82
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.LevelPerk",
+      "symbol": "LevelPerk",
+      "signature": "Events.LevelPerk.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/XpSystem/XpUpdate.lua",
+          "sha256": "8ad8b9eb27e054a8d1051815c7796daa67e87416ac319288c79805e370d87b71",
+          "lines": [
+            389,
+            389
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "Events.OnLoadMapZones",
+      "symbol": "OnLoadMapZones",
+      "signature": "Events.OnLoadMapZones.Add(callback)",
+      "side": "server",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/server/metazones/metazoneHandler.lua",
+          "sha256": "c8cbc5c52a32405d2822d2601af4227afb5149937c372cd22916a7faba5ff6ba",
+          "lines": [
+            182,
+            182
+          ],
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "setActionAnim",
+      "signature": "ISBaseTimedAction:setActionAnim(_action, _displayItemModels)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            125,
+            125
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "setOverrideHandModels",
+      "signature": "ISBaseTimedAction:setOverrideHandModels(_primaryHand, _secondaryHand, _resetModel)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            133,
+            133
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "setOverrideHandModelsString",
+      "signature": "ISBaseTimedAction:setOverrideHandModelsString(_primaryHand, _secondaryHand, _resetModel)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            137,
+            137
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "setAnimVariable",
+      "signature": "ISBaseTimedAction:setAnimVariable(_key, _val)",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            149,
+            149
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "overrideWeaponType",
+      "signature": "ISBaseTimedAction:overrideWeaponType()",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            141,
+            141
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    },
+    {
+      "receiver_type": "ISBaseTimedAction",
+      "symbol": "restoreWeaponType",
+      "signature": "ISBaseTimedAction:restoreWeaponType()",
+      "side": "shared",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "lines": [
+            145,
+            145
+          ],
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@ class ApiLibrary(unittest.TestCase):
 
     def test_curated_catalog_valid(self):
         data = m.read(m.CURATED)
-        self.assertEqual(len(data["records"]), 106)
+        self.assertEqual(len(data["records"]), 170)
         self.assertEqual({r["status"] for r in data["records"]}, {"VERIFIED", "UNKNOWN", "INFERRED"})
         self.assertTrue(all(r["runtime_status"] == "NOT_TESTED" for r in data["records"]))
 

@@ -39,3 +39,6 @@ Report: purpose; third-party mod/author/version/URL; license/permission status; 
 
 ## Stop conditions
 Stop and request approval if asked to copy an unlicensed implementation or asset, remove attribution, bypass license restrictions, or ship a third-party component whose rights are unclear. This workflow is an engineering safeguard, not legal advice.
+
+## Reusable research lessons
+For broad downloaded-mod research, consult [the portable knowledge map](references/workshop-knowledge.md). It separates discovery signals from APIs and runtime claims, and records neutral acceptance questions without importing implementations.

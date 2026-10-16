@@ -1,6 +1,6 @@
 # API catalog and audit memory
 
-`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. The catalog contains 94 observations from Steam build 25485521. See [population provenance](population-provenance.md) for coverage, status counts and limits. Full engine version is explicitly UNKNOWN and every runtime status is NOT_TESTED. [Deep review](deep-review-25485521.md) records refined receivers, native-only findings and a conflicting fluid API.
+`api-library.json` is a small curated evidence index, not an exhaustive API dump. Search only relevant symbols. The catalog contains 170 observations from Steam build 25485521. See [Workshop evidence promotion](workshop-evidence.md) for 64 newly promoted source observations and [population provenance](population-provenance.md) for coverage, status counts and limits. Full engine version is explicitly UNKNOWN and every runtime status is NOT_TESTED. [Deep review](deep-review-25485521.md) records refined receivers, native-only findings and a conflicting fluid API.
 
 ## Record contents
 

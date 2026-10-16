@@ -69,6 +69,8 @@ Python is discovered automatically; supply `-PythonExe` for a nonstandard runtim
 
 ## Default editor
 
+Daily work uses Codex CLI inside VS Code. Setup creates B47ANCED.code-workspace in $teamWorkspace. Open it, run Terminal > Run Task > Codex CLI: Start in project, and choose the owning mod repository. The official extension is optional alongside this terminal workflow. See [daily use and workspace setup](VSCODE.md) and [the workflow map](CLI-WORKFLOWS.md). Use -SkipCLIWorkspace only to omit CLI/workspace provisioning intentionally. Existing desktop monitors remain active until a tested replacement exists.
+
 Setup installs VS Code and the official Codex extension by default. If VS Code is absent, Windows App Installer/winget is required; alternatively install VS Code manually first. Pass `-SkipVSCode` for another editor or disposable test setup. Follow [VS Code setup and activation](VSCODE.md), including sign-in and the read-only editor verification command. Editor provisioning runs only during explicit setup, never automatic updates or rollback.
 
 ## Verify

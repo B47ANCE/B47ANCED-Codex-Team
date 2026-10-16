@@ -4,6 +4,8 @@
 
 ## Quick setup
 
+The team default is **VS Code with Codex CLI in the selected project's integrated terminal**. Setup creates a local multi-folder workspace and manual workflow tasks; the official IDE extension remains available alongside the CLI. [Daily workflow and migration boundaries](docs/VSCODE.md), [all 23 skills/workflow map](docs/CLI-WORKFLOWS.md).
+
 Install Git, Python 3.11+, Node.js LTS, Codex CLI and GitHub CLI for the default setup. [Meshy prerequisites and exact commands](docs/MESHY.md). Authenticate GitHub CLI locally with your own account. Clone main, review the files, then run:
 
 ```powershell

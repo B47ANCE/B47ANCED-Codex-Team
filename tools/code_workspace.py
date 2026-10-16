@@ -1,0 +1,116 @@
+"""Create a developer-local VS Code workspace without changing project/editor files."""
+import argparse, hashlib, json, os, pathlib, tempfile, uuid
+
+def digest(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+def save_owned(files, state_path, backup_root):
+    if state_path.is_symlink():
+        raise ValueError('Linked state preserved')
+    state=json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else {}
+    previous={}
+    for path,raw in files.items():
+        if path.is_symlink():
+            raise ValueError('Linked output preserved')
+        old=path.read_bytes() if path.exists() else None
+        previous[path]=old
+        if old is not None and old!=raw and state.get(str(path))!=digest(old):
+            raise ValueError('Customized output preserved for manual review')
+    changed={path:raw for path,raw in files.items() if previous[path]!=raw}
+    if changed:
+        backup=backup_root/uuid.uuid4().hex
+        for path in changed:
+            if previous[path] is not None:
+                backup.mkdir(parents=True,exist_ok=True)
+                (backup/path.name).write_bytes(previous[path])
+    written=[]
+    try:
+        for path,raw in changed.items():
+            path.parent.mkdir(parents=True,exist_ok=True)
+            if (path.read_bytes() if path.exists() else None)!=previous[path]:
+                raise ValueError('Output changed concurrently')
+            fd,temp=tempfile.mkstemp(prefix='.b47-',dir=path.parent)
+            try:
+                with os.fdopen(fd,'wb') as stream:
+                    stream.write(raw)
+                os.replace(temp,path)
+                written.append(path)
+            finally:
+                if os.path.exists(temp):
+                    os.unlink(temp)
+        state_path.parent.mkdir(parents=True,exist_ok=True)
+        state.update({str(path):digest(raw) for path,raw in files.items()})
+        fd,temp=tempfile.mkstemp(prefix='.b47-state-',dir=state_path.parent)
+        try:
+            with os.fdopen(fd,'w',encoding='utf-8') as stream:
+                stream.write(json.dumps(state,indent=2)+'\n')
+            os.replace(temp,state_path)
+        finally:
+            if os.path.exists(temp):
+                os.unlink(temp)
+    except Exception:
+        for path in written:
+            if path.read_bytes()!=files[path]:
+                continue
+            if previous[path] is None:
+                path.unlink()
+            else:
+                path.write_bytes(previous[path])
+        raise
+
+def create(workspace, repositories, home, python, powershell, team_tools, source_tools):
+    workspace=pathlib.Path(workspace).resolve()
+    home=pathlib.Path(home).resolve()
+    root=pathlib.Path(repositories).resolve() if repositories else None
+    if root and not root.is_dir():
+        raise ValueError('Repository root must exist')
+    runtime=home/'.codex/cli-workflow-runtime'
+    launcher=runtime/'Invoke-TeamWorkflow.ps1'
+    payload=(pathlib.Path(source_tools)/'Invoke-TeamWorkflow.ps1').read_bytes()
+    folders=[dict(name='Codex Workspace',path=str(workspace))]
+    targets=[dict(label='Codex Workspace (research/setup)',value=str(workspace))]
+    if root:
+        folders.append(dict(name='Mod Repositories',path=str(root)))
+        targets += [dict(label=p.name,value=str(p)) for p in sorted(root.iterdir(),key=lambda p:p.name.lower())
+                    if p.is_dir() and not p.name.startswith('.')]
+    base=['-NoLogo','-NoProfile','-File',str(launcher),'-HomeDirectory',str(home),'-TeamTools',str(team_tools)]
+    if python:
+        base+=['-PythonExe',str(python)]
+    if root:
+        base+=['-RepositoryRoot',str(root)]
+    actions=[('codex','Codex CLI: Start in project'),('resume','Codex CLI: Resume in project'),
+             ('freshness','PZ: Check repository freshness'),('versions','PZ: Check project versions'),
+             ('mcp-list','Codex: List MCP connections'),('update-check','Team: Check for updates'),
+             ('update','Team: Apply validated update'),('rollback-preview','Team: Preview rollback'),
+             ('meshy-balance','Meshy: Check connection and credits (free)'),('meshy-key','Meshy: Set key locally (masked)')]
+    if root:
+        actions.append(('verify-team','Team: Verify mod repositories and 23 skills'))
+    tasks=[]
+    for action,label in actions:
+        args=base+['-Action',action]
+        if action in {'codex','resume','freshness','versions'}:
+            args+=['-Target','${input:pzProject}']
+        tasks.append(dict(label=label,type='process',command=str(powershell),args=args,
+                          options=dict(cwd=str(workspace)),problemMatcher=[],
+                          presentation=dict(reveal='always',panel='dedicated',focus=True)))
+    data=dict(folders=folders,settings={},
+              extensions=dict(recommendations=['openai.chatgpt']),
+              tasks=dict(version='2.0.0',tasks=tasks,inputs=[dict(id='pzProject',type='pickString',
+                    description='Choose the project that owns this workflow',options=targets)]))
+    dest=workspace/'B47ANCED.code-workspace'
+    encoded=(json.dumps(data,indent=2)+'\n').encode('utf-8')
+    save_owned({launcher:payload,dest:encoded},runtime/'workspace-state.json',home/'.codex/cli-workflow-backups')
+    return dict(workspace=str(dest),tasks=len(tasks),project_choices=len(targets),automatic_tasks=0)
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    for name in ['workspace','home','powershell','team-tools','source-tools']:
+        parser.add_argument('--'+name,required=True)
+    parser.add_argument('--repositories')
+    parser.add_argument('--python')
+    args=parser.parse_args()
+    try:
+        result=create(args.workspace,args.repositories,args.home,args.python,args.powershell,args.team_tools,args.source_tools)
+    except Exception:
+        raise SystemExit('VS Code workspace setup refused: verify paths and preserve/review existing workspace or launcher customization.')
+    print(json.dumps(result))

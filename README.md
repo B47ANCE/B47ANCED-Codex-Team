@@ -1,10 +1,12 @@
-# B47ANCE Workshop Codex Team 13.6.0
+# B47ANCE Workshop Codex Team 13.7.0
 
 23 Lua-only Project Zomboid skills, shared rules, templates and validated Windows sign-in updates. Canonical source: https://github.com/B47ANCE/B47ANCED-Codex-Team.git, branch main.
 
 ## Quick setup
 
-Explicit setup also creates a private [saved-chat workspace](docs/SAVED-CHATS.md) to resume existing local Codex chats in VS Code. Each developer uses their own history; no chat starts automatically. Opt out with `-SkipChatWorkspace`.
+Explicit setup automatically installs the [sidebar chat list](docs/CHAT-SIDEBAR.md), showing each developer's own existing chats inside Codex. No shared exports or terminal picker are needed. Opt out with `-SkipChatSidebar`.
+
+Explicit setup also creates an optional-use private [saved-chat workspace](docs/SAVED-CHATS.md) to resume existing local Codex chats in VS Code. Each developer uses their own history; no chat starts automatically. Opt out with `-SkipChatWorkspace`.
 
 The team default is **VS Code with Codex CLI in the selected project's integrated terminal**. Setup creates a local multi-folder workspace and manual workflow tasks; the official IDE extension remains available alongside the CLI. [Daily workflow and migration boundaries](docs/VSCODE.md), [all 23 skills/workflow map](docs/CLI-WORKFLOWS.md).
 

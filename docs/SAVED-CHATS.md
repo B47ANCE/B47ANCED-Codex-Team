@@ -26,3 +26,8 @@ Owned output hashes protect customized workspaces, scripts and metadata. Explici
 Automatic sign-in updates install new helpers inert. They never scan history, refresh private outputs, start agents or open VS Code. After reviewing an updated package, rerun explicit setup/Setup-ChatWorkspace to refresh local outputs. Team rollback restores managed package files, not private chat history or developer-local workspace/runtime copies; keep their backups if restoring those manually. Missing or incompatible sessions should be continued using a local handoff rather than editing session databases.
 
 Source: [official Codex CLI documentation](https://learn.chatgpt.com/docs/codex/cli). Installation and metadata validation do not prove an interactive resume succeeded; verify the selected history and available tools in the new session.
+
+
+Team setup automatically installs **All Existing Chats** inside the Codex sidebar,
+using your own local history. See [sidebar setup, privacy and recovery](CHAT-SIDEBAR.md).
+Use `-SkipChatSidebar` to omit it; settings and histories are preserved.

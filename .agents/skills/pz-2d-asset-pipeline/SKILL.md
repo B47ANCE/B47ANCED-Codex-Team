@@ -20,3 +20,5 @@ Use when the task concerns this domain. Follow the shared guide at `%USERPROFILE
 - Applies to future team mods and the selected current projects: Eyewear, Dogmeat, Medical Checks, Helicopter Events, Buildable Fences, Active Hours and Glowsticks. UI was explicitly excluded. Preserve existing custom Eyewear thumbnail and Buildable Fences poster.
 - Canonical portable payload: installed hub templates/branding/B47_BRANDING.json. Decode each base64 asset as data, verify its declared SHA-256 and PNG dimensions, then copy exact bytes only to the project's verified missing artwork slot. Never execute asset data. Discover authoritative layout and packaging scripts; update their fallback behavior without changing manually supplied art, historical packages or unrelated item textures. Missing production layouts receive authoring assets, not invented Mod IDs/runtime packages.
 - Asset selection does not authorize packaging, deployment or publication. See installed hub docs/BRANDING.md.
+
+Codex authors frame-animation sequencing through local tools. Never use Meshy for animation or rigging; static asset creation does not authorize motion generation.

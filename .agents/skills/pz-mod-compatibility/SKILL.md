@@ -14,3 +14,5 @@ Use when the task concerns this domain. Follow the shared guide at `%USERPROFILE
 3. Audit target mods and installed vanilla APIs, dependency declarations, load order, global overrides, namespaces and missing optional dependencies. Apply pz-clean-room-research to external authors. Do not edit third-party mods without authorization. Use opt-in adapters and nil-safe feature detection. Test standalone, with dependency, without dependency, and dedicated server; report untested combinations.
 4. Run available static/structural checks, retain evidence, and mark unavailable runtime validation NOT TESTED.
 5. Report changed files, validation results, licensing/provenance, outstanding blockers, and deployment/publication status.
+
+For audit-derived independent design checks, see [the compatibility research notes](../pz-clean-room-research/references/workshop-knowledge.md#compatibility); source signals are not runtime guarantees.

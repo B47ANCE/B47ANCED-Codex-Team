@@ -14,3 +14,5 @@ Use when the task concerns this domain. Follow the shared guide at `%USERPROFILE
 3. Inspect vanilla UI and input patterns. Show only meaningful state-applicable context actions, never opposite-state redundant commands. Support keyboard/mouse/controller, resizing, clipping, scale, focus, localization and accessibility. Separate client presentation from server-authoritative mutations. Validate in-game; static layout inspection is insufficient.
 4. Run available static/structural checks, retain evidence, and mark unavailable runtime validation NOT TESTED.
 5. Report changed files, validation results, licensing/provenance, outstanding blockers, and deployment/publication status.
+
+For audit-derived independent design checks, see [the ui research notes](../pz-clean-room-research/references/workshop-knowledge.md#ui); source signals are not runtime guarantees.

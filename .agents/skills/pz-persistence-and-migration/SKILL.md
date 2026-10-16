@@ -20,3 +20,5 @@ Use when the task concerns this domain. Follow the shared guide at `%USERPROFILE
 - Test forward migration, idempotent reload, missing/corrupt fields, older clients where relevant, reconnect and dedicated-server restart.
 - Preserve save backups and document whether downgrade/rollback is supported; do not mutate actual player saves during automated tests.
 - Static simulation is not native save compatibility proof.
+
+For audit-derived independent design checks, see [the persistence research notes](../pz-clean-room-research/references/workshop-knowledge.md#persistence); source signals are not runtime guarantees.

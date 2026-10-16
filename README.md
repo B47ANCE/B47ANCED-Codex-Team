@@ -1,4 +1,4 @@
-# B47ANCE Workshop Codex Team 13.7.0
+# B47ANCE Workshop Codex Team 13.8.0
 
 23 Lua-only Project Zomboid skills, shared rules, templates and validated Windows sign-in updates. Canonical source: https://github.com/B47ANCE/B47ANCED-Codex-Team.git, branch main.
 
@@ -37,3 +37,5 @@ python -m unittest discover -s tests -v
 ```
 
 [Security](docs/SECURITY.md), [ownership/configuration](docs/CONFIGURATION.md), [changelog](CHANGELOG.md). CI remains offline; no deployment, Workshop upload or dedicated-server access is implied. G7 dedicated MP and G8 release gates remain unchanged.
+
+13.8.0 adds [portable audit-derived knowledge and API evidence](docs/WORKSHOP-KNOWLEDGE.md). Codex authors all rigging and animation through Blender/local tools; Meshy motion/rigging workflows are prohibited.

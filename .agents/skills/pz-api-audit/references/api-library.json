@@ -6348,6 +6348,1798 @@
         }
       ],
       "notes": "Reviewed BaseLib registration exposes global unpack; J2SEPlatform initializes this library. This source-route result is not an invocation test. Source inspection/offline host fixture only. Installed overrides and mod-provided globals may differ; no SP/dedicated evidence."
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            943,
+            943
+          ],
+          "path": "media/lua/client/Chat/ISChat.lua",
+          "sha256": "0386ca1cd4bb936ea6a3591dc13f77f1ef830764c6b8a8ee2ded92559b16b483",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnTick",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnTick.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnTick",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            61,
+            61
+          ],
+          "path": "media/lua/client/Chat/ISAlert.lua",
+          "sha256": "76d3bf60b358774d789bfcacf422f84c0f67dbcf10e527b763d54c1e180f6c2f",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnGameStart",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnGameStart.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnGameStart",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1919,
+            1919
+          ],
+          "path": "media/lua/client/Tutorial/Steps.lua",
+          "sha256": "71100a086e9389fb84c771bdb03b18327028c5baa90583859d4112c7c9964cf6",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnPlayerUpdate",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnPlayerUpdate.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnPlayerUpdate",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1307,
+            1307
+          ],
+          "path": "media/lua/server/ClientCommands.lua",
+          "sha256": "c9de3d3024a46e2b3ab1670c11f98885647bfb6d73114ff7896bf41e263923fd",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnClientCommand",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnClientCommand.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnClientCommand",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1481,
+            1481
+          ],
+          "path": "media/lua/client/Foraging/ISSearchManager.lua",
+          "sha256": "6c50503a81392d663c922e20da6e13d70e0ee84fe7437f402b409f726eda9b41",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnGameBoot",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnGameBoot.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnGameBoot",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            183,
+            183
+          ],
+          "path": "media/lua/server/Camping/SCampfireSystem.lua",
+          "sha256": "88f434e22cf472c498e4fceabfa46849795a77c8da212248608644401ddde083",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.EveryOneMinute",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.EveryOneMinute.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "EveryOneMinute",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            218,
+            218
+          ],
+          "path": "media/lua/client/ServerCommands.lua",
+          "sha256": "33b80f64168f96cc15444fc8a838fad4c81e52e48484963bd71e4e63971273bb",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnServerCommand",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnServerCommand.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnServerCommand",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1413,
+            1413
+          ],
+          "path": "media/lua/client/Foraging/ISSearchManager.lua",
+          "sha256": "6c50503a81392d663c922e20da6e13d70e0ee84fe7437f402b409f726eda9b41",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnCreatePlayer",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnCreatePlayer.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnCreatePlayer",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            88,
+            88
+          ],
+          "path": "media/lua/client/DebugUIs/AdminContextMenu.lua",
+          "sha256": "93b44a4ef611543bbfd5d31ef9296faebe8cee265923e9e591758cb3166dbf09",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnFillWorldObjectContextMenu",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnFillWorldObjectContextMenu.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnFillWorldObjectContextMenu",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            42,
+            42
+          ],
+          "path": "media/lua/client/Context/ISContextManager.lua",
+          "sha256": "2dfdf2e8b85f0ab253b5cf37f1d124e8270bf545da0eb18f48f461a10ea1ad11",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnFillInventoryObjectContextMenu",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnFillInventoryObjectContextMenu.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnFillInventoryObjectContextMenu",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            347,
+            347
+          ],
+          "path": "media/lua/server/Vehicles/ProfessionVehicles.lua",
+          "sha256": "dd8f54aff597b75ff3662c74d9cac4f019030c9cf5e37b44982eeb1bdeeb8be6",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnInitGlobalModData",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnInitGlobalModData.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnInitGlobalModData",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1178,
+            1178
+          ],
+          "path": "media/lua/client/Chat/ISChat.lua",
+          "sha256": "0386ca1cd4bb936ea6a3591dc13f77f1ef830764c6b8a8ee2ded92559b16b483",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnKeyPressed",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnKeyPressed.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnKeyPressed",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            840,
+            840
+          ],
+          "path": "media/lua/client/Tutorial/Steps.lua",
+          "sha256": "71100a086e9389fb84c771bdb03b18327028c5baa90583859d4112c7c9964cf6",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnZombieDead",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnZombieDead.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnZombieDead",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1414,
+            1414
+          ],
+          "path": "media/lua/client/Foraging/ISSearchManager.lua",
+          "sha256": "6c50503a81392d663c922e20da6e13d70e0ee84fe7437f402b409f726eda9b41",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnPlayerDeath",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnPlayerDeath.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnPlayerDeath",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            184,
+            184
+          ],
+          "path": "media/lua/server/Camping/SCampfireSystem.lua",
+          "sha256": "88f434e22cf472c498e4fceabfa46849795a77c8da212248608644401ddde083",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.EveryTenMinutes",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.EveryTenMinutes.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "EveryTenMinutes",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            2178,
+            2178
+          ],
+          "path": "media/lua/client/OptionScreens/MainScreen.lua",
+          "sha256": "f89d351830fcb0050cfc10bc7a7e1a216a260b4731fe0ac34da9bcd4269352e5",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnMainMenuEnter",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnMainMenuEnter.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnMainMenuEnter",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            101,
+            101
+          ],
+          "path": "media/lua/client/DebugUIs/DebugScenarios.lua",
+          "sha256": "a87638b8ef1f790906c97f10a5bea7e7991efb566976452ff61f3f27ea6d8f4c",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.LoadGridsquare",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.LoadGridsquare.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "LoadGridsquare",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            718,
+            718
+          ],
+          "path": "media/lua/client/Vehicles/ISUI/ISVehicleDashboard.lua",
+          "sha256": "5b56f71248cd371f3d43aebe53fe6147f785ba97fc76c380bef07da69cdb7ce1",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnExitVehicle",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnExitVehicle.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnExitVehicle",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            75,
+            75
+          ],
+          "path": "media/lua/client/LastStand/WinterIsComing.lua",
+          "sha256": "a4a795aef28484e8b9a31122ee897d41c72592becac4ddda9ffca5c180593c25",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.EveryHours",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.EveryHours.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "EveryHours",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            76,
+            76
+          ],
+          "path": "media/lua/shared/Fishing/fishing_properties.lua",
+          "sha256": "87991e4bb9c16ec4e2bd79f838771d4f0abdcf4bc0b0fb0077615db31dc3bd56",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnServerStarted",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "Events.OnServerStarted.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnServerStarted",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            719,
+            719
+          ],
+          "path": "media/lua/client/Vehicles/ISUI/ISVehicleDashboard.lua",
+          "sha256": "5b56f71248cd371f3d43aebe53fe6147f785ba97fc76c380bef07da69cdb7ce1",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnSwitchVehicleSeat",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnSwitchVehicleSeat.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnSwitchVehicleSeat",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            208,
+            208
+          ],
+          "path": "media/lua/server/Items/SuburbsDistributions.lua",
+          "sha256": "25a15471f95fb56ebe7ac405c4a85705d18b3ee12a2bd7fe379e2c71e3bc36b1",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnPreDistributionMerge",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnPreDistributionMerge.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnPreDistributionMerge",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            274,
+            274
+          ],
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnObjectAdded",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnObjectAdded.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnObjectAdded",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            393,
+            393
+          ],
+          "path": "media/lua/server/XpSystem/XpUpdate.lua",
+          "sha256": "8ad8b9eb27e054a8d1051815c7796daa67e87416ac319288c79805e370d87b71",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnLoad",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnLoad.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnLoad",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            717,
+            717
+          ],
+          "path": "media/lua/client/Vehicles/ISUI/ISVehicleDashboard.lua",
+          "sha256": "5b56f71248cd371f3d43aebe53fe6147f785ba97fc76c380bef07da69cdb7ce1",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnEnterVehicle",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnEnterVehicle.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnEnterVehicle",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            20,
+            20
+          ],
+          "path": "media/lua/client/Fishing/FishingHandler.lua",
+          "sha256": "6975228698ab3219b4dec4838b6171ecad7645e6c49265b894f8c76d6b4b02cf",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnEquipPrimary",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnEquipPrimary.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnEquipPrimary",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            59,
+            59
+          ],
+          "path": "media/lua/client/DebugUIs/ISFastTeleportMove.lua",
+          "sha256": "fa955c4258c359c73c92bc2baa203be5e6cb2c0f27b42ecf498e5b4a246273cc",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnKeyStartPressed",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnKeyStartPressed.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnKeyStartPressed",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            377,
+            377
+          ],
+          "path": "media/lua/server/XpSystem/XpUpdate.lua",
+          "sha256": "8ad8b9eb27e054a8d1051815c7796daa67e87416ac319288c79805e370d87b71",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnPlayerMove",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnPlayerMove.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnPlayerMove",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            34,
+            34
+          ],
+          "path": "media/lua/server/Items/LootLog.lua",
+          "sha256": "a4b31da1fbbcc48c18805c53e317b372dd343ff4943a74cf788fece29a1a541e",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnFillContainer",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnFillContainer.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnFillContainer",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            117,
+            117
+          ],
+          "path": "media/lua/client/erosion/debug/DebugDemoTime.lua",
+          "sha256": "2c71122499b1787d5d8e71a1977dad44e9c9195c10dfc3c106bd95a93964db44",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnPreUIDraw",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnPreUIDraw.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnPreUIDraw",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            873,
+            873
+          ],
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISContextMenu",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "ISContextMenu:addOption(name, target, onSelect, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "addOption",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1075,
+            1075
+          ],
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISContextMenu",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "ISContextMenu:addSubMenu(option, menu)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "addSubMenu",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1079,
+            1079
+          ],
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISContextMenu",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "ISContextMenu:addActionsOption(text, getActionsFunction, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "addActionsOption",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            1084,
+            1084
+          ],
+          "path": "media/lua/client/ISUI/ISContextMenu.lua",
+          "sha256": "4e4616dedbf135960dd2b7c63d67480ad19ff17352b1797cf9224631f9a669c8",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISContextMenu",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "ISContextMenu:setOptionChecked(option, checked)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "setOptionChecked",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            12,
+            12
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:isValid()",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "isValid",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            55,
+            55
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:start()",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "start",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            63,
+            63
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:stop()",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "stop",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            68,
+            68
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:perform()",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "perform",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            74,
+            74
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:getDuration()",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "getDuration",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            11,
+            11
+          ],
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "SGlobalObjectSystem",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "SGlobalObjectSystem:new(name)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "new",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            71,
+            71
+          ],
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "SGlobalObjectSystem",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "SGlobalObjectSystem:getIsoObjectAt(x, y, z)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "getIsoObjectAt",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            81,
+            81
+          ],
+          "path": "media/lua/server/Map/SGlobalObjectSystem.lua",
+          "sha256": "0f29131a414c391c60513e4bad4202b0b07295265f1609cb8c8adb7401d16b8b",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "SGlobalObjectSystem",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "SGlobalObjectSystem:newLuaObjectAt(x, y, z)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "newLuaObjectAt",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            9,
+            9
+          ],
+          "path": "media/lua/client/Map/CGlobalObjectSystem.lua",
+          "sha256": "c3c8f8c8b2249266ee43476b6e97179f73a9493ff921340275a4082943a5d17c",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "CGlobalObjectSystem",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "CGlobalObjectSystem:new(name)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "new",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            59,
+            59
+          ],
+          "path": "media/lua/client/Map/CGlobalObjectSystem.lua",
+          "sha256": "c3c8f8c8b2249266ee43476b6e97179f73a9493ff921340275a4082943a5d17c",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "CGlobalObjectSystem",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "CGlobalObjectSystem:getIsoObjectAt(x, y, z)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "getIsoObjectAt",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            106,
+            106
+          ],
+          "path": "media/lua/client/Map/CGlobalObjectSystem.lua",
+          "sha256": "c3c8f8c8b2249266ee43476b6e97179f73a9493ff921340275a4082943a5d17c",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "CGlobalObjectSystem",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "CGlobalObjectSystem:OnServerCommand(command, args)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnServerCommand",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            203,
+            203
+          ],
+          "path": "media/lua/client/TimedActions/ISTimedActionQueue.lua",
+          "sha256": "23c98152728172b44ccb41bc8ddc97798fee7a91b57b20620fb11d5f41e7792c",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISTimedActionQueue",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "ISTimedActionQueue.addAfter(previousAction, action)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "addAfter",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            224,
+            224
+          ],
+          "path": "media/lua/client/TimedActions/ISTimedActionQueue.lua",
+          "sha256": "23c98152728172b44ccb41bc8ddc97798fee7a91b57b20620fb11d5f41e7792c",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISTimedActionQueue",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "ISTimedActionQueue.queueActions(character, addActionsFunction, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "queueActions",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            764,
+            764
+          ],
+          "path": "media/lua/client/TimedActions/ISInventoryTransferAction.lua",
+          "sha256": "96ee554609f9ae029809643d50e4f31dbc5a7d21a558934be0804fd909c345b4",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISInventoryTransferAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "ISInventoryTransferAction:new(character, item, srcContainer, destContainer, time)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "new",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            9,
+            9
+          ],
+          "path": "media/lua/shared/ISBaseObject.lua",
+          "sha256": "5dae034ac3471c03f81f89fdaa371b493990636148f075fac58581ac573521ef",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseObject",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseObject:derive(type)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "derive",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            718,
+            718
+          ],
+          "path": "media/lua/shared/Foraging/forageSystem.lua",
+          "sha256": "74b3a75ab959e95320aa4f022e43b533ef03ef4a5f32ae37a1528ce26b42038e",
+          "statement": "Vanilla foraging emits this hook before populating foraging category definitions. Cat refers to category, not animal species; do not infer meaning from the short name."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.preAddCatDefs",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "preAddCatDefs: observed forageSystem payload",
+      "signature_scope": "observed_vanilla_event_emission_only; subscription lifecycle/runtime not established",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "preAddCatDefs",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            542,
+            542
+          ],
+          "path": "media/lua/shared/TimedActions/ISReloadWeaponAction.lua",
+          "sha256": "e85cd77ded08a1b2e6957fd1c810ed5bd58b6fa84c157c3f34a16f7b750fe6d8",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnWeaponSwingHitPoint",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "Events.OnWeaponSwingHitPoint.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnWeaponSwingHitPoint",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            100,
+            100
+          ],
+          "path": "media/lua/client/DebugUIs/DebugScenarios.lua",
+          "sha256": "a87638b8ef1f790906c97f10a5bea7e7991efb566976452ff61f3f27ea6d8f4c",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnNewGame",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnNewGame.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnNewGame",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            192,
+            192
+          ],
+          "path": "media/lua/client/LastStand/LastStandSetup.lua",
+          "sha256": "34789a635fc62892f55225b11fd4ab6aba3123953498785acf2a46c2fe552d7c",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnInitWorld",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnInitWorld.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnInitWorld",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            481,
+            481
+          ],
+          "path": "media/lua/client/ISUI/ISMPEditAccount.lua",
+          "sha256": "2f647f2a03ab141dc8d4c3bdd675fdc6f35d74e0f0adcedd6e0f7604737ba987",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnDisconnect",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnDisconnect.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnDisconnect",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            69,
+            69
+          ],
+          "path": "media/lua/shared/Definitions/DamageModelDefinitions.lua",
+          "sha256": "f08372a85c7075c17aab6d0097d4d83616b53e28b6e486f4a1a23f4b12eff932",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnHitZombie",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "Events.OnHitZombie.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnHitZombie",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            82,
+            82
+          ],
+          "path": "media/lua/client/ISUI/ISServerDisconnectUI.lua",
+          "sha256": "f6fc11c2ae982098d0558518a6780773a22542ff51be3ff958f3dbcddb68b6c8",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnResolutionChange",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "client",
+      "signature": "Events.OnResolutionChange.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnResolutionChange",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            389,
+            389
+          ],
+          "path": "media/lua/server/XpSystem/XpUpdate.lua",
+          "sha256": "8ad8b9eb27e054a8d1051815c7796daa67e87416ac319288c79805e370d87b71",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.LevelPerk",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.LevelPerk.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "LevelPerk",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            182,
+            182
+          ],
+          "path": "media/lua/server/metazones/metazoneHandler.lua",
+          "sha256": "c8cbc5c52a32405d2822d2601af4227afb5149937c372cd22916a7faba5ff6ba",
+          "statement": "Installed vanilla Lua registers a callback with this event; this verifies the observed registration name/side only."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "Events.OnLoadMapZones",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "server",
+      "signature": "Events.OnLoadMapZones.Add(callback)",
+      "signature_scope": "observed_vanilla_registration_only; callback parameter contract UNKNOWN",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "OnLoadMapZones",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            125,
+            125
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:setActionAnim(_action, _displayItemModels)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "setActionAnim",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            133,
+            133
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:setOverrideHandModels(_primaryHand, _secondaryHand, _resetModel)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "setOverrideHandModels",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            137,
+            137
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:setOverrideHandModelsString(_primaryHand, _secondaryHand, _resetModel)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "setOverrideHandModelsString",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            149,
+            149
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:setAnimVariable(_key, _val)",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "setAnimVariable",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            141,
+            141
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:overrideWeaponType()",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "overrideWeaponType",
+      "verified_on": "2026-10-15"
+    },
+    {
+      "api_library": "Project Zomboid vanilla Lua/exposed engine APIs",
+      "evidence": [
+        {
+          "kind": "vanilla_lua",
+          "lines": [
+            145,
+            145
+          ],
+          "path": "media/lua/shared/TimedActions/ISBaseTimedAction.lua",
+          "sha256": "ad72e57f976bd1564d59d08d98d06f8c8d4acea6386aace48e0d99ce9d02a1f0",
+          "statement": "Installed vanilla Lua defines this method on the stated Lua class; only the declaration and formal parameter list are recorded."
+        }
+      ],
+      "game_version": "UNKNOWN",
+      "mutation": "Caller behavior and authoritative mutation/synchronization/persistence must be established in the owning project; this is not runtime or security verification.",
+      "notes": "Independent installed vanilla source evidence. Workshop usage prompted research but is not proof of API correctness. No third-party implementation imported. Exact callback arguments, load order, optional parameters and runtime availability are not established beyond the stated scope.",
+      "receiver_type": "ISBaseTimedAction",
+      "returns": "UNKNOWN; only the stated source definition/registration is verified.",
+      "runtime_status": "NOT_TESTED",
+      "side": "shared",
+      "signature": "ISBaseTimedAction:restoreWeaponType()",
+      "signature_scope": "observed_vanilla_lua_definition; formal parameter names only, not full semantic contract",
+      "status": "VERIFIED",
+      "steam_build": "25485521",
+      "symbol": "restoreWeaponType",
+      "verified_on": "2026-10-15"
     }
   ]
 }

@@ -6,3 +6,5 @@ Trace client requests, server validation, state ownership, server sandbox interp
 
 ## Workshop test distribution exception
 Apply the Workshop MP testing policy in global AGENTS.md and installed hub docs/WORKSHOP_MP_TESTING.md. Missing dedicated MP evidence alone does not block an explicitly authorized labelled Workshop test upload. G7 remains NOT TESTED / BLOCKED and stable-release G8 remains BLOCKED; offline/authority/security/version/package failures still block upload. This skill does not itself authorize publication.
+
+For audit-derived independent design checks, see [the authority research notes](../pz-clean-room-research/references/workshop-knowledge.md#authority); source signals are not runtime guarantees.

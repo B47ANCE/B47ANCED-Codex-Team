@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.8.0
+- Promote 64 independently rechecked vanilla Lua observations into the shared API catalog; preserve all 106 earlier records and their uncertainty labels. All runtime statuses remain NOT_TESTED.
+- Add portable clean-room research guidance and animation contracts with provenance and explicit UNKNOWN/runtime gates; no third-party code or assets distributed.
+- Require Codex-authored rigging and animation using Blender/local tools. Meshy rigging, motion clips, animation and text-to-motion are prohibited; approved static-model workflows remain available.
+
 ## 13.7.0
 - Explicit setup installs the sidebar companion automatically, using each developer's own local history.
 - Offline VSIX build needs no npm downloads; private Python paths stay in generated local output.

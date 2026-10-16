@@ -11,7 +11,7 @@ Open B47ANCED.code-workspace, run the Codex CLI project task and select the repo
 | Saves and migration | Design/test disposable persistence fixtures and rollback | pz-persistence-and-migration |
 | Items and inventory | Implement scoped features with sandbox configuration and verification | pz-item-and-recipe-development |
 | Interfaces | Develop localized vanilla-aligned UI/context menus | pz-ui-ux-development |
-| Original art and animation | Use verified Blender/Meshy integrations and original editable assets; approve paid jobs individually | pz-2d-asset-pipeline, pz-3d-asset-pipeline, pz-character-animation |
+| Original art and animation | Codex authors rigs/animation through Blender/local tools; Meshy is limited to approved static assets; preserve editable originals | pz-2d-asset-pipeline, pz-3d-asset-pipeline, pz-character-animation |
 | Compatibility and bugs | Investigate symptoms and installed evidence; preserve runtime labels | pz-mod-compatibility, pz-debug-root-cause |
 | GitHub and docs | `commit` after authorized changes; follow branch/docs/secrets/tests/push rules | pz-github-versioning, pz-ci-automation, pz-security-permissions |
 | Release checks | Audit packages, identity, versions, translations and case safety | pz-release-audit |

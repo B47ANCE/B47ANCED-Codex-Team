@@ -1,5 +1,7 @@
 # Audit population provenance — 2026-10-14
 
+This document describes historical population passes. For the current 170-record catalog and scoped uncertainty totals, see [Workshop evidence promotion](workshop-evidence.md); later shared additions do not rewrite historical results below.
+
 Historical population baseline (13.4.1): 93 shared records: three original Mod Selector observations and 90 observations populated from existing team-project audits. Initial status totals: **23 VERIFIED, 52 INFERRED, 18 UNKNOWN**. These initial counts are historical; [the subsequent deep review](deep-review-25485521.md) records the current **71 VERIFIED, 21 INFERRED, 1 UNKNOWN** and the scope of those labels. All are runtime **NOT_TESTED**, Steam build **25485521**, full engine version **UNKNOWN**.
 
 VERIFIED means only the stated source observation: the original three Mod Selector calls, fourteen named global/static call-site observations and six manually reviewed findings. It does not prove complete signatures, native overload choice, state authority or runtime correctness. INFERRED means the same method short name occurs in installed Lua but its receiver/type or historical behavior is unresolved. UNKNOWN means a bounded Lua scan did not find an executable call site; it does not prove absence or inaccessibility.

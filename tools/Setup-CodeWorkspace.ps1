@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$HomeDirectory=$env:USERPROFILE,[string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$Open)
+param([string]$HomeDirectory=$env:USERPROFILE,[string]$Workspace,[string]$RepositoryRoot,[string]$PythonExe,[switch]$Open,[switch]$MergeOverviewTasks)
 $ErrorActionPreference='Stop'
 if(-not $Workspace){
  $state=Join-Path $HomeDirectory '.codex/b47anced-team-state.json'
@@ -16,6 +16,7 @@ $hub=Join-Path $HomeDirectory '.codex/b47anced-team/tools'
 $teamTools=if(Test-Path -LiteralPath (Join-Path $hub 'test_meshy_connection.py')){$hub}else{$PSScriptRoot}
 $workspaceArgs=@((Join-Path $PSScriptRoot 'code_workspace.py'),'--workspace',$Workspace,'--home',$HomeDirectory,'--python',$PythonExe,'--powershell',(Get-Command powershell.exe).Source,'--team-tools',$teamTools,'--source-tools',$PSScriptRoot)
 if($RepositoryRoot){$workspaceArgs+=@('--repositories',$RepositoryRoot)}
+if($MergeOverviewTasks){$workspaceArgs+='--merge-overview-tasks'}
 & $PythonExe @workspaceArgs
 if($LASTEXITCODE -ne 0){throw 'Workspace setup refused; existing files were preserved'}
 if($RepositoryRoot){

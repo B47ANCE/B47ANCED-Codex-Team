@@ -7,7 +7,7 @@ foreach($name in $skillNames){if(-not(Test-Path -LiteralPath (Join-Path $HomeDir
 # Managed worktrees are a container, not another mod repository.
 $projects=@(Get-ChildItem -LiteralPath $RepositoryRoot -Directory | Where-Object {$_.Name -ne '.worktrees'})
 $globalGuide=(Join-Path $HomeDirectory '.codex/AGENTS.md').Replace('\','/')
-$portableGuide='(?<![\w./:%~$-])(?:%USERPROFILE%|\$env:USERPROFILE|~)/\.codex/AGENTS\.md(?![\w/]|\.[\w./])'
+$portableGuide='(?<![\w./:%~$-])(?:%USERPROFILE%|\$env:USERPROFILE|USERPROFILE|~)/\.codex/AGENTS\.md(?![\w/]|\.[\w./])'
 $absoluteGuide='(?<![\w./:%~$-])'+[regex]::Escape($globalGuide)+'(?![\w/]|\.[\w./])'
 foreach($project in $projects){
  $guide=Join-Path $project.FullName 'AGENTS.md'

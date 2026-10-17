@@ -4,7 +4,8 @@ import argparse, hashlib, json, os, pathlib, tempfile, uuid
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
-def save_owned(files, state_path, backup_root):
+def save_owned(files, state_path, backup_root, reviewed_custom=None):
+    reviewed_custom=reviewed_custom or {}
     if state_path.is_symlink():
         raise ValueError('Linked state preserved')
     state=json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else {}
@@ -14,7 +15,9 @@ def save_owned(files, state_path, backup_root):
             raise ValueError('Linked output preserved')
         old=path.read_bytes() if path.exists() else None
         previous[path]=old
-        if old is not None and old!=raw and state.get(str(path))!=digest(old):
+        if path in reviewed_custom and (old is None or reviewed_custom[path]!=digest(old)):
+            raise ValueError('Custom output changed during review')
+        if old is not None and old!=raw and state.get(str(path))!=digest(old) and reviewed_custom.get(path)!=digest(old):
             raise ValueError('Customized output preserved for manual review')
     changed={path:raw for path,raw in files.items() if previous[path]!=raw}
     if changed:
@@ -39,7 +42,8 @@ def save_owned(files, state_path, backup_root):
                 if os.path.exists(temp):
                     os.unlink(temp)
         state_path.parent.mkdir(parents=True,exist_ok=True)
-        state.update({str(path):digest(raw) for path,raw in files.items()})
+        # A narrow authorized merge never grants ownership of the whole custom file.
+        state.update({str(path):digest(raw) for path,raw in files.items() if path not in reviewed_custom})
         fd,temp=tempfile.mkstemp(prefix='.b47-state-',dir=state_path.parent)
         try:
             with os.fdopen(fd,'w',encoding='utf-8') as stream:
@@ -58,7 +62,7 @@ def save_owned(files, state_path, backup_root):
                 path.write_bytes(previous[path])
         raise
 
-def create(workspace, repositories, home, python, powershell, team_tools, source_tools):
+def create(workspace, repositories, home, python, powershell, team_tools, source_tools, merge_overview=False):
     workspace=pathlib.Path(workspace).resolve()
     home=pathlib.Path(home).resolve()
     root=pathlib.Path(repositories).resolve() if repositories else None
@@ -106,7 +110,35 @@ def create(workspace, repositories, home, python, powershell, team_tools, source
               tasks=dict(version='2.0.0',tasks=tasks,inputs=[dict(id='pzProject',type='pickString',
                     description='Choose the project that owns this workflow',options=targets)]))
     dest=workspace/'B47ANCED.code-workspace'
+    reviewed_custom={}
+    original=None
+    if merge_overview:
+        if not root or not dest.is_file() or dest.is_symlink():
+            raise ValueError('Overview merge requires an existing regular JSON workspace and repository root')
+        original=dest.read_bytes()
+        # Strict JSON: comments/duplicate keys are refused rather than silently lost.
+        def unique(pairs):
+            out={}
+            for key,value in pairs:
+                if key in out:raise ValueError('Duplicate workspace key')
+                out[key]=value
+            return out
+        def invalid_constant(value):raise ValueError('Non-JSON workspace constant')
+        existing=json.loads(original.decode('utf-8-sig'),object_pairs_hook=unique,parse_constant=invalid_constant)
+        if not isinstance(existing,dict):raise ValueError('Invalid workspace object')
+        block=existing.setdefault('tasks',dict(version='2.0.0',tasks=[]))
+        if not isinstance(block,dict) or block.get('version')!='2.0.0' or not isinstance(block.get('tasks'),list):
+            raise ValueError('Unsupported custom task schema')
+        overview_tasks=[t for t in tasks if t['label'].startswith('Overview:')]
+        for task in overview_tasks:
+            matches=[t for t in block['tasks'] if isinstance(t,dict) and t.get('label')==task['label']]
+            if len(matches)>1 or matches and matches[0]!=task:
+                raise ValueError('Conflicting custom overview task preserved')
+            if not matches:block['tasks'].append(task)
+        data=existing
+        reviewed_custom[dest]=digest(original)
     encoded=(json.dumps(data,indent=2)+'\n').encode('utf-8')
+    if original is not None and json.loads(original.decode('utf-8-sig'))==data:encoded=original
     files={launcher:payload,dest:encoded}
     if root:
         # Explicit setup pins executable overview code and view. Validated updates
@@ -116,7 +148,7 @@ def create(workspace, repositories, home, python, powershell, team_tools, source
             files[overview/name]=(pathlib.Path(source_tools)/name).read_bytes()
         for name in ('catalog.json','view.json'):
             files[overview/name]=(pathlib.Path(source_tools).parent/'templates/overview'/name).read_bytes()
-    save_owned(files,runtime/'workspace-state.json',home/'.codex/cli-workflow-backups')
+    save_owned(files,runtime/'workspace-state.json',home/'.codex/cli-workflow-backups',reviewed_custom)
     return dict(workspace=str(dest),tasks=len(tasks),project_choices=len(targets),automatic_tasks=1 if root else 0)
 
 if __name__=='__main__':
@@ -125,9 +157,10 @@ if __name__=='__main__':
         parser.add_argument('--'+name,required=True)
     parser.add_argument('--repositories')
     parser.add_argument('--python')
+    parser.add_argument('--merge-overview-tasks',action='store_true')
     args=parser.parse_args()
     try:
-        result=create(args.workspace,args.repositories,args.home,args.python,args.powershell,args.team_tools,args.source_tools)
+        result=create(args.workspace,args.repositories,args.home,args.python,args.powershell,args.team_tools,args.source_tools,args.merge_overview_tasks)
     except Exception:
         raise SystemExit('VS Code workspace setup refused: verify paths and preserve/review existing workspace or launcher customization.')
     print(json.dumps(result))

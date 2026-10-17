@@ -85,22 +85,39 @@ def create(workspace, repositories, home, python, powershell, team_tools, source
              ('meshy-balance','Meshy: Check connection and credits (free)'),('meshy-key','Meshy: Set key locally (masked)')]
     if root:
         actions.append(('verify-team','Team: Verify mod repositories and 23 skills'))
+        actions += [('overview-refresh','Overview: Refresh features and connections'),
+                    ('overview-open','Overview: Open mod ecosystem'),
+                    ('overview-watch','Overview: Keep features and connections current')]
     tasks=[]
     for action,label in actions:
         args=base+['-Action',action]
+        if action.startswith('overview-'):
+            args+=['-Workspace',str(workspace)]
         if action in {'codex','resume','freshness','versions'}:
             args+=['-Target','${input:pzProject}']
         tasks.append(dict(label=label,type='process',command=str(powershell),args=args,
                           options=dict(cwd=str(workspace)),problemMatcher=[],
                           presentation=dict(reveal='always',panel='dedicated',focus=True)))
+        if action=='overview-watch':
+            tasks[-1].update(isBackground=True,runOptions=dict(runOn='folderOpen'))
+            tasks[-1]['presentation']=dict(reveal='silent',panel='dedicated',focus=False)
     data=dict(folders=folders,settings={},
               extensions=dict(recommendations=['openai.chatgpt']),
               tasks=dict(version='2.0.0',tasks=tasks,inputs=[dict(id='pzProject',type='pickString',
                     description='Choose the project that owns this workflow',options=targets)]))
     dest=workspace/'B47ANCED.code-workspace'
     encoded=(json.dumps(data,indent=2)+'\n').encode('utf-8')
-    save_owned({launcher:payload,dest:encoded},runtime/'workspace-state.json',home/'.codex/cli-workflow-backups')
-    return dict(workspace=str(dest),tasks=len(tasks),project_choices=len(targets),automatic_tasks=0)
+    files={launcher:payload,dest:encoded}
+    if root:
+        # Explicit setup pins executable overview code and view. Validated updates
+        # still install new code inert; the watcher never imports fetched helpers.
+        overview=runtime/'overview'
+        for name in ('mod_overview.py','code_workspace.py'):
+            files[overview/name]=(pathlib.Path(source_tools)/name).read_bytes()
+        for name in ('catalog.json','view.json'):
+            files[overview/name]=(pathlib.Path(source_tools).parent/'templates/overview'/name).read_bytes()
+    save_owned(files,runtime/'workspace-state.json',home/'.codex/cli-workflow-backups')
+    return dict(workspace=str(dest),tasks=len(tasks),project_choices=len(targets),automatic_tasks=1 if root else 0)
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()

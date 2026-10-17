@@ -18,7 +18,8 @@ class CodeWorkspace(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             args,project=self.fixture(pathlib.Path(td));result=m.create(*args)
             data=json.loads(pathlib.Path(result['workspace']).read_text())
-            self.assertEqual(result['tasks'],11)
+            self.assertEqual(result['tasks'],14)
+            self.assertEqual(result['automatic_tasks'],1)
             self.assertEqual(result['project_choices'],2)
             self.assertEqual(data['settings'],{})
             self.assertEqual((project/'AGENTS.md').read_bytes(),b'custom instructions')
@@ -26,7 +27,10 @@ class CodeWorkspace(unittest.TestCase):
             self.assertFalse((project/'.vscode').exists())
             for task in data['tasks']['tasks']:
                 self.assertEqual(task['type'],'process')
-                self.assertNotIn('runOptions',task)
+                if 'overview-watch' in task['args']:
+                    self.assertEqual(task['runOptions'],{'runOn':'folderOpen'})
+                    self.assertTrue(task['isBackground'])
+                else:self.assertNotIn('runOptions',task)
                 self.assertFalse(any(x in task['label'].lower() for x in ['deploy','publish']))
             self.assertNotIn('.worktrees',json.dumps(data))
 

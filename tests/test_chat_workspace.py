@@ -4,6 +4,13 @@ sys.path.insert(0,str(ROOT/'tools'))
 import chat_workspace as m
 ID='11111111-2222-4333-8444-555555555555'
 class ChatWorkspace(unittest.TestCase):
+ def test_overview_tasks_inherited_without_starting_chats(self):
+  with tempfile.TemporaryDirectory() as td:
+   h,p,base,out=self.fixture(pathlib.Path(td));d=json.loads(base.read_text())
+   task=dict(label='Overview: Keep features and connections current',type='process',command='powershell.exe',runOptions=dict(runOn='folderOpen'))
+   d['tasks']=dict(tasks=[task]);base.write_text(json.dumps(d));before=p.read_bytes()
+   m.generate(h,base,out);ws=json.loads(out.read_text())
+   self.assertEqual(ws['tasks']['tasks'][-1],task);self.assertEqual(p.read_bytes(),before)
  def fixture(self,b,chat=True):
   h=b/'home/.codex';(h/'sessions').mkdir(parents=True)
   p=h/'sessions/chat.jsonl';raw=(json.dumps(dict(type='session_meta',payload=dict(id=ID,cwd='old path',source='vscode',timestamp='2026-10-12')))+'\n').encode()

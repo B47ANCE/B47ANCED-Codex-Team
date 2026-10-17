@@ -1,8 +1,10 @@
-# B47ANCE Workshop Codex Team 13.8.1
+# B47ANCE Workshop Codex Team 13.9.0
 
 23 Lua-only Project Zomboid skills, shared rules, templates and validated Windows sign-in updates. Canonical source: https://github.com/B47ANCE/B47ANCED-Codex-Team.git, branch main.
 
 ## Quick setup
+
+The [mod ecosystem overview](docs/MOD-OVERVIEW.md) shows features and directed connections across the portfolio. Explicit workspace setup builds a portable local view and adds refresh/open tasks plus a read-only watcher. Each developer uses their own repository paths; changed feature evidence is flagged for review rather than silently promoted to current runtime proof.
 
 Explicit setup automatically installs the [sidebar chat list](docs/CHAT-SIDEBAR.md), showing each developer's own existing chats inside Codex. No shared exports or terminal picker are needed. Opt out with `-SkipChatSidebar`.
 
@@ -38,6 +40,6 @@ python -m unittest discover -s tests -v
 
 [Security](docs/SECURITY.md), [ownership/configuration](docs/CONFIGURATION.md), [changelog](CHANGELOG.md). CI remains offline; no deployment, Workshop upload or dedicated-server access is implied. G7 dedicated MP and G8 release gates remain unchanged.
 
-13.8.1 adds [portable audit-derived knowledge and API evidence](docs/WORKSHOP-KNOWLEDGE.md). Codex authors all rigging and animation through Blender/local tools; Meshy motion/rigging workflows are prohibited.
+The package includes [portable audit-derived knowledge and API evidence](docs/WORKSHOP-KNOWLEDGE.md). Codex authors all rigging and animation through Blender/local tools; Meshy motion/rigging workflows are prohibited.
 
 Steam desktop restarts after Workshop publication require a separate explicit confirmation each time. Publishing alone does not authorize a restart.

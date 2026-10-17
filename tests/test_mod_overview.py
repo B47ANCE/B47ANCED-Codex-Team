@@ -5,6 +5,24 @@ sys.path.insert(0,str(ROOT/'tools'))
 import mod_overview as m
 
 class ModOverview(unittest.TestCase):
+    def test_merged_snapshot_available_without_developer_clones(self):
+        data=m.snapshot(m.read_json(ROOT/'templates/overview/catalog.json'),None)
+        mods={row['id']:row for row in data['mods']}
+        for ident,version in [('qm','0.18.0-dev.1'),('rooms','0.2.0-dev.6')]:
+            row=mods[ident]
+            self.assertEqual(row['version'],version)
+            self.assertFalse(row['installed'])
+            self.assertIn('NOT INSTALLED',row['review'])
+            self.assertEqual(len(row['source_commit']),40)
+            self.assertIn('G7/stable G8 BLOCKED',row['limits'])
+        self.assertFalse(any(f['status']=='Separate branch' for f in mods['qm']['features']))
+        records=next(f for f in data['flows'] if f['name']=='Physical storage records')
+        self.assertEqual(records['status'],'Source')
+        allocation=next(f for f in data['flows'] if f['name']=='Advisory room allocation')
+        self.assertEqual(allocation['status'],'Foundation')
+        self.assertIn('remain disabled',allocation['text'])
+        self.assertTrue(any(e['a']=='rooms' and e['b']=='qm' and e['kind']=='Required' for e in data['edges']))
+
     def test_watch_refreshes_after_source_edit(self):
         with tempfile.TemporaryDirectory() as td:
             p=pathlib.Path(td);root,a,b,catalog=self.fixture(p)

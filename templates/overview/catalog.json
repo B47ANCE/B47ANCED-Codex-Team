@@ -1,12 +1,12 @@
 {
   "date": "2026-10-16",
-  "scope": "26 project folders; duplicate Medical Checks checkouts and .worktrees deduplicated. Branch additions explicitly separated. Read-only source snapshot, not a release or runtime certification.",
+  "scope": "26 project folders; duplicate Medical Checks checkouts and .worktrees deduplicated. Branch additions explicitly separated. Read-only source snapshot, not a release or runtime certification. Quartermaster/Rooms snapshots selectively refreshed from merged commits on 2026-10-17; other project records retain their original audit evidence.",
   "mods": [
     {
       "id": "rooms",
       "folder": "B47ANCEDRooms",
       "name": "Rooms",
-      "version": "0.2.0-dev.5",
+      "version": "0.2.0-dev.6",
       "features": [
         {
           "status": "Source",
@@ -19,13 +19,16 @@
         {
           "status": "Source",
           "text": "Permission and geometry API for cooperating mods; building-scoped cleaning areas."
+        },
+        {
+          "status": "Source",
+          "text": "Designated-only storage membership/geometry APIs with complete-footprint configuration permission; paired allocation-provider tests."
         }
       ],
-      "limits": "Does not lock doors or enforce unrelated vanilla transfers/building actions. Storage roles do not route items. Current dedicated acceptance pending.",
+      "limits": "Metadata does not grant inventory access, route items or enforce unrelated vanilla actions. Native room overrides stay removed. Native/dedicated NOT TESTED; G7/stable G8 BLOCKED.",
       "evidence": [
         "README.md",
-        "VERSION",
-        "src/B47ANCEDRooms/42/mod.info"
+        "docs/ALLOCATION_INTEGRATION.md"
       ],
       "mod_ids": [
         "B47ANCEDRooms"
@@ -33,13 +36,17 @@
       "source_roots": [
         "src"
       ],
-      "source_digest": "0d0caa631660f8a1babd88f7b70e6978717719ba79e4e904989876fcfd259e08"
+      "source_digest": "10afab43888c304c16cd6a14642f50e8a0201fb83c00c41642acda00d549ff34",
+      "reviewed": true,
+      "source_commit": "e9d3b0965155ef6bb5ae067eb42d50e96d2de7b2",
+      "source_repository": "B47ANCE/B47ANCEDRooms",
+      "review_date": "2026-10-17"
     },
     {
       "id": "qm",
       "folder": "B47ANCEDQuartermaster",
       "name": "Quartermaster",
-      "version": "0.11.0-dev.1",
+      "version": "0.18.0-dev.1",
       "features": [
         {
           "status": "Source",
@@ -54,23 +61,26 @@
           "text": "Rooms integration and supply API used by Auto Clean."
         },
         {
-          "status": "Separate branch",
-          "text": "0.17.0-dev.1 ledger-freshness: physical shareable shopping papers and held-list HUD; paper supply inspections and ledger CDs."
+          "status": "Source",
+          "text": "Physical shareable Shopping Lists and held-list HUD; paper supply inspections and ledger CDs."
         },
         {
-          "status": "Separate branch",
-          "text": "Powered Windows ’93 desktop, CD Writer and QUARTERMASTER.EXE; ledger freshness requirements for room/building work."
+          "status": "Source",
+          "text": "Powered Windows'93 desktop, CD Writer and QUARTERMASTER.EXE; ledger freshness requirements for room/building work."
         },
         {
-          "status": "Separate branch",
+          "status": "Source",
           "text": "Carry grouping, progress, vehicle/trailer cargo and nested bags; optional Dangerous Load and extra carry allowance."
+        },
+        {
+          "status": "Foundation",
+          "text": "Sparse container/Whole/preset/room allocation profiles and percentage UI; bounded shadow accounting and reservation primitives. Enforcement and live role routing disabled."
         }
       ],
-      "limits": "Root 0.11.0-dev.1 differs from active development checkout 0.17.0-dev.1. Earlier owner-reported dedicated pass does not validate newer features. Computer power is native; no confirmed Power-mod dependency.",
+      "limits": "Native SP/dedicated NOT TESTED for 0.18.0-dev.1; G7/stable G8 BLOCKED. Advisory allocation does not override native transfer grants. Earlier runtime evidence is historical.",
       "evidence": [
         "README.md",
-        "VERSION",
-        "src/B47ANCEDQuartermaster/42/mod.info"
+        "docs/ALLOCATION_INTEGRATION.md"
       ],
       "mod_ids": [
         "B47ANCEDQuartermaster"
@@ -78,7 +88,11 @@
       "source_roots": [
         "src"
       ],
-      "source_digest": "0d1547caffc38084293582e83e93dd46065a141b9eaca944f680ec60e17bcebb"
+      "source_digest": "1bdd0592c3886a9808e114f7723b1747909588de42e0b71b0c0c0059aca5de05",
+      "reviewed": true,
+      "source_commit": "bec375b0483ec8d9d4bbf1565cd897c50d6fb887",
+      "source_repository": "B47ANCE/B47ANCEDQuartermaster",
+      "review_date": "2026-10-17"
     },
     {
       "id": "clean",
@@ -949,7 +963,7 @@
       "a": "rooms",
       "b": "qm",
       "kind": "Required",
-      "text": "Room geometry and cooperating-mod permissions"
+      "text": "Required designated UUID geometry, metadata and independent action permissions; advisory allocation uses current storageScopes/roomDesignations contracts."
     },
     {
       "a": "rooms",
@@ -1117,7 +1131,7 @@
         "clean"
       ],
       "status": "Source",
-      "text": "Rooms owns designated tiles/access → Quartermaster locates configured supplies → Auto Clean executes native cleaning and returns tools. Current native dedicated acceptance remains pending."
+      "text": "Rooms owns designated tiles/access; Quartermaster locates configured supplies; Auto Clean executes native cleaning and returns tools. Updated provider snapshots do not establish new Auto Clean or dedicated runtime acceptance."
     },
     {
       "name": "Physical storage records",
@@ -1125,8 +1139,8 @@
         "rooms",
         "qm"
       ],
-      "status": "Separate branch",
-      "text": "Quartermaster 0.17 ledger-freshness: room-aware physical inspections → paper ledger → selected CD → powered native desktop → browsing and freshness-gated collection. Uses native computer power, not a confirmed Power-mod integration."
+      "status": "Source",
+      "text": "Merged Quartermaster 0.18.0-dev.1 with Rooms 0.2.0-dev.6: room-aware inspection -> paper ledger -> selected CD -> powered native desktop -> browsing and freshness-gated collection. Native computer power; no confirmed Power-mod dependency. Native/dedicated acceptance NOT TESTED."
     },
     {
       "name": "UV defense and infected ecology",
@@ -1252,6 +1266,15 @@
       ],
       "status": "Planned",
       "text": "Junk Drawer can inspect/profile salvage; future domain recipes may produce electrical, optical, food or medical materials. No certified first-party recipes or confirmed adapters yet."
+    },
+    {
+      "name": "Advisory room allocation",
+      "mods": [
+        "rooms",
+        "qm"
+      ],
+      "status": "Foundation",
+      "text": "Rooms 0.2.0-dev.6 supplies designated UUID geometry, type/role and independent action permissions. Quartermaster 0.18.0-dev.1 owns sparse profiles, staged percentage editing and bounded server shadow accounting. Enforcement and live Primary/Secondary routing remain disabled; native/dedicated NOT TESTED."
     }
   ],
   "schema": 1

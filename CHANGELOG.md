@@ -1,5 +1,11 @@
 # Changelog
 
+## 13.9.1
+
+- Refresh Quartermaster 0.18.0-dev.1 and Rooms 0.2.0-dev.6 from their merged source commits. Promote ledger, Shopping List, computer and carry features from separate branches into Source.
+- Add advisory room allocation and clarify designated-room permissions. Enforcement/live routing stay disabled; native/dedicated NOT TESTED.
+- Preserve other project records, original audit date, developer-local detection and missing-clone labels.
+
 ## 13.9.0
 
 - Add the portable 26-project feature/connection overview and 14 multi-mod feature groups.

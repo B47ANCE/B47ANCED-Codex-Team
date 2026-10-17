@@ -1,6 +1,6 @@
 # Features and connections overview
 
-The team package includes the reviewed 26-project portfolio and 14 shared-feature
+The team package includes the reviewed 26-project portfolio and 15 shared-feature
 groups. Each developer gets an interactive, self-contained local overview during
 explicit workspace setup. It works offline and includes projects they have not
 cloned, explicitly labelled **NOT INSTALLED — shared snapshot only**.
@@ -137,3 +137,22 @@ existing update/rollback safeguards.
 This is a feature/contract map, not a release gate, dependency installer, workshop
 publisher, live server monitor or proof that every vanilla-system interaction has
 been identified. G7/G8 requirements remain unchanged.
+
+
+## Merged source snapshot update — 2026-10-17
+
+Package 13.9.1 refreshes Quartermaster **0.18.0-dev.1** at merged commit
+`bec375b0483ec8d9d4bbf1565cd897c50d6fb887` and Rooms **0.2.0-dev.6** at
+`e9d3b0965155ef6bb5ae067eb42d50e96d2de7b2`. Ledger, physical Shopping Lists,
+computer/CD and carry features are Source; advisory room allocation is Foundation.
+Rooms supplies designated UUID geometry/metadata and independent action permissions;
+Quartermaster owns profiles and shadow accounting. Enforcement and live role routing
+remain disabled. Native SP/dedicated NOT TESTED; G7/stable G8 BLOCKED.
+
+The original catalog date remains the broader portfolio audit date. Only these two
+entries and affected flows/connections were refreshed; other projects are not claimed
+re-audited. Missing clones show the shared versions labelled NOT INSTALLED. Existing
+clones use their own version/source review state and normal Git update workflow.
+Package updates do not pull mod repositories, activate a new pinned watcher or change
+local settings. After a validated-main update, review and rerun workspace setup as
+described above to activate the refreshed catalog, then refresh the overview.

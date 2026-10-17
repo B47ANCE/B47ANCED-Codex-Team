@@ -18,6 +18,10 @@ $workspaceArgs=@((Join-Path $PSScriptRoot 'code_workspace.py'),'--workspace',$Wo
 if($RepositoryRoot){$workspaceArgs+=@('--repositories',$RepositoryRoot)}
 & $PythonExe @workspaceArgs
 if($LASTEXITCODE -ne 0){throw 'Workspace setup refused; existing files were preserved'}
+if($RepositoryRoot){
+ $runtime=Join-Path $HomeDirectory '.codex/cli-workflow-runtime'
+ & (Join-Path $runtime 'Invoke-TeamWorkflow.ps1') -Action overview-refresh -Workspace $Workspace -RepositoryRoot $RepositoryRoot -HomeDirectory $HomeDirectory -TeamTools $teamTools -PythonExe $PythonExe
+}
 if($Open){
  $code=Get-Command code.cmd -ErrorAction SilentlyContinue
  if(-not $code){

@@ -2,6 +2,11 @@ import importlib.util, pathlib, tempfile, shutil, unittest, json
 root=pathlib.Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('team_config',root/'tools/team_config.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 class TeamConfigTests(unittest.TestCase):
+ def test_worktree_git_pointer_excluded_from_payload(self):
+  with tempfile.TemporaryDirectory() as td:
+   p=pathlib.Path(td);(p/'.git').write_text('gitdir: developer-local-path')
+   (p/'VERSION').write_text('1.0.0')
+   self.assertEqual([x.name for x in m.files(p)],['VERSION'])
  def test_package_valid(self):
   self.assertEqual(m.validate(root)['skills'],23)
  def test_install_and_modified_file_refusal(self):

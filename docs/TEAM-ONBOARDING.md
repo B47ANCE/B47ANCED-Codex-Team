@@ -2,7 +2,7 @@
 
 Canonical source: [GitHub repository](https://github.com/B47ANCE/B47ANCED-Codex-Team), branch `main`.
 [Download main ZIP](https://github.com/B47ANCE/B47ANCED-Codex-Team/archive/refs/heads/main.zip).
-Links follow main and may advance beyond this document's configuration version, 13.8.1.
+Links follow main and may advance beyond this document's configuration version, 13.9.0.
 
 ## Prerequisites
 
@@ -111,6 +111,16 @@ The least-privilege sign-in task applies validated main updates. Updates check t
 Get-ScheduledTaskInfo -TaskName B47ANCED-Codex-Update
 Get-Content "$env:USERPROFILE\.codex\b47anced-team-tools\last-update.log"
 ```
+
+## Current features and mod connections
+
+For the included feature/connection view, see [mod ecosystem overview](MOD-OVERVIEW.md).
+In VS Code choose **Terminal → Run Task → Overview: Open mod ecosystem**. Allow
+the read-only automatic overview task only in your trusted workspace, or start
+**Overview: Keep features and connections current** manually. Each developer's
+own mod root is read; no project files, credentials or instructions are changed.
+Missing clones and stale feature evidence stay clearly marked. Update project
+descriptors alongside feature changes so the team sees reviewed information.
 
 ## Manual rollback of a completed update
 

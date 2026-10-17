@@ -8,9 +8,10 @@ def files(src):
  for base,dirs,names in os.walk(src,followlinks=False):
   dirs[:]=[d for d in dirs if d not in ('.git','__pycache__')]
   for name in dirs+names:
+   if name=='.git':continue
    p=pathlib.Path(base)/name
    if p.is_symlink() or getattr(p,'is_junction',lambda:False)():raise ValueError('linked source rejected')
-  out.extend(pathlib.Path(base)/n for n in names if n!='MANIFEST.sha256.json')
+  out.extend(pathlib.Path(base)/n for n in names if n not in ('MANIFEST.sha256.json','.git'))
  return out
 def validate(src):
  src=pathlib.Path(src)

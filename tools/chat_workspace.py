@@ -55,6 +55,9 @@ def generate(home,base_workspace,output,source_tools=None):
     if not chats:
         workspace['tasks']['tasks']=workspace['tasks']['tasks'][1:]
         workspace['tasks']['inputs']=workspace['tasks']['inputs'][1:]
+    # Keep the reviewed overview reachable from the saved-chat workspace too.
+    workspace['tasks']['tasks'].extend(t for t in base.get('tasks',{}).get('tasks',[])
+                                      if t.get('label','').startswith('Overview: '))
     ledger=runtime/'chats.local.json'
     values={output:(json.dumps(workspace,indent=2)+'\n').encode(),ledger:(json.dumps(dict(chats=chats,archived='Excluded; original archives preserved'),indent=2)+'\n').encode()}
     for name in ('Resume-CodexChat.ps1','chat_workspace.py','code_workspace.py'):

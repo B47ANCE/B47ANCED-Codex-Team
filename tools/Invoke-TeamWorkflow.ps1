@@ -1,12 +1,22 @@
 [CmdletBinding()]
 param(
- [Parameter(Mandatory=$true)][ValidateSet('codex','resume','freshness','versions','verify-team','update-check','update','rollback-preview','meshy-balance','meshy-key','mcp-list')][string]$Action,
- [string]$Target,[string]$RepositoryRoot,[Parameter(Mandatory=$true)][string]$TeamTools,
+ [Parameter(Mandatory=$true)][ValidateSet('codex','resume','freshness','versions','verify-team','update-check','update','rollback-preview','meshy-balance','meshy-key','mcp-list','overview-refresh','overview-open','overview-watch')][string]$Action,
+ [string]$Target,[string]$RepositoryRoot,[string]$Workspace,[Parameter(Mandatory=$true)][string]$TeamTools,
  [Parameter(Mandatory=$true)][string]$HomeDirectory,[string]$PythonExe
 )
 $ErrorActionPreference='Stop'
 if($Action -in @('codex','resume','freshness','versions')){
  if(-not $Target -or -not(Test-Path -LiteralPath $Target -PathType Container)){throw 'Choose an existing project folder'}
+}
+if($Action -like 'overview-*'){
+ if(-not $PythonExe -or -not $Workspace -or -not $RepositoryRoot){throw 'Overview requires configured Python, workspace and repository root'}
+ $runtime=Join-Path $PSScriptRoot 'overview'
+ $overviewArgs=@((Join-Path $runtime 'mod_overview.py'),'--repositories',$RepositoryRoot,'--catalog',(Join-Path $runtime 'catalog.json'),'--template',(Join-Path $runtime 'view.json'),'--output',(Join-Path $Workspace 'mod-overview'))
+ if($Action -eq 'overview-watch'){$overviewArgs+='--watch'}
+ & $PythonExe @overviewArgs
+ if($LASTEXITCODE -ne 0){throw 'Overview refresh failed; prior output preserved'}
+ if($Action -eq 'overview-open'){Start-Process -FilePath (Join-Path $Workspace 'mod-overview/index.html') -WindowStyle Hidden}
+ return
 }
 switch($Action){
  'codex' {

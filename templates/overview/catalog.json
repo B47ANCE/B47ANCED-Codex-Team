@@ -1,0 +1,1258 @@
+{
+  "date": "2026-10-16",
+  "scope": "26 project folders; duplicate Medical Checks checkouts and .worktrees deduplicated. Branch additions explicitly separated. Read-only source snapshot, not a release or runtime certification.",
+  "mods": [
+    {
+      "id": "rooms",
+      "folder": "B47ANCEDRooms",
+      "name": "Rooms",
+      "version": "0.2.0-dev.5",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Draw, paint, erase, merge and split designated rooms across floors; undo/redo and draft recovery."
+        },
+        {
+          "status": "Source",
+          "text": "Room types, names and storage roles; revisioned ownership, safehouse delegation and visitor policies."
+        },
+        {
+          "status": "Source",
+          "text": "Permission and geometry API for cooperating mods; building-scoped cleaning areas."
+        }
+      ],
+      "limits": "Does not lock doors or enforce unrelated vanilla transfers/building actions. Storage roles do not route items. Current dedicated acceptance pending.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDRooms/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDRooms"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "0d0caa631660f8a1babd88f7b70e6978717719ba79e4e904989876fcfd259e08"
+    },
+    {
+      "id": "qm",
+      "folder": "B47ANCEDQuartermaster",
+      "name": "Quartermaster",
+      "version": "0.11.0-dev.1",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Configure category/item storage rules, priorities, presets and whole-furniture sections."
+        },
+        {
+          "status": "Source",
+          "text": "Sort inventory, containers, rooms, buildings and eligible floor items; shopping demands and Dibs lists."
+        },
+        {
+          "status": "Source",
+          "text": "Rooms integration and supply API used by Auto Clean."
+        },
+        {
+          "status": "Separate branch",
+          "text": "0.17.0-dev.1 ledger-freshness: physical shareable shopping papers and held-list HUD; paper supply inspections and ledger CDs."
+        },
+        {
+          "status": "Separate branch",
+          "text": "Powered Windows ’93 desktop, CD Writer and QUARTERMASTER.EXE; ledger freshness requirements for room/building work."
+        },
+        {
+          "status": "Separate branch",
+          "text": "Carry grouping, progress, vehicle/trailer cargo and nested bags; optional Dangerous Load and extra carry allowance."
+        }
+      ],
+      "limits": "Root 0.11.0-dev.1 differs from active development checkout 0.17.0-dev.1. Earlier owner-reported dedicated pass does not validate newer features. Computer power is native; no confirmed Power-mod dependency.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDQuartermaster/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDQuartermaster"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "0d1547caffc38084293582e83e93dd46065a141b9eaca944f680ec60e17bcebb"
+    },
+    {
+      "id": "clean",
+      "folder": "B47ANCEDAutoClean",
+      "name": "Auto Clean",
+      "version": "0.5.1-dev.1",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Rectangle/paint Clean Area and designated-tile Clean Building with preview, cancellation and progress."
+        },
+        {
+          "status": "Source",
+          "text": "Quartermaster supplies, borrowed broom return and native action timings."
+        },
+        {
+          "status": "Source",
+          "text": "Bleach/water cleaning and decorative ground-trash removal; preserves dropped inventory items."
+        }
+      ],
+      "limits": "Requires Rooms and Quartermaster. Workshop distribution is not current dedicated-MP proof.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDAutoClean/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDAutoClean"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "6c751528c675ebfa408146993773df1b09cf48b6b4aa509f8da61f0f41731653"
+    },
+    {
+      "id": "power",
+      "folder": "B47ANCEDPower",
+      "name": "Power",
+      "version": "0.17.0-dev.1",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Battery/device profiles, charge accounting, battery replacement, coin-cell watches and improvised adapters."
+        },
+        {
+          "status": "Source",
+          "text": "Reserved energy transactions, rollback and uncertain-operation recovery."
+        },
+        {
+          "status": "Foundation",
+          "text": "Source/storage/load/network registries, appliance watt profiles and bounded infrastructure discovery."
+        },
+        {
+          "status": "Foundation",
+          "text": "Read-only generator observations and Weather event ingestion/consequence proposals."
+        }
+      ],
+      "limits": "Generator electrical capacity and automatic external-storage charging remain unresolved. Event ingestion does not automatically damage equipment. Native SP/dedicated acceptance pending.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDPower/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDPower"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": "ec6975052d3843758dfda0576e2e19e21f600f5610c56f888607d55a52a95d89"
+    },
+    {
+      "id": "spx",
+      "folder": "B47ANCEDSPXTRM",
+      "name": "SPXTRM",
+      "version": "0.30.0",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Serviceable bulbs, color/type profiles, tools, wear and burnout; placed/dropped lights and aiming."
+        },
+        {
+          "status": "Source",
+          "text": "Laser presentation, optical emitter metadata and bounded occlusion/exposure queries."
+        },
+        {
+          "status": "Source",
+          "text": "Sunlight/UV and sunburn dose with clothing coverage; domain-owned treatment delegation."
+        },
+        {
+          "status": "Source",
+          "text": "Opt-in timed UVC treatment of placed water containers; biological quality only."
+        },
+        {
+          "status": "Source",
+          "text": "Grow-lamp and batched crop-light observations without crop growth changes."
+        },
+        {
+          "status": "Foundation",
+          "text": "Reactive material optical contracts and post-commit consumer notifications."
+        }
+      ],
+      "limits": "Requires Power. Retains legacy lightWorks Lua API/save contracts. UVC is not a potability guarantee; native lighting/fluids/dedicated behavior needs testing.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "docs/CONSUMER_INTEGRATIONS.md",
+        "src/B47ANCEDSPXTRM/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDSPXTRM"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": "eeb8911b4e958dcc0e97205df1a4913fef624d67e65667bfd3b9b115faaecd53"
+    },
+    {
+      "id": "water",
+      "folder": "B47ANCEDWaterworks",
+      "name": "Waterworks",
+      "version": "0.34.1",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Fluid adapters and actual-volume transfers; five-axis contamination mixing and quality tests."
+        },
+        {
+          "status": "Source",
+          "text": "Reservations, rollback, uncertain-operation recovery, filters and treatment chains."
+        },
+        {
+          "status": "Source",
+          "text": "Networks, valves, pumps, pressure, recurring schedules and bounded inspector."
+        },
+        {
+          "status": "Source",
+          "text": "Portable pumps, powered purification/heating, freezing/thawing, wear, leaks and repairs."
+        },
+        {
+          "status": "Source",
+          "text": "Optional Power energy transactions and SPXTRM biological UV treatment."
+        }
+      ],
+      "limits": "No hard team dependency. Does not own crop growth, animal thirst or electricity generation. Source/offline evidence does not establish native replication or dedicated correctness.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "Contents/mods/B47ANCEDWaterworks/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDWaterworks"
+      ],
+      "source_roots": [
+        "Contents/mods"
+      ],
+      "source_digest": "ff8916d91d0886ea3503e8646532ba4b349ed896a6b0b20212a44538449fa835"
+    },
+    {
+      "id": "harvest",
+      "folder": "B47ANCEDHarvest",
+      "name": "Harvest",
+      "version": "0.9.0",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Read-only crop adapters, bounded field summaries and seasonal guidance."
+        },
+        {
+          "status": "Foundation",
+          "text": "Irrigation-demand planning and server-only application of provider-delivered water uses."
+        },
+        {
+          "status": "Foundation",
+          "text": "Optional climate/calendar and optical crop observations."
+        },
+        {
+          "status": "Planned",
+          "text": "Production crop automation, machinery and growth-changing integrations."
+        }
+      ],
+      "limits": "No automatic Waterworks withdrawal or implemented grow-light growth bonus. Native seasonal synchronization and dedicated acceptance pending.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "Contents/mods/B47ANCEDHarvest/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDHarvest"
+      ],
+      "source_roots": [
+        "Contents/mods"
+      ],
+      "source_digest": null
+    },
+    {
+      "id": "weather",
+      "folder": "weatherWorks",
+      "name": "weatherWorks",
+      "version": "No root VERSION; metadata only",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Read-only normalized climate observations and bounded seven-day hourly history."
+        },
+        {
+          "status": "Source",
+          "text": "Bounded listeners, persistent environmental events, high-wind/storm detection."
+        },
+        {
+          "status": "Foundation",
+          "text": "Explicit-target precipitation exposure and optional Power event handoff."
+        },
+        {
+          "status": "Foundation",
+          "text": "Calendar/season provider for farming guidance."
+        }
+      ],
+      "limits": "Weather handoff still looks up legacy powerWorks global while Power uses B47ANCEDPower: migration risk. Power also has a current catch-up reader; do not assume every event path is broken. No automatic cleaning, crop mutation or equipment damage.",
+      "evidence": [
+        "README.md",
+        "Contents/mods/weatherWorks/42/mod.info"
+      ],
+      "mod_ids": [
+        "weatherWorks"
+      ],
+      "source_roots": [
+        "Contents/mods"
+      ],
+      "source_digest": "1eaeda9f0c3c81992239286b01a17d32d7d4166302aac9f0cecddc78ec85d51d"
+    },
+    {
+      "id": "food",
+      "folder": "B47ANCEDProvisions",
+      "name": "Provisions",
+      "version": "0.7.0",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Formerly foodWorks: read-only food freshness, age, cooking, freezing, nutrition, packaging and taint inspection."
+        },
+        {
+          "status": "Foundation",
+          "text": "Ingredient classification and optional resource-reservation appliance transaction contracts."
+        },
+        {
+          "status": "Foundation",
+          "text": "Bounded persistent preservation-process framework with cancellation/recovery."
+        },
+        {
+          "status": "Planned",
+          "text": "First-party production processes, recipes, stations and outputs."
+        }
+      ],
+      "limits": "No selected production preservation process yet. ApplianceTransactions still looks up legacy powerWorks global, whereas Power uses B47ANCEDPower: migration risk. Retains foodWorks Lua/save contracts. Architecture is not finished gameplay.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "Contents/mods/B47ANCEDProvisions/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDProvisions"
+      ],
+      "source_roots": [
+        "Contents/mods"
+      ],
+      "source_digest": null,
+      "aliases": [
+        "foodWorks"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "folder": "B47ANCEDKnowledgeAndWisdom",
+      "name": "Knowledge & Wisdom",
+      "version": "0.16.0",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Knowledge definitions, prerequisite expressions, research viewer and content-provider claims."
+        },
+        {
+          "status": "Foundation",
+          "text": "Committed-action XP, rollback/quarantine and read-only journal/media inspection."
+        },
+        {
+          "status": "Foundation",
+          "text": "Survivor journal, progressive writing, recovery plans, geography familiarity and history cores."
+        },
+        {
+          "status": "Blocked",
+          "text": "Multiplayer progression, claims, journal mutation and history persistence: MULTIPLAYER_STORAGE_UNAVAILABLE."
+        }
+      ],
+      "limits": "No legacy experienceWorks global/Mod-ID alias. SP-oriented cores and offline tests are not native runtime acceptance; multiplayer storage blocks affected features.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDKnowledgeAndWisdom/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDKnowledgeAndWisdom"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": "3d602b15071c7cf8f9909d87d84afcb5fa3cc0589e924cf1de8961e99e7e41be"
+    },
+    {
+      "id": "mortis",
+      "folder": "Project MORTIS",
+      "name": "M.O.R.T.I.S.",
+      "version": "0.25.0-dev.4",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Native-zombie framework: type/trait/behavior/component/species registries, identity and reconciliation."
+        },
+        {
+          "status": "Foundation",
+          "text": "Anatomy, trauma, decomposition, detached-part provenance and attachment sockets."
+        },
+        {
+          "status": "Foundation",
+          "text": "Feeding/hunger, locomotion ownership, knockdown/pile/crowd-flow and logical groups."
+        },
+        {
+          "status": "Foundation",
+          "text": "Consumer transactions, diagnostics and Knowledge-owned research infrastructure integration."
+        },
+        {
+          "status": "Planned",
+          "text": "Integrated Active Hours day/night behavior; current locomotion diagnostic is dormant."
+        }
+      ],
+      "limits": "Requires Knowledge & Wisdom. Native animation/state restoration and dedicated behavior remain gates. Active Hours documents disagree about standalone maintenance; MORTIS documentation specifies its execution takes precedence.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/ProjectMORTIS/42/mod.info"
+      ],
+      "mod_ids": [
+        "ProjectMORTIS"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": "43a7cd1ad3c012237c5800f397d971cefadb69d425962c1393a8a1381721bc73"
+    },
+    {
+      "id": "health",
+      "folder": "B47ANCEDHealthCare",
+      "name": "Health Care",
+      "version": "0.10.1",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Timed read-only clinical examinations and scoped recent-observation reports."
+        },
+        {
+          "status": "Foundation",
+          "text": "Species-agnostic procedure reservations, locks, commit/cancel and uncertain-operation recovery."
+        },
+        {
+          "status": "Source",
+          "text": "Timed recent-zombie body-part recovery with tools, anatomy and provenance checks."
+        },
+        {
+          "status": "Source",
+          "text": "Optional SPXTRM sunburn-treatment procedure; SPXTRM retains dose ownership."
+        },
+        {
+          "status": "Separate branch",
+          "text": "0.11.0 treatment checkout: server-validated timed cold-pack self-care consuming supplies."
+        }
+      ],
+      "limits": "Requires MORTIS and Knowledge & Wisdom. Diagnosis, additional procedures and corpse visual amputation remain unfinished. Separate 0.11.0 branch is not root 0.10.1; native SP/dedicated untested.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDHealthCare/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDHealthCare"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": "72ba8a49cf3414d555eba39eb447f34ee9c52015966286d1f8bfa23ca5f5d5dd"
+    },
+    {
+      "id": "night",
+      "folder": "Project Nightfall",
+      "name": "Nightfall",
+      "version": "0.30.0",
+      "features": [
+        {
+          "status": "Source",
+          "text": "UV-sensitive infected types, sun damage, hibernation, shelter/evasion and Feral reserve/sprinting."
+        },
+        {
+          "status": "Source",
+          "text": "Smart stalking/ambush, screech response, personal hordes and persistent Alpha leadership/territory."
+        },
+        {
+          "status": "Source",
+          "text": "Seasonal movement, shelters/dens, lighting defense and bounded crowd behavior."
+        },
+        {
+          "status": "Source",
+          "text": "Provenance-checked body-part effigies and feeding; research files and configurable presets."
+        }
+      ],
+      "limits": "Requires SPXTRM, MORTIS, Power, Health Care and Knowledge & Wisdom in current metadata. Some README references still say lightWorks. Complex native AI/MP behavior remains unverified.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/ProjectNightfall/42/mod.info"
+      ],
+      "mod_ids": [
+        "ProjectNightfall"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": "be936b22c5776695280b919efe638f0bfd927daae87d82ba04435922f005a85e"
+    },
+    {
+      "id": "earth",
+      "folder": "B47ANCEDEarthworks",
+      "name": "Earthworks",
+      "version": "No root VERSION; metadata only",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Excavation, trenches/moats/basements, framing, deepening, spoil transport and backfill."
+        },
+        {
+          "status": "Source",
+          "text": "Constructed routes, traffic wear and stored-water visuals."
+        },
+        {
+          "status": "Foundation",
+          "text": "CAT machine work and training/manual integration."
+        },
+        {
+          "status": "Blocked",
+          "text": "Active Java visibility JAR/bridge dependency; legacy experienceWorks dependency and groundWorks activation checks."
+        }
+      ],
+      "limits": "Lua-only policy blocks present runtime dependency surface. No canonical root VERSION/onboarding. Water visuals are not simulated flow/swimming; experimental wheelbarrow MP pushing disabled.",
+      "evidence": [
+        "README.md",
+        "src/B47ANCEDEarthworks/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDEarthworks"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": null
+    },
+    {
+      "id": "cat",
+      "folder": "CATConstruction",
+      "name": "CAT Construction",
+      "version": "No root VERSION; metadata only",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Construction-machine earthwork commands and qualification checks."
+        },
+        {
+          "status": "Foundation",
+          "text": "Sixteen physical machine manuals and operation/repair/maintenance prerequisite providers."
+        },
+        {
+          "status": "Foundation",
+          "text": "Earthworks geometry/material ownership and manual issuance cooperation."
+        }
+      ],
+      "limits": "Modified external-origin development copy; credits/rights remain relevant. Legacy groundWorks/experienceWorks lookups need migration. Full native control prevention and MP correctness unverified; no modified package publication claimed.",
+      "evidence": [
+        "README.md",
+        "src/CATConstruction/mod.info",
+        "src/CATConstruction/42/mod.info"
+      ],
+      "mod_ids": [
+        "CATConstruction"
+      ],
+      "source_roots": [
+        "src",
+        "Contents/mods"
+      ],
+      "source_digest": null
+    },
+    {
+      "id": "junk",
+      "folder": "B47ANCEDJunkDrawer",
+      "name": "Junk Drawer",
+      "version": "0.5.0",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Salvage profile/provider registry, unknown-item review and deterministic preview."
+        },
+        {
+          "status": "Foundation",
+          "text": "Read-only materials, hazards, tools, skills, knowledge and output inspection."
+        },
+        {
+          "status": "Foundation",
+          "text": "Server salvage commit/replay protection and rollback; timed actions for supported profiles."
+        },
+        {
+          "status": "Planned",
+          "text": "First-party certified salvage recipes and domain-specific integrations."
+        }
+      ],
+      "limits": "No first-party gameplay recipe certified yet. Proposed electrical/medical/food links are not implemented integration guarantees.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "Contents/mods/B47ANCEDJunkDrawer/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDJunkDrawer"
+      ],
+      "source_roots": [
+        "Contents/mods"
+      ],
+      "source_digest": "750bdb53858f32455c79099a5b30060009f4370d5d425cd362d78b146601a074"
+    },
+    {
+      "id": "essentials",
+      "folder": "B47ANCEDEssentials",
+      "name": "Essentials",
+      "version": "0.19.0",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Nearby inventory aggregation, Equipped view, exact-minute clock and key auto-filing."
+        },
+        {
+          "status": "Source",
+          "text": "Battery grouping, matching-magazine actions, craft output placement and hotbar ordering."
+        },
+        {
+          "status": "Source",
+          "text": "Literature/media progress and duplicate hints, map symbol defaults and admin menu grouping."
+        },
+        {
+          "status": "Foundation",
+          "text": "Bounded inventory traversal, stable references, server batch transfers and provider recovery."
+        },
+        {
+          "status": "Foundation",
+          "text": "Heavy-object provider lifecycle and independent-hand classification; vanilla ladder traversal."
+        }
+      ],
+      "limits": "No implemented independent-hand combat/input/animation system. Shared APIs do not prove other projects consume them. Native/dedicated behavior requires acceptance.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "Contents/mods/B47ANCEDEssentials/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDEssentials"
+      ],
+      "source_roots": [
+        "Contents/mods"
+      ],
+      "source_digest": "2638d2a53d5602839917e6f16e6efe54ec1f78b31be6ebc79a4f55237dda9d8f"
+    },
+    {
+      "id": "fences",
+      "folder": "B47ANCEDBuildableFences",
+      "name": "Buildable Fences & Gates",
+      "version": "1.1.0-dev.15",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Twenty-one pieces across six fence/gate families with orientation controls and dedicated menus."
+        },
+        {
+          "status": "Source",
+          "text": "Carpentry/welding/material requirements, concrete consumption and matching corner/junction generation."
+        },
+        {
+          "status": "Source",
+          "text": "Server material handling and break-state initialization."
+        }
+      ],
+      "limits": "Standalone. Native collisions, persistence, audio/cutaway and dedicated tests remain gates; no verified Rooms protection integration.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDBuildableFences/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDBuildableFences"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "27448a6f6c39a9ef0b6db7bb56de82bb9921e392a6b6d148130bf0396043fca2"
+    },
+    {
+      "id": "eyewear",
+      "folder": "B47ANCEDEyewear",
+      "name": "Eyewear",
+      "version": "0.15.0-dev.1",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Glasses/hat ties in fourteen materials; crafted cloth/leather retainers and durability."
+        },
+        {
+          "status": "Source",
+          "text": "Reinforcement, adhesive tape upgrades and server-validated zip-tie cutting."
+        },
+        {
+          "status": "Source",
+          "text": "Rare unbreakable retainers, item identity/provenance and worn/ground models."
+        }
+      ],
+      "limits": "Latest 0.15 features do not inherit historical 0.13.1 owner-reported dedicated pass. Native fit/appearance acceptance pending.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDEyewear/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDEyewear"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "581e19db45844935c92cef8f7d55e24b9c81628fdd39ff0fe39554203d0ab8a5"
+    },
+    {
+      "id": "dog",
+      "folder": "B47ANCEDDogmeat",
+      "name": "Dogmeat",
+      "version": "0.2.0-dev.7",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Ownership, naming, handler permissions and private projection foundations."
+        },
+        {
+          "status": "Foundation",
+          "text": "Native persistence/lifecycle pairing diagnostics with test carrier."
+        },
+        {
+          "status": "Foundation",
+          "text": "German Shepherd and English Mastiff editable model development."
+        },
+        {
+          "status": "Planned",
+          "text": "Playable dog care, bonding, training and tasks."
+        },
+        {
+          "status": "Blocked",
+          "text": "Authenticated ownership/admission and exclusive native-control contracts unresolved."
+        }
+      ],
+      "limits": "Standalone; no current MORTIS hard dependency. Models are on visual-acceptance hold. Offline ownership tests do not prove native admission, persistence or MP control.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/metadata/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDDogmeat"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "3fb755871a25e3cedd9dae57c5381d1a1ab60a25b88b88ac41f4f71bfb7ce9a0"
+    },
+    {
+      "id": "heli",
+      "folder": "B47ANCEDHelicopterEvents",
+      "name": "Helicopter Events",
+      "version": "0.1.0-dev.4",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Default-disabled dedicated-only rotor-audio probe with expiring server snapshots."
+        },
+        {
+          "status": "Foundation",
+          "text": "Default-disabled read-only radio/device preflight."
+        },
+        {
+          "status": "Planned",
+          "text": "Military air-support gameplay, authorization, equipment, combat and crash salvage."
+        }
+      ],
+      "limits": "Current scope is probes, not completed helicopter events. SP/host unsupported for probes; no Workshop item assigned.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDHelicopterEvents/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDHelicopterEvents"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "2c2b2237c88fe045d7b3283ba915127cd013ea8c37b20816f068d37f6c0de8f2"
+    },
+    {
+      "id": "checks",
+      "folder": "B47ANCEDMedicalChecks",
+      "name": "Medical Checks",
+      "version": "0.2.0-dev.3",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "Server account preferences and configured policy reporting; inactive approval metadata cleanup."
+        },
+        {
+          "status": "Blocked",
+          "text": "Consent enforcement: native medical handler lacks a verified Lua veto."
+        }
+      ],
+      "limits": "Separate from Health Care. Does not grant approvals, block vanilla actions or hide native medical panels. Scaffold only; no assigned Workshop item.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/B47ANCEDMedicalChecks/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDMedicalChecks"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "ab41ac8b5cf45763a35e5ee442ddd116448c19bb7ea1c6efd8b2b0a25d4c41e6"
+    },
+    {
+      "id": "hours",
+      "folder": "B47ANCEDActiveHours",
+      "name": "Active Hours",
+      "version": "0.1.0-dev.4",
+      "features": [
+        {
+          "status": "Historical",
+          "text": "Standalone day/night infected behavior design and proof work."
+        },
+        {
+          "status": "Planned",
+          "text": "Integrated active/inactive behavior profiles in MORTIS."
+        }
+      ],
+      "limits": "Standalone README says absorbed; newer MORTIS guide says standalone remains maintained but disables when MORTIS is enabled. Production solar behavior remains gated, not completed gameplay.",
+      "evidence": [
+        "README.md",
+        "VERSION"
+      ],
+      "mod_ids": [],
+      "source_roots": [],
+      "source_digest": "a3bb1654f877b9965d5c247948b1a6f86a20395bd00d5b495dd4c76fd264693c"
+    },
+    {
+      "id": "home",
+      "folder": "Last Known Address",
+      "name": "Last Known Address",
+      "version": "No root VERSION; metadata only",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Sleep/set/remove home-bed records, configurable home limits and persistence across replacement characters."
+        },
+        {
+          "status": "Source",
+          "text": "Optional validated home spawn with ordinary spawn fallback."
+        },
+        {
+          "status": "Blocked",
+          "text": "Requires custom PreSpawn Java bridge/JAR."
+        }
+      ],
+      "limits": "Current Lua-only policy blocks dependency surface. Sleep evidence/client trust and extra local-player support remain limitations.",
+      "evidence": [
+        "README.md",
+        "src/LastKnownAddress/42/mod.info"
+      ],
+      "mod_ids": [
+        "LastKnownAddress"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "5ebe1920b4c6792240d03de2812b6511ac39af7d7b257d4ef0d9bb6f7432b384"
+    },
+    {
+      "id": "costume",
+      "folder": "B47ANCE Costume",
+      "name": "Costume",
+      "version": "No root VERSION; metadata only",
+      "features": [
+        {
+          "status": "Foundation",
+          "text": "User-provided costume mesh replaces visible character/clothes while retaining external equipment."
+        },
+        {
+          "status": "Foundation",
+          "text": "Editable source assets, hoodie/trousers/boots and material pipeline."
+        }
+      ],
+      "limits": "No canonical root VERSION confirmed; mod.info 0.1.0 is metadata. Native equipment fit, rendering and dedicated acceptance unverified.",
+      "evidence": [
+        "README.md",
+        "src/B47ANCECostume/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCECostume"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "28b96a9830bc6b411735bf3def6074930166ccb5ea14d15cc246203e81b8636c"
+    },
+    {
+      "id": "glow",
+      "folder": "AuthenticZGlowstickMPPatch",
+      "name": "Glowsticks",
+      "version": "0.3.1",
+      "features": [
+        {
+          "status": "Source",
+          "text": "Remote held and loaded-floor glowstick presentation using replicated native items."
+        },
+        {
+          "status": "Source",
+          "text": "Exactly-one-Authentic-Z-variant compatibility guard; upstream local lighting retained."
+        }
+      ],
+      "limits": "External Authentic Z Lite or full variant required. Hotbar rendering deferred; no altered dropped lifetime. Native SP/dedicated not tested.",
+      "evidence": [
+        "README.md",
+        "VERSION",
+        "src/AuthenticZGlowstickMPPatch/42/mod.info"
+      ],
+      "mod_ids": [
+        "B47ANCEDGlowSticksAzMP"
+      ],
+      "source_roots": [
+        "src"
+      ],
+      "source_digest": "396c20f539e71eb4a12235e550a5bc215e8640e838202f7b1c7beea4e0c78200"
+    }
+  ],
+  "edges": [
+    {
+      "a": "rooms",
+      "b": "qm",
+      "kind": "Required",
+      "text": "Room geometry and cooperating-mod permissions"
+    },
+    {
+      "a": "rooms",
+      "b": "clean",
+      "kind": "Required",
+      "text": "Designated cleaning scope and permissions"
+    },
+    {
+      "a": "qm",
+      "b": "clean",
+      "kind": "Required",
+      "text": "Configured supplies and borrowing"
+    },
+    {
+      "a": "power",
+      "b": "spx",
+      "kind": "Required",
+      "text": "Device energy and battery ownership"
+    },
+    {
+      "a": "knowledge",
+      "b": "mortis",
+      "kind": "Required",
+      "text": "Knowledge definitions/progression infrastructure"
+    },
+    {
+      "a": "knowledge",
+      "b": "health",
+      "kind": "Required",
+      "text": "Procedure knowledge prerequisites"
+    },
+    {
+      "a": "mortis",
+      "b": "health",
+      "kind": "Required",
+      "text": "Anatomy, corpse lifecycle and part provenance"
+    },
+    {
+      "a": "spx",
+      "b": "night",
+      "kind": "Required",
+      "text": "UV/light exposure and infected light interactions"
+    },
+    {
+      "a": "mortis",
+      "b": "night",
+      "kind": "Required",
+      "text": "Infected anatomy, traits and behavior framework"
+    },
+    {
+      "a": "power",
+      "b": "night",
+      "kind": "Required",
+      "text": "Declared direct dependency"
+    },
+    {
+      "a": "health",
+      "b": "night",
+      "kind": "Required",
+      "text": "Body-part recovery/procedure provider"
+    },
+    {
+      "a": "knowledge",
+      "b": "night",
+      "kind": "Required",
+      "text": "Research files and prerequisite knowledge"
+    },
+    {
+      "a": "cat",
+      "b": "earth",
+      "kind": "Required",
+      "text": "Declared machine dependency"
+    },
+    {
+      "a": "power",
+      "b": "water",
+      "kind": "Optional",
+      "text": "Optional reserved energy for pumps/heating/treatment"
+    },
+    {
+      "a": "spx",
+      "b": "water",
+      "kind": "Optional",
+      "text": "Opt-in UVC; Water owns biological-quality transaction"
+    },
+    {
+      "a": "health",
+      "b": "spx",
+      "kind": "Optional",
+      "text": "Sunburn procedure; SPXTRM retains dose"
+    },
+    {
+      "a": "harvest",
+      "b": "spx",
+      "kind": "Optional",
+      "text": "Crop coordinates/state for read-only lighting observations"
+    },
+    {
+      "a": "weather",
+      "b": "harvest",
+      "kind": "Optional",
+      "text": "Calendar and seasonal observations"
+    },
+    {
+      "a": "weather",
+      "b": "power",
+      "kind": "Optional",
+      "text": "Current Power catch-up ingestion; Weather push still uses old global"
+    },
+    {
+      "a": "hours",
+      "b": "mortis",
+      "kind": "Optional",
+      "text": "MORTIS execution precedence; no mutual dependency"
+    },
+    {
+      "a": "knowledge",
+      "b": "earth",
+      "kind": "Migration",
+      "text": "Metadata requires obsolete experienceWorks ID"
+    },
+    {
+      "a": "knowledge",
+      "b": "cat",
+      "kind": "Migration",
+      "text": "Legacy experienceWorks qualification integration"
+    },
+    {
+      "a": "earth",
+      "b": "cat",
+      "kind": "Migration",
+      "text": "Legacy groundWorks activation/API; geometry and manuals"
+    },
+    {
+      "a": "water",
+      "b": "harvest",
+      "kind": "Planned",
+      "text": "Irrigation supply orchestration still needs a caller/provider"
+    },
+    {
+      "a": "power",
+      "b": "food",
+      "kind": "Planned",
+      "text": "Appliance reservation contract; paired build unverified"
+    },
+    {
+      "a": "water",
+      "b": "food",
+      "kind": "Planned",
+      "text": "Appliance fluid reservation contract; no production process"
+    },
+    {
+      "a": "junk",
+      "b": "power",
+      "kind": "Planned",
+      "text": "Future electrical salvage content, no certified recipe"
+    }
+  ],
+  "flows": [
+    {
+      "name": "Room-aware cleaning",
+      "mods": [
+        "rooms",
+        "qm",
+        "clean"
+      ],
+      "status": "Source",
+      "text": "Rooms owns designated tiles/access → Quartermaster locates configured supplies → Auto Clean executes native cleaning and returns tools. Current native dedicated acceptance remains pending."
+    },
+    {
+      "name": "Physical storage records",
+      "mods": [
+        "rooms",
+        "qm"
+      ],
+      "status": "Separate branch",
+      "text": "Quartermaster 0.17 ledger-freshness: room-aware physical inspections → paper ledger → selected CD → powered native desktop → browsing and freshness-gated collection. Uses native computer power, not a confirmed Power-mod integration."
+    },
+    {
+      "name": "UV defense and infected ecology",
+      "mods": [
+        "power",
+        "spx",
+        "mortis",
+        "night",
+        "knowledge"
+      ],
+      "status": "Source",
+      "text": "Power owns energy; SPXTRM owns light/UV; MORTIS provides anatomy/behavior; Nightfall chooses infected responses and research content. Dedicated AI acceptance remains blocked."
+    },
+    {
+      "name": "Recovered parts and effigies",
+      "mods": [
+        "mortis",
+        "health",
+        "night",
+        "knowledge"
+      ],
+      "status": "Source",
+      "text": "MORTIS preserves anatomy/provenance → Health Care validates timed corpse recovery → Nightfall validates same-source parts for effigy assembly/feeding. Knowledge provides prerequisites, with multiplayer storage restrictions."
+    },
+    {
+      "name": "Powered water infrastructure",
+      "mods": [
+        "power",
+        "water"
+      ],
+      "status": "Source",
+      "text": "Power reserves exact energy; Water owns pumps, fluid/quality transactions and recovery. Energy and fluid outcomes must reconcile; offline contracts do not prove native replication."
+    },
+    {
+      "name": "UVC water treatment",
+      "mods": [
+        "power",
+        "spx",
+        "water"
+      ],
+      "status": "Source",
+      "text": "SPXTRM timed action revalidates reach and placed source, recomputes optical conditions → Water transaction changes biological quality only. Opt-in default off; not universal sterilization/potability."
+    },
+    {
+      "name": "Sunburn care",
+      "mods": [
+        "spx",
+        "health"
+      ],
+      "status": "Separate branch",
+      "text": "SPXTRM owns dose; Health Care owns procedure validation. Health Care 0.11 branch adds timed self-only cold-pack consumption. Root 0.10.1 is not that branch; no native runtime acceptance."
+    },
+    {
+      "name": "Irrigation and crop lighting",
+      "mods": [
+        "water",
+        "harvest",
+        "weather",
+        "spx"
+      ],
+      "status": "Foundation",
+      "text": "Harvest calculates demand and can apply provider-delivered uses; Weather gives seasonal observations; SPXTRM samples crop light without growth changes. Automatic Waterworks supply and growth bonuses are not implemented."
+    },
+    {
+      "name": "Storm-aware infrastructure",
+      "mods": [
+        "weather",
+        "power"
+      ],
+      "status": "Migration",
+      "text": "Weather publishes bounded storm/wind facts. Power has a current catch-up reader, but Weather push targets old powerWorks global. Consequence proposals do not automatically damage equipment."
+    },
+    {
+      "name": "Preservation appliances",
+      "mods": [
+        "food",
+        "water",
+        "power"
+      ],
+      "status": "Foundation",
+      "text": "Food process framework coordinates optional fluid/energy reservations and owner outcomes. No first-party production process/station/recipe chosen; paired API identities need verification."
+    },
+    {
+      "name": "Qualified excavation machinery",
+      "mods": [
+        "cat",
+        "earth",
+        "knowledge"
+      ],
+      "status": "Blocked",
+      "text": "CAT machine work + Earthworks terrain/routes/manual issuance + Knowledge qualifications. Legacy IDs and active Earthworks Java bridge prevent treating this as a supported Lua-only integrated build."
+    },
+    {
+      "name": "Research and progression content",
+      "mods": [
+        "knowledge",
+        "mortis",
+        "health",
+        "night",
+        "cat"
+      ],
+      "status": "Blocked",
+      "text": "Domain projects own their content; Knowledge owns definitions/prerequisites/claims. A declared dependency does not unblock multiplayer mutation: MULTIPLAYER_STORAGE_UNAVAILABLE remains explicit."
+    },
+    {
+      "name": "Active/inactive infected profiles",
+      "mods": [
+        "hours",
+        "mortis",
+        "night"
+      ],
+      "status": "Planned",
+      "text": "MORTIS takes precedence over standalone Active Hours according to its current guide. Production solar profiles remain design/proof scope; Nightfall already owns its own UV/shelter behavior. Combined policy still needs acceptance."
+    },
+    {
+      "name": "Future salvage ecosystem",
+      "mods": [
+        "junk",
+        "power",
+        "food",
+        "health",
+        "spx"
+      ],
+      "status": "Planned",
+      "text": "Junk Drawer can inspect/profile salvage; future domain recipes may produce electrical, optical, food or medical materials. No certified first-party recipes or confirmed adapters yet."
+    }
+  ],
+  "schema": 1
+}

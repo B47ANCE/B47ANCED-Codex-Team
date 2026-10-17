@@ -1,5 +1,13 @@
 # Changelog
 
+## 13.9.0
+
+- Add the portable 26-project feature/connection overview and 14 multi-mod feature groups.
+- Explicit VS Code workspace setup pins the local generator/view and adds open, refresh and read-only folder-open watch tasks. No remote fetch, game execution or project writes.
+- Refresh current versions/loader dependencies and project-owned descriptors; flag changed source, missing clones and unreviewed features. Preserve separate-branch and runtime limitations.
+- Document same-PR descriptor maintenance, developer-specific paths, automatic-task trust, backups and inert-update/rollback boundaries. Existing credentials, project instructions and local settings remain independent.
+- Exclude Git worktree pointer metadata from package inventory, matching normal clone behavior without exposing developer-local Git paths.
+
 ## 13.8.1
 - Ask and wait for explicit confirmation before each post-publication Steam desktop restart or launch. Revoke standing automatic-restart approval and inspect combined upload/restart wrappers before execution. Preserve graceful shutdown and upload verification safeguards.
 

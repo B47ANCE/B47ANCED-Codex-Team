@@ -5,6 +5,60 @@ spec=importlib.util.spec_from_file_location('code_workspace',ROOT/'tools/code_wo
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 
 class CodeWorkspace(unittest.TestCase):
+    def custom(self,args):
+        args[0].mkdir(parents=True,exist_ok=True)
+        path=args[0]/'B47ANCED.code-workspace'
+        data=dict(folders=[dict(path='../my-own-project')],settings={'editor.fontSize':19},launch={'custom':True},
+                  extensions={'recommendations':['custom.extension']},tasks={'version':'2.0.0','tasks':[{'label':'My custom task','command':'keep'}],'inputs':[{'id':'mine','type':'promptString'}]})
+        path.write_text(json.dumps(data))
+        return path,data
+
+    def test_explicit_overview_merge_preserves_custom_fields_and_ownership(self):
+        with tempfile.TemporaryDirectory() as td:
+            args,_=self.fixture(pathlib.Path(td));path,original=self.custom(args);raw=path.read_bytes()
+            m.create(*args,merge_overview=True);merged=json.loads(path.read_text())
+            for key in ['folders','settings','launch','extensions']:self.assertEqual(merged[key],original[key])
+            self.assertEqual(merged['tasks']['inputs'],original['tasks']['inputs'])
+            self.assertEqual(merged['tasks']['tasks'][0],original['tasks']['tasks'][0])
+            self.assertEqual(len(merged['tasks']['tasks']),4)
+            backups=list((args[2]/'.codex/cli-workflow-backups').rglob('B47ANCED.code-workspace'))
+            self.assertEqual([p.read_bytes() for p in backups],[raw])
+            after=path.read_bytes();m.create(*args,merge_overview=True);self.assertEqual(path.read_bytes(),after)
+            state=json.loads((args[2]/'.codex/cli-workflow-runtime/workspace-state.json').read_text())
+            self.assertNotIn(str(path),state)
+            with self.assertRaises(ValueError):m.create(*args)
+            self.assertEqual(path.read_bytes(),after)
+
+    def test_overview_merge_conflict_or_non_json_preserves_all_outputs(self):
+        with tempfile.TemporaryDirectory() as td:
+            args,_=self.fixture(pathlib.Path(td));path,data=self.custom(args)
+            data['tasks']['tasks'].append({'label':'Overview: Refresh features and connections','command':'custom'})
+            for raw in [json.dumps(data).encode(),b'{/* custom comment */}',b'{"settings":{},"settings":{"x":1}}',b'{"settings":{"x":NaN}}']:
+                path.write_bytes(raw)
+                with self.assertRaises(ValueError):m.create(*args,merge_overview=True)
+                self.assertEqual(path.read_bytes(),raw)
+                self.assertFalse((args[2]/'.codex/cli-workflow-runtime/Invoke-TeamWorkflow.ps1').exists())
+
+    def test_custom_merge_write_failure_restores_original(self):
+        with tempfile.TemporaryDirectory() as td:
+            args,_=self.fixture(pathlib.Path(td));path,_=self.custom(args);raw=path.read_bytes()
+            replace=m.os.replace;calls=[]
+            def fail(source,dest):
+                calls.append(dest)
+                if len(calls)==2:raise OSError('injected')
+                return replace(source,dest)
+            with mock.patch.object(m.os,'replace',side_effect=fail):
+                with self.assertRaises(OSError):m.create(*args,merge_overview=True)
+            self.assertEqual(path.read_bytes(),raw)
+            self.assertFalse((args[2]/'.codex/cli-workflow-runtime/Invoke-TeamWorkflow.ps1').exists())
+
+    def test_custom_merge_concurrent_edit_is_not_overwritten(self):
+        with tempfile.TemporaryDirectory() as td:
+            p=pathlib.Path(td)/'workspace';old=b'original';p.write_bytes(b'concurrent edit')
+            with self.assertRaises(ValueError):
+                m.save_owned({p:b'merged'},pathlib.Path(td)/'state.json',pathlib.Path(td)/'backups',{p:m.digest(old)})
+            self.assertEqual(p.read_bytes(),b'concurrent edit')
+
     def fixture(self,base):
         home=base/'home';workspace=base/'Workspace with spaces';repos=base/'Mods'
         project=repos/'Custom project';project.mkdir(parents=True)

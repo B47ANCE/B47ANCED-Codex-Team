@@ -65,7 +65,7 @@ class RepositoryVerification(unittest.TestCase):
 
     def test_portable_and_absolute_custom_references(self):
         variants = ['%USERPROFILE%\\.codex\\AGENTS.md', '$env:USERPROFILE/.codex/AGENTS.md',
-                    '~/.codex/AGENTS.md', str(self.home / '.codex/AGENTS.md'),
+                    '~/.codex/AGENTS.md', 'USERPROFILE/.codex/AGENTS.md', 'USERPROFILE\\.codex\\AGENTS.md', str(self.home / '.codex/AGENTS.md'),
                     str(self.home / '.codex/AGENTS.md').replace('\\', '/').upper()]
         for index, reference in enumerate(variants):
             self.project('Custom' + str(index), 'Read `' + reference + '` before work.')
@@ -83,6 +83,8 @@ class RepositoryVerification(unittest.TestCase):
     def test_unrelated_or_lookalike_references_fail(self):
         p = self.project('Invalid', '')
         for text in ['Custom project rules only', 'Read .codex/config.toml',
+                     'Read NOTUSERPROFILE/.codex/AGENTS.md', 'Read /wrong/USERPROFILE/.codex/AGENTS.md',
+                     'Read USERPROFILE/.codex/AGENTS.md.bak', 'Read USERPROFILE/.codex/AGENTS.md/subfolder',
                      'Read %USERPROFILE%/.codex/AGENTS.md.bak', 'Read /other/.codex/AGENTS.md',
                      'Read /wrong' + str(self.home / '.codex/AGENTS.md'),
                      'Read %USERPROFILE%/.codex/AGENTS.md/subfolder']:

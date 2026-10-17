@@ -156,3 +156,28 @@ clones use their own version/source review state and normal Git update workflow.
 Package updates do not pull mod repositories, activate a new pinned watcher or change
 local settings. After a validated-main update, review and rerun workspace setup as
 described above to activate the refreshed catalog, then refresh the overview.
+
+
+## Preserve a customized VS Code workspace
+
+If normal setup preserves a customized workspace, explicitly merge only overview
+tasks using the reviewed 13.9.2 helper:
+
+```powershell
+& .\tools\Setup-CodeWorkspace.ps1 -Workspace $teamWorkspace -RepositoryRoot $modRepositories -PythonExe $pythonExe -MergeOverviewTasks
+```
+
+This opt-in mode requires an existing strict JSON workspace (JSONC comments,
+duplicate keys and unsupported task schemas are refused unchanged). It adds only
+Open/Refresh/Keep-current overview tasks, retaining settings, folders, launch and
+extension fields, existing tasks/inputs and unknown fields. Existing identical
+overview tasks are retained; conflicting labels are refused for manual review.
+The original bytes are backed up under the developer-local cli-workflow-backups
+directory. All writes are checked for concurrent changes and rolled back on write
+failure. The customized workspace stays outside whole-file team ownership, so a
+later default setup cannot silently replace it. Other customized runtime outputs
+still block replacement. VS Code retains control of workspace trust and automatic
+task consent; adding the read-only watcher does not start it or grant approval.
+
+Repository verification also accepts literal USERPROFILE/.codex/AGENTS.md, as used
+by Earthworks, with bounded exact-path matching. No project guide is rewritten.

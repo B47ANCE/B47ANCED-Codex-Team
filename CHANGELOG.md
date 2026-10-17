@@ -1,5 +1,10 @@
 # Changelog
 
+## 13.9.2
+
+- Recognize bounded literal USERPROFILE/.codex/AGENTS.md startup references without changing project instructions; retain lookalike/path-suffix rejection.
+- Add explicit -MergeOverviewTasks for customized JSON workspaces: preserve settings, folders, existing tasks/inputs and other fields; back up originals, refuse conflicts/concurrent edits, roll back failed writes, and never grant whole-file team ownership.
+
 ## 13.9.1
 
 - Refresh Quartermaster 0.18.0-dev.1 and Rooms 0.2.0-dev.6 from their merged source commits. Promote ledger, Shopping List, computer and carry features from separate branches into Source.
